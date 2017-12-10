@@ -6,6 +6,7 @@ var APP_PATH = path.resolve(ROOT_PATH, 'src');
 var BUILD_PATH = path.resolve(ROOT_PATH, 'build');
 var TEST_PATH = path.resolve(ROOT_PATH, 'test');
 var STYLE_PATH = path.resolve(ROOT_PATH, 'style');
+var COMPONENT_PATH = path.resolve(ROOT_PATH, '/components');
 
 module.exports = {
   //项目的文件夹 可以直接用文件夹名称 默认会找index.js 也可以确定是哪个文件名字
@@ -32,8 +33,7 @@ module.exports = {
         exclude: /node_modules/},
       {
         test: /\.(less|css)$/,
-        use: ['style-loader', 'css-loader', 'less-loader'],
-        include: [APP_PATH, STYLE_PATH]
+        use: ['style-loader', 'css-loader', 'less-loader']
       },
       {
         test: /\.(png|jpg)$/,
@@ -67,7 +67,9 @@ module.exports = {
   //添加我们的插件 会自动生成一个html文件
   plugins: [
     new HtmlwebpackPlugin({
-      title: 'Hello World app'
+      filename: 'index.html',
+      template: 'index.html',
+      inject: true
     })
   ]
 };
