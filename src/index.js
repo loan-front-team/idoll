@@ -6,9 +6,9 @@ import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
   <Layout>
-    <Sider span={4} toggle={1} />
+    <Sider span={10} toggle={1} />
     <Layout>
-      <Header headerType='seat' />
+      <Header />
       <Content />
       <Footer />
     </Layout>

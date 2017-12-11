@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classNames';
+
 import './style'
 
 class Sider extends Component {
@@ -13,7 +14,6 @@ class Sider extends Component {
   }
 
   toggleMenu() {
-    console.log('sdfd')
     this.setState({
       fold: !this.state.fold
     })
@@ -22,7 +22,6 @@ class Sider extends Component {
   render() {
   	const { span, toggle, children } = this.props;
     const { fold } = this.state;
-    console.log(fold);
     const classes = classNames({
       'idoll-layout-sider': 'doll-layout-sider',
       [`idoll-layout-sider-${span}`]: (span && toggle !== 1) || (span && toggle === 1 && !fold)
