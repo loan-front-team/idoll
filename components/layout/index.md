@@ -13,6 +13,7 @@ layout 布局
 -用于页面的整体布局
 
 ## 如何使用
+```
 import { Layout, Sider, Header, Footer, Content } from './components/layout'
 
 <Layout>
@@ -30,6 +31,7 @@ import { Layout, Sider, Header, Footer, Content } from './components/layout'
   <Footer />
 </Layout>
 
+```
 - 使用Sider时，如果需要配合其他Header, Content, Footer使用其他类型组件外层需要在包个Layout
 
 ### API
