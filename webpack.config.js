@@ -16,6 +16,9 @@ module.exports = {
     path: BUILD_PATH,
     filename: 'bundle.js'
   },
+  resolve: {
+        extensions: ['.js', '.jsx', '.json', '.less']
+  },
   //devserver 配置
   devServer: {
     historyApiFallback: true,
