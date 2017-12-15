@@ -12,10 +12,12 @@ ReactDOM.render(
     <Button type='dashed'>Dashed</Button>
     <Button type='danger'>Danger</Button>
     <br />
-    <Button type='primary' ghost>Primary</Button>
-    <Button ghost>Default</Button>
-    <Button type='dashed' ghost>Dashed</Button>
-    <Button type='danger' ghost>Danger</Button>
+    <div id='ghost'>
+      <Button type='primary' ghost>Primary</Button>
+      <Button ghost>Default</Button>
+      <Button type='dashed' ghost>Dashed</Button>
+      <Button type='danger' ghost>Danger</Button>
+    </div>
   </div>
   , document.getElementById('root'));
 registerServiceWorker();

@@ -8,17 +8,17 @@ export default class Button extends React.Component {
 	static defaultProps = {
 	    prefixCls: 'idoll-btn',
 	    onClick() {},
-	    loading: false,
   	}
 	static propTypes = {
 	    type: React.PropTypes.string,
 	    shape: React.PropTypes.oneOf(['circle', 'circle-outline']),
 	    size: React.PropTypes.oneOf(['large', 'default', 'small']),
 	    htmlType: React.PropTypes.oneOf(['submit', 'button', 'reset']),
-	    onClick: React.PropTypes.func,
-	    loading: React.PropTypes.bool,
 	    className: React.PropTypes.string,
 	    icon: React.PropTypes.string,
+	    ghost: React.PropTypes.bool,
+	    onClick: React.PropTypes.func,
+
 	}
 	componentWillUnmount() {
 		if (this.clickedTimeout) {
@@ -41,15 +41,15 @@ export default class Button extends React.Component {
 
 		this.props.onClick(...args);
 	}
-	// Handle auto focus when click button in Chrome
+	// 处理chrome单击时自动focus on
 	handleMouseUp = (e) => {
-	findDOMNode(this).blur();
-	if (this.props.onMouseUp) {
-	  this.props.onMouseUp(e);
-	}
+		findDOMNode(this).blur();
+		if (this.props.onMouseUp) {
+		  this.props.onMouseUp(e);
+		}
 	}
 	render() {
-		const{ type, shape, size, className, htmlType, children, icon, loading, prefixCls, ...others } = this.props;
+		const{ type, shape, size, htmlType, className, icon, ghost, prefixCls, children, ...others } = this.props;
 		const sizeCls = ({large: 'lg', small: "sm"})[size] || '';
 		const classes = classNames({
 			[prefixCls]: true,
@@ -57,7 +57,7 @@ export default class Button extends React.Component {
 			[`${prefixCls}-${shape}`]: shape,
 			[`${prefixCls}-${sizeCls}`]: sizeCls,
 			[`${prefixCls}-icon-only`]: !children && icon,
-			[`${prefixCls}-loading`]: loading,
+			[`${prefixCls}-background-ghost`]: ghost,
 			[className]: className,
 
 		})

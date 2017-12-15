@@ -1,5 +1,6 @@
 // mixins for button
 // ------------------------
+//添加了高度属性
 .button-size(@height; @padding; @font-size; @border-radius) {
   padding: @padding;
   font-size: @font-size;
@@ -87,7 +88,7 @@
   color: @color;
   background-color: @background;
   border-color: @border;
-  // a inside Button which only work in Chrome
+  // Button 里面的a只在Chrome中有效
   // http://stackoverflow.com/a/17253457
   > a:only-child {
     color: currentColor;

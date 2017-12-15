@@ -10,7 +10,7 @@
   .btn;
   .btn-default;
 
-  // Make sure that the target of Button's click event always be `button`
+  // 确保鼠标单击事件总是 `button`
   // Ref: https://github.com/ant-design/ant-design/issues/7034
   > i,
   > span {
@@ -119,12 +119,12 @@
     position: relative;
   }
 
-  // To ensure that a space will be placed between character and `Icon`.
+  // 确保 character 和 `Icon` 中间有一个空格
   > .@{iconfont-css-prefix} + span,
   > span + .@{iconfont-css-prefix} {
     margin-left: 8px;
   }
-
+//单击后border 1px扩散的动画效果
   &-clicked:after {
     content: '';
     position: absolute;
@@ -138,7 +138,7 @@
     animation: buttonEffect .4s;
     display: block;
   }
-
+//danger颜色的特殊性
   &-danger&-clicked:after {
     border-color: @btn-danger-color;
   }
