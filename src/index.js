@@ -6,6 +6,16 @@ import Button from '../components/button/button.jsx'
 import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
-  <Button className='btn' type='primary' size='small'>按钮</Button>,
-  document.getElementById('root'));
+  <div>
+    <Button type='primary'>Primary</Button>
+    <Button>Default</Button>
+    <Button type='dashed'>Dashed</Button>
+    <Button type='danger'>Danger</Button>
+    <br />
+    <Button type='primary' ghost>Primary</Button>
+    <Button ghost>Default</Button>
+    <Button type='dashed' ghost>Dashed</Button>
+    <Button type='danger' ghost>Danger</Button>
+  </div>
+  , document.getElementById('root'));
 registerServiceWorker();
