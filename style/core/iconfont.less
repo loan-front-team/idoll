@@ -1,0 +1,43 @@
+@import "../theme/default/index.less";
+@import "../mixins/iconfont.less";
+
+// font-face
+@font-face {
+  font-family: 'idollicon';
+  src:  url('@{icon-url}/idollicon.eot?zfzssk');
+  src:  url('@{icon-url}/idollicon.eot?zfzssk#iefix') format('embedded-opentype'),
+    /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('@{icon-url}/idollicon.ttf') format('truetype'),
+    /* chrome、firefox */
+    url('@{icon-url}/idollicon.woff?zfzssk') format('woff'),
+    /* iOS 4.1- */
+    url('@{icon-url}/idollicon.svg?zfzssk#idollicon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+.@{iconfont-css-prefix} {
+ .iconfont-mixin();
+}
+
+.@{iconfont-css-prefix}-home:before {content: "\e902";}
+.@{iconfont-css-prefix}-image:before {content: "\e90d";}
+.@{iconfont-css-prefix}-connection:before {content: "\e91b";}
+.@{iconfont-css-prefix}-phone:before {content: "\e942";}
+.@{iconfont-css-prefix}-phone-hang-up:before {content: "\e943";}
+.@{iconfont-css-prefix}-user-plus:before {content: "\e973";}
+.@{iconfont-css-prefix}-user-minus:before {content: "\e974";}
+.@{iconfont-css-prefix}-user-check:before {content: "\e975";}
+.@{iconfont-css-prefix}-bin:before {content: "\e9ac";}
+.@{iconfont-css-prefix}-switch:before {content: "\e9b6";}
+.@{iconfont-css-prefix}-menu:before {content: "\e9bd";}
+.@{iconfont-css-prefix}-cloud-check:before {content: "\e9c4";}
+.@{iconfont-css-prefix}-download2:before {content: "\e9c5";}
+.@{iconfont-css-prefix}-upload2:before {content: "\e9c6";}
+.@{iconfont-css-prefix}-bookmark:before {content: "\e9d2";}
+.@{iconfont-css-prefix}-bookmarks:before {content: "\e9d3";}
+.@{iconfont-css-prefix}-arrow-left2:before {content: "\ea40";}
+.@{iconfont-css-prefix}-table2:before {content: "\ea71";}
+.@{iconfont-css-prefix}-indent-increase:before {content: "\ea7b";}
+.@{iconfont-css-prefix}-indent-decrease:before {content: "\ea7c";}
+
+
