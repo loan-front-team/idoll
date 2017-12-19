@@ -4,13 +4,20 @@ import classNames from 'classNames';
 
 import './style'
 
-function Layout(props) {
-  	const { children } = props;
+class Layout extends Component {
+  render() {
+  	const { children } = this.props;
     const classes = classNames({
        'idoll-layout': 'doll-layout',
        'idoll-layout-has-sider': (children.length && children.filter(function(item) { return item.type.name === 'Sider' })).length
-    });
-  	return <div className={classes}>{children}</div>;
+    })
+
+  	return (
+    <div className={classes}>
+      {children}
+    </div>
+  	)
+  }
 }
 
 Layout.propTypes = {
