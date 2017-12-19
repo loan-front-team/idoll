@@ -30,8 +30,7 @@ module.exports = {
       {
         test: /\.(jsx|js)$/,
         use: 'babel-loader',
-        exclude: /node_modules/
-      },
+        exclude: /node_modules/},
       {
         test: /\.(less|css)$/,
         use: ['style-loader', 'css-loader', 'less-loader']
