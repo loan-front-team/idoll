@@ -37,12 +37,14 @@ import { Layout, Sider, Header, Footer, Content } from './components/layout'
 ### API
 
 Sider
+
 | 成员       | 说明                   | 类型               | 默认值       |
 |-----------|-----------------------|--------------------|-------------|
-| span      | 基本宽度32px + 12 * span 最大值 10  | number  | 0
-| toogle    | 可选, 是否添加缩进图标    | number             |
+| span      | 基本宽度32px + 12 * span 最大值 10  | number  | 0 |
+| toogle    | 可选, 是否添加缩进图标    | number             |   |
 
 Header
+
 | 成员       | 说明                   | 类型               | 默认值       |
 |-----------|-----------------------|--------------------|-------------|
-| span      | 基本宽度60px + 15 * span 最大值 2 | number   | 0
+| span      | 基本宽度60px + 15 * span 最大值 2 | number   | 0           |
