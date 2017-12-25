@@ -18,7 +18,8 @@
     "rc-select": "^7.5.0",
     "react": "^15.6.2",
     "react-dom": "^15.6.2",
-    "react-router": "^4.2.0"
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
