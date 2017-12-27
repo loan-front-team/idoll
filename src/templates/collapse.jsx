@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Collapse from'../../components/collapse';
+import Collapse from '../../components/collapse';
 
 
 const Panel = Collapse.Panel;
@@ -16,7 +16,6 @@ const text = `
 `;
 export default class CollapseView extends React.Component {
 	render() {
-		
 		return (
 			<div>
 				<h1>折叠面板</h1>

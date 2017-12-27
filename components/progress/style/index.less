@@ -1,7 +1,9 @@
-@import '../../../style/theme/default';
-@import '../../../style/mixins/index';
+@import "../../../style/theme/default/index.less";
+@import "../../../style/mixins/index.less";
 
 @progress-prefix-cls: ~"@{idoll-prefix}-progress";
+@progress-default-color: @processing-color;
+@progress-remaining-color: @background-color-base;
 
 .@{progress-prefix-cls} {
   .reset-component;
@@ -82,7 +84,7 @@
     }
   }
 
-  &-status-excaption {
+  &-status-exception {
     .@{progress-prefix-cls}-bg {
       background-color: @error-color;
     }
