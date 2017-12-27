@@ -11,13 +11,13 @@ export default class Collapse extends React.Component {
 	static defaultProps = {
 		prefixCls: 'idoll-collapse',
 		bordered: true,
-		openAnimation: { ...animation, appear() {} },
+		openAnimation: { ...animation, appear() {} }
 	};
 
 	render() {
 		const { prefixCls, className = '', bordered } = this.props;
 		const collapseClassName = classNames({
-			[`${prefixCls}-borderless`]: !bordered,
+			[`${prefixCls}-borderless`]: !bordered
 		}, className);
 		return <RcCollapse {...this.props} className={collapseClassName} />;
 	}
