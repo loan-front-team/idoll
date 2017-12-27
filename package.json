@@ -16,11 +16,8 @@
     "classnames": "^2.2.5",
     "css-animation": "^1.4.1",
     "prop-types": "^15.6.0",
-<<<<<<< HEAD
     "rc-collapse": "^1.7.7",
-=======
     "rc-select": "^7.5.0",
->>>>>>> 52086fcd2c0f561473814a30e6b63fa212263a14
     "react": "^15.6.2",
     "react-dom": "^15.6.2",
     "react-router": "^4.2.0",
