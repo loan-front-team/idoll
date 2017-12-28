@@ -5,6 +5,14 @@ import Collapse from '../../components/collapse';
 
 const Panel = Collapse.Panel;
 
+const customPanelStyle = {
+  background: '#f7f7f7',
+  borderRadius: 4,
+  marginBottom: 24,
+  border: 0,
+  overflow: 'hidden'
+};
+
 function callback(key) {
   console.log(key);
 }
@@ -17,32 +25,44 @@ const text = `
 export default class CollapseView extends React.Component {
 	render() {
 		return (
-			<div>
-				<h1>折叠面板</h1>
-				<Collapse defaultActiveKey={['1']} onChange={callback}>
-				    <Panel header="This is panel header 1" key="1" >
-				      <p>{text}</p>
-				    </Panel>
-				    <Panel header="This is panel header 2" key="2">
-				      <p>{text}</p>
-				    </Panel>
-				    <Panel header="This is panel header 3" key="3" disabled>
-				      <p>{text}</p>
-				    </Panel>
-				</Collapse>
-				<h2>简洁风格</h2>
-				<Collapse defaultActiveKey={['1']} bordered={false}>
-				    <Panel header="This is panel header 1" key="1">
-				      {text}
-				    </Panel>
-				    <Panel header="This is panel header 2" key="2">
-				      {text}
-				    </Panel>
-				    <Panel header="This is panel header 3" key="3">
-				      {text}
-				    </Panel>
-				 </Collapse>
-			</div>
+  <div id='main-container'>
+    <h1 className='h1'>折叠面板</h1>
+    <Collapse defaultActiveKey={['1']} onChange={callback}>
+      <Panel header='This is panel header 1' key='1' >
+        <p>{text}</p>
+      </Panel>
+      <Panel header='This is panel header 2' key='2'>
+        <p>{text}</p>
+      </Panel>
+      <Panel header='This is panel header 3' key='3' disabled>
+        <p>{text}</p>
+      </Panel>
+    </Collapse>
+    <h1 className='h1'>简洁风格</h1>
+    <Collapse defaultActiveKey={['1']} bordered={false}>
+      <Panel header='This is panel header 1' key='1'>
+        {text}
+      </Panel>
+      <Panel header='This is panel header 2' key='2'>
+        {text}
+      </Panel>
+      <Panel header='This is panel header 3' key='3'>
+        {text}
+      </Panel>
+    </Collapse>
+    <h1 className='h1'>自定义</h1>
+    <Collapse bordered={false} defaultActiveKey={['1']}>
+      <Panel header='This is panel header 1' key='1' style={customPanelStyle}>
+        <p>{text}</p>
+      </Panel>
+      <Panel header='This is panel header 2' key='2' style={customPanelStyle}>
+        <p>{text}</p>
+      </Panel>
+      <Panel header='This is panel header 3' key='3' style={customPanelStyle}>
+        <p>{text}</p>
+      </Panel>
+    </Collapse>
+  </div>
 			)
 		}
 }

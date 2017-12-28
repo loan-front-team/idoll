@@ -1,3 +1,5 @@
+#progress
+
 ---
 category: Components
 subtitle: 进度条

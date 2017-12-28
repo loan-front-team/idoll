@@ -17,7 +17,7 @@ function animate(node, show, done) {
     end() {
       node.style.height = '';
       done();
-    }
+    },
   });
 }
 
@@ -30,7 +30,7 @@ const animation = {
   },
   appear(node, done) {
     return animate(node, true, done);
-  }
+  },
 };
 
 export default animation;
