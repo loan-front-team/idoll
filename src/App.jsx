@@ -5,6 +5,7 @@ import Home from './Home'
 import Collapse from './templates/collapse'
 import Progress from './templates/progress'
 import Select from './templates/select'
+import Layout from './templates/layout'
 
 import './App.css';
 
@@ -15,6 +16,7 @@ const App = () => (
       <Route exact path='/collapse' component={Collapse} />
       <Route exact path='/progress' component={Progress} />
       <Route exact path='/select' component={Select} />
+      <Route exact path='/layout' component={Layout} />
     </div>
   </Router>
 )
