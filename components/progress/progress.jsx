@@ -18,7 +18,7 @@ export default class Progress extends Component {
     showInfo: true,
     trailColor: '#f3f3f3',
     prefixCls: 'idoll-progress',
-    size: 'default'
+    size: 'small'
   };
 
   static propTypes = {
