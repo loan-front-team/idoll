@@ -31,6 +31,7 @@ export default class Progress extends Component {
     trailColor: PropTypes.string,
     format: PropTypes.func,
     gapDegree: PropTypes.number,
+    gapPosition: PropTypes.oneOf(['top', 'bottom', 'left', 'right']),
     default: PropTypes.oneOf(['default', 'small'])
   };
   render() {
@@ -65,7 +66,7 @@ export default class Progress extends Component {
           </div>
         </div>
       </div>)
-    } else if (type === 'circle' || type === 'dashBoard') {
+    } else if (type === 'circle' || type === 'dashboard') {
       const circleSize = width || 120;
       const circleStyle = {
         width: circleSize,
@@ -73,8 +74,8 @@ export default class Progress extends Component {
         fontSize: circleSize * 0.15 + 6
       }
       const circleWidth = strokeWidth || 6;
-      const gapPos = gapPosition || (type === 'dashBoard' && ('bottom' || 'top'));
-      const gapDeg = gapDegree || (type === 'dashBoard' && 75);
+      const gapPos = gapPosition || (type === 'dashboard' && ('bottom' || 'top'));
+      const gapDeg = gapDegree || (type === 'dashboard' && 75);
       progress = (<div className={`${prefixCls}-inner`} style={circleStyle}>
         <Circle percent={percent} strokeWidth={circleWidth} trailWidth={circleWidth} strokeColor={statusColorMap[progressStatus]} trailColor={trailColor} prefixCls={prefixCls} gapDegree={gapDeg} gapPosition={gapPos} />
       </div>);
