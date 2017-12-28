@@ -1,9 +1,13 @@
+# Grid
+
 ---
+
 category: Components
 chinese: 栅格
 type: Basic
 cols: 1
 english: Grid
+
 ---
 
 24 栅格系统。
@@ -16,7 +20,7 @@ english: Grid
 
 ## 概述
 
-```
+```html
 <Row gutter='12' type='flex' align='top' justify='start'>
    <Col span='12' push='2' offset='3' />
 </Row>
