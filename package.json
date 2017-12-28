@@ -15,13 +15,17 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "css-animation": "^1.4.1",
+    "moment": "^2.20.1",
+    "omit": "^1.0.1",
     "prop-types": "^15.6.0",
+    "rc-calendar": "^9.4.0",
     "rc-collapse": "^1.7.7",
     "rc-select": "^7.5.0",
     "react": "^15.6.2",
     "react-dom": "^15.6.2",
     "react-router": "^4.2.0",
-    "react-router-dom": "^4.2.2"
+    "react-router-dom": "^4.2.2",
+    "warning": "^3.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
