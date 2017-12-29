@@ -1,0 +1,117 @@
+@import '../../../style/theme/default/index';
+@import '../../../style/mixins/index';
+
+//size mixins for input
+.input-lg() {
+  padding: @input-padding-vertical-lg @input-padding-horizontal;
+  height: @input-height-lg;
+}
+
+.input-sm {
+  padding: @input-padding-verticle-sm @input-padding-horizontal;
+  height: @input-height-sm;
+  border-radius: @border-radius-sm;
+}
+
+//input status
+// == when focus or actived
+.active(@color: @input-hover-border-color) {
+  border-color: tint(@color, 20%);
+  outline: 0;
+  box-shadow: 0 0 0 2px fade(@color, 20%);
+}
+
+// == when hoverd
+.hover(@color: @input-hover-border-color) {
+  border-color: tint(@color, 20%);
+}
+
+.disabled() {
+  background-color: @input-disabled-bg;
+  opacity: 1;
+  cursor: @cursor-disabled;
+  color: #ccc;
+  &:hover {
+    .hover(@input-border-color);
+  }
+}
+
+// Basic style for input
+.input() {
+  position: relative;
+  display: inline-block;
+  padding: @input-padding-vertical-base @input-padding-horizontal;
+  width: 100%;
+  height: @input-height-base;
+  cursor: text;
+  font-size: @font-size-base;
+  line-height: @line-height-base;
+  color: @input-color;
+  background-color: @input-bg;
+  background-image: none;
+  border: 1px solid @input-border-color;
+  border-radius: @border-radius-base;
+  .placeholder(); //Reset placeholder
+  transition: border .2s @ease-in-out, background .2s @ease-in-out, box-shadow .2s @ease-in-out;
+
+  &:hover {
+    .hover();
+  }
+
+  &:focus {
+    .active();
+  }
+
+  &[disabled],
+  fieldset[disabled] & {
+    .disabled();
+  }
+
+  // reset height for `textarea`s
+  textarea& {
+    max-width: 100%; //prevent textarea resize from coming out o its container
+    height: auto;
+    vertical-align: bottom;
+  }
+
+  // size
+  &-lg {
+    .input-lg();
+  }
+
+  &-sm {
+    .input-sm();
+  }
+}
+
+// Input with icons, you can define @height if you wish change the input size
+.input-width-icon(@height: @input-height-base) {
+  position: relative;
+
+  .@{iconfont-css-prefix} {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    .square(@height);
+    font-size: 14px;
+    line-height: @height;
+    text-align: center;
+    pointer-events: none;
+  }
+}
+
+// label input
+.input-group(@inputClass) {
+  position: relative;
+  display: table;
+  border-collapse: separete;
+  width: 100%;
+
+  //Undo padding and float of grid classes
+  &[class*='col-'] {
+    float: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
