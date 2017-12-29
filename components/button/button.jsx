@@ -7,8 +7,8 @@ import './style/index.js'
 export default class Button extends React.Component {
 	static defaultProps = {
 	    prefixCls: 'idoll-btn',
-	    onClick() {},
-	    loading: false,
+	    ghost: false,
+	    loading: false
   	}
 	static propTypes = {
 	    type: React.PropTypes.string,
@@ -18,7 +18,7 @@ export default class Button extends React.Component {
 	    onClick: React.PropTypes.func,
 	    loading: React.PropTypes.bool,
 	    className: React.PropTypes.string,
-	    icon: React.PropTypes.string,
+	    icon: React.PropTypes.string
 	}
 	componentWillUnmount() {
 		if (this.clickedTimeout) {
@@ -29,9 +29,9 @@ export default class Button extends React.Component {
 		}
 	}
 	clearButton = (button) => {
-		button.className = button.className.replace(`${this.props.prefixCls}-clicked`,'');
+		button.className = button.className.replace(`${this.props.prefixCls}-clicked`, '');
 	}
-	//添加单击效果
+	// 添加单击效果
 	handleClick = (...args) => {
 		const buttonNode = findDOMNode(this);
 		this.clearButton(buttonNode);
@@ -49,8 +49,8 @@ export default class Button extends React.Component {
 	}
 	}
 	render() {
-		const{ type, shape, size, className, htmlType, children, icon, loading, prefixCls, ...others } = this.props;
-		const sizeCls = ({large: 'lg', small: "sm"})[size] || '';
+		const { type, shape, size, className, htmlType, children, icon, loading, ghost, prefixCls, ...others } = this.props;
+		const sizeCls = ({large: 'lg', small: 'sm'})[size] || '';
 		const classes = classNames({
 			[prefixCls]: true,
 			[`${prefixCls}-${type}`]: type,
@@ -58,34 +58,35 @@ export default class Button extends React.Component {
 			[`${prefixCls}-${sizeCls}`]: sizeCls,
 			[`${prefixCls}-icon-only`]: !children && icon,
 			[`${prefixCls}-loading`]: loading,
-			[className]: className,
+			[`${prefixCls}-background-ghost`]: ghost,
+			[className]: className
 
 		})
 
 		const kids = React.Children.map(children, insertSpace)
 		return (
-			<button { ...others } type={ htmlType || 'button' } className={ classes } onMouseUp={ this.handleMouseUp } onClick={ this.handleClick }>
-				{ kids }
-			</button>
+  <button {...others} type={htmlType || 'button'} className={classes} onMouseUp={this.handleMouseUp} onClick={this.handleClick}>
+    { kids }
+  </button>
 			)
 	}
 }
 
-//----------------如果是两个中文字符，则在两个中文字符中自动插入一个空格--------------------------------
+// ----------------如果是两个中文字符，则在两个中文字符中自动插入一个空格--------------------------------
 function insertSpace(child) {
 	if (isString(child.type && isTwoCNChar(child.props.children))) {
 		return React.cloneElement(child, {}, child.props.split('').join(' '));
 	}
 	if (isString(child)) {
-		if (isTwoCNChar(child)) {child = child.split('').join(' ')}
+		if (isTwoCNChar(child)) { child = child.split('').join(' ') }
 		return <span>{child}</span>
 	}
 }
-//判断字符串类型
+// 判断字符串类型
 function isString(str) {
 	return typeof str === 'string';
 }
-//判断是否是两个中文字符
-const rxTwoCNChar =/^[\u4e00-\u9fa5]{2}$/;
+// 判断是否是两个中文字符
+const rxTwoCNChar = /^[\u4e00-\u9fa5]{2}$/;
 const isTwoCNChar = rxTwoCNChar.test.bind(rxTwoCNChar);
-//-------------------------------insertSpace End-----------------------------------------------------
+// -------------------------------insertSpace End-----------------------------------------------------
