@@ -6,6 +6,7 @@ import Collapse from './templates/collapse'
 import Progress from './templates/progress'
 import Select from './templates/select'
 import Layout from './templates/layout'
+import Button from './templates/button'
 
 import './App.css';
 
@@ -17,6 +18,7 @@ const App = () => (
       <Route exact path='/progress' component={Progress} />
       <Route exact path='/select' component={Select} />
       <Route exact path='/layout' component={Layout} />
+      <Route exact path='/button' component={Button} />
     </div>
   </Router>
 )

@@ -10,6 +10,7 @@ function Home() {
         <NavLink className='nav' to='/collapse' activeStyle={{fontWeight: 'bold', color: 'red'}}>collapse</NavLink>
         <NavLink className='nav' to='/progress' activeStyle={{fontWeight: 'bold', color: 'red'}}>progress</NavLink>
         <NavLink className='nav' to='/select' activeStyle={{ fontWeight: 'bold', color: 'red' }}>select</NavLink>
+        <NavLink className='nav' to='/button' activeStyle={{ fontWeight: 'bold', color: 'red' }}>button</NavLink>
       </div>
     );
 }
