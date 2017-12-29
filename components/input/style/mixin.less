@@ -114,4 +114,100 @@
     padding-left: 0;
     padding-right: 0;
   }
+
+  > [class*='col-'] {
+    padding-right: 8px;
+  }
+
+  &-addon,
+  &-wrap,
+  > .@{inputClass} {
+
+    &:not(:first-child):not(:last-child) {
+      border-radius: 0;
+    }
+  }
+
+  &-addon,
+  &-wrap {
+    width: 1%;
+    white-space: nowrap;
+    vertical-align: middle;
+  }
+
+  &-wrap > * {
+    display: block !important;
+  }
+
+  .@{inputClass} {
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  &-addon {
+    padding: @input-padding-verticle-base @input-padding-horizontal;
+    font-size: @font-size-base;
+    font-weight: normal;
+    line-height: 1;
+    color: @input-color;
+    text-align: center;
+    background-color: @input-color;
+    border: 1px solid @input-border-color;
+    border-radius: @border-radius-base;
+
+    // Reset Select's style in addon
+    .idoll-select {
+      margin: -(@input-padding-verticle-base+1) (-@input-padding-horizontal); //lesshint spaceAroundOperator: false
+    
+      .idoll-select-selection {
+        background-color: inherit;
+        border: 0;
+        margin: -1px;
+        border: 1px solid transparent;
+      }
+
+      &-open,
+      &-focused {
+        .idoll-select-selection {
+          border-color: tint(@primary-color, 20%);
+        }
+      }
+    }
+  }
+
+  //Reset rounded corners
+  > span > .@{inputClass}:first-child,
+  > .@{inputClass}:first-child,
+  &-addon:first-child {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+
+    //Reset Select's style in addon
+    .idoll-select .idoll-select-selection {
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+    }
+  }
+
+  &-addon:first-child {
+    border-right: 0;
+  }
+  &-addon:last-child {
+    border-left: 0;
+  }
+
+  > .@{inputClass}:last-child,
+  &-addon:last-child {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+  }
+
+  // Sizing options
+  &-lg .@{inputClass},
+  &-lg > &-addon {
+    .input-sm();
+  }
 }
