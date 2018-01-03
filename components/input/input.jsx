@@ -43,7 +43,7 @@ export default class Input extends Component {
 
   static propTypes = {
     type: PropTypes.string,
-    id: PropTypes.onOfType([
+    id: PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.number
     ]),
@@ -100,7 +100,7 @@ export default class Input extends Component {
 
   resizeTextarea = () => {
     const { type, autosize } = this.props;
-    if (type !== 'textarea' || !autosize || !this.refs.input ) {
+    if (type !== 'textarea' || !autosize || !this.refs.input) {
       return;
     }
     const minRows = autosize ? autosize.minRows : null;
@@ -109,7 +109,7 @@ export default class Input extends Component {
     this.setStates({ textareaStyles });
   }
 
-  renderLabledInput(children) {
+  renderLabelInput(children) {
     const props = this.props;
     const wrapperClassName = `${props.prefixcls}-group`;
     const addonClassName = `${wrapperClassName}-addon`;
@@ -144,7 +144,7 @@ export default class Input extends Component {
 
     // Fix https://fb.me/react-unknown-prop
     const otherProps = omit(this.props, [
-      'profixCls',
+      'prefixCls',
       'onPressEnter',
       'autosize',
       'addonBefore',
@@ -188,7 +188,7 @@ export default class Input extends Component {
           return (
             <input
               {...otherProps}
-              className={inputClassName}
+              className={'idoll-input'}
               onKeyDown={this.handleKeyDown}
               ref='input'
             />

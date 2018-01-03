@@ -6,6 +6,7 @@ import MainLayout from './templates/layout'
 import Collapse from './templates/collapse'
 import Select from './templates/select'
 import Button from './templates/button'
+import Input from './templates/input'
 
 
 import './App.css';
@@ -18,7 +19,7 @@ const App = () => (
       <Route exact path='/collapse' component={Collapse} />
       <Route exact path='/select' component={Select} />
       <Route exact path='/button' component={Button} />
-
+      <Route exact path='/input' component={Input} />
     </div>
   </Router>
   )
