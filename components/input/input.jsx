@@ -31,7 +31,7 @@ function clearNextFrameAction(nextFrameId) {
 
 export default class Input extends Component {
   static defaultProps = {
-    dafaultValue: '',
+    defaultValue: '',
     disabled: false,
     prefixCls: 'idoll-input',
     type: 'text',
@@ -54,7 +54,7 @@ export default class Input extends Component {
     className: PropTypes.string,
     addonBefore: PropTypes.node,
     addonAfter: PropTypes.node,
-    prefixcls: PropTypes.string,
+    prefixCls: PropTypes.string,
     autosize: PropTypes.oneOfType([
       PropTypes.bool,
       PropTypes.object
@@ -111,7 +111,7 @@ export default class Input extends Component {
 
   renderLabelInput(children) {
     const props = this.props;
-    const wrapperClassName = `${props.prefixcls}-group`;
+    const wrapperClassName = `${props.prefixCls}-group`;
     const addonClassName = `${wrapperClassName}-addon`;
     const addonBefore = props.addonBefore ? (
       <span className={addonClassName}>
@@ -126,10 +126,10 @@ export default class Input extends Component {
     ) : null;
 
     const className = classNames({
-      [`${props.prefixcls}-wrapper`]: true,
+      [`${props.prefixCls}-wrapper`]: true,
       [wrapperClassName]: (addonBefore || addonAfter)
     });
-
+    console.log(children);
     return (
       <span className={className}>
         {addonBefore}
@@ -151,7 +151,7 @@ export default class Input extends Component {
       'addonAfter'
     ]);
 
-    const prefixCls = props.prefixcls;
+    const prefixCls = props.prefixCls;
     if (!props.type) {
       return props.children;
     }
@@ -168,32 +168,31 @@ export default class Input extends Component {
       // Input elements must be either controlled or uncontrolled,
       // specify either the value prop, or the defaultValue props, but no both
       delete otherProps.defaultValue;
-
-      switch (props.type) {
-        case 'textarea':
-          return (
-            <textarea
-              {...otherProps}
-              style={{
-                  ...props.style,
-                  ...this.state.textareaStyles
-              }}
-              className={inputClassName}
-              onKeyDown={this.handleKeyDown}
-              onChange={this.handleTextareaChange}
-              ref='input'
-            />
-          );
-        default:
-          return (
-            <input
-              {...otherProps}
-              className={'idoll-input'}
-              onKeyDown={this.handleKeyDown}
-              ref='input'
-            />
+    }
+    switch (props.type) {
+      case 'textarea':
+        return (
+          <textarea
+            {...otherProps}
+            style={{
+                ...props.style,
+                 ...this.state.textareaStyles
+            }}
+            className={inputClassName}
+            onKeyDown={this.handleKeyDown}
+            onChange={this.handleTextareaChange}
+            ref='input'
+          />
         );
-      }
+      default:
+        return (
+          <input
+            {...otherProps}
+            className={inputClassName}
+            onKeyDown={this.handleKeyDown}
+            ref='input'
+          />
+      );
     }
   }
 
