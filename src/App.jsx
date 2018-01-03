@@ -6,6 +6,8 @@ import MainLayout from './templates/layout'
 import Collapse from './templates/collapse'
 import Select from './templates/select'
 import Alert from './templates/alert'
+import Button from './templates/button'
+import message from './templates/message'
 
 import './App.css';
 
@@ -16,7 +18,9 @@ const App = () => (
       <Route exact path='/layout' component={MainLayout} />
       <Route exact path='/collapse' component={Collapse} />
       <Route exact path='/select' component={Select} />
-	    <Route exact path='/alert' component={Alert} />
+      <Route exact path='/alert' component={Alert} />
+      <Route exact path='/button' component={Button} />
+      <Route exact path='/message' component={message} />
     </div>
   </Router>
   )

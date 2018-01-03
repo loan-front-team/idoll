@@ -2,13 +2,13 @@
 import * as React from 'react';
 import Notification from 'rc-notification';
 // import Icon from '../icon';
+import style from './style/index';
 
 let defaultDuration = 3;
 let defaultTop;
 let messageInstance;
 let key = 1;
 let prefixCls = 'idoll-message';
-let getContainer;
 
 function getMessageInstance(callback) {
   if (messageInstance) {
@@ -18,8 +18,8 @@ function getMessageInstance(callback) {
   Notification.newInstance({
     prefixCls,
     transitionName: 'move-up',
-    style: { top: defaultTop },
-    getContainer
+    style: { top: defaultTop }
+    // getContainer
   }, (instance) => {
     if (messageInstance) {
       callback(messageInstance);
@@ -52,7 +52,7 @@ function notice(content, duration = defaultDuration, type, onClose) {
       style: {},
       content: (
         <div className={`${prefixCls}-custom-content ${prefixCls}-${type}`}>
-          <Icon type={iconType} />
+          {/* <Icon type={iconType} /> */}
           <span>{content}</span>
         </div>
       ),
@@ -68,7 +68,7 @@ function notice(content, duration = defaultDuration, type, onClose) {
 
 export default {
   info(content, duration, onClose) {
-    return notice(content, duration, 'info', onClose)
+    return notice(content, duration, 'info', onClose);
   },
   success(content, duration, onClose) {
     return notice(content, duration, 'success', onClose)
@@ -96,9 +96,6 @@ export default {
     }
     if (options.prefixCls !== undefined) {
       prefixCls = options.prefixCls;
-    }
-    if (options.getContainer !== undefined) {
-      getContainer = options.getContainer;
     }
   },
   destroy() {
