@@ -5,12 +5,37 @@ import './style'
 
 function Home() {
   	return (
-    <div>
-      <NavLink className='nav' to='/layout' activeStyle={{ fontWeight: 'bold', color: 'red' }}>layout</NavLink>
-      <NavLink className='nav' to='/collapse' activeStyle={{ fontWeight: 'bold', color: 'red' }}>collapse</NavLink>
-      <NavLink className='nav' to='/select' activeStyle={{ fontWeight: 'bold', color: 'red' }}>select</NavLink>
-      <NavLink className='nav' to='/radio' activeStyle={{ fontWeight: 'bold', color: 'red' }}>radio</NavLink>
-      <NavLink className='nav' to='/button' activeStyle={{ fontWeight: 'bold', color: 'red' }}>button</NavLink>
+    <div className='widget-list'>
+      <div className='header'><h1>Dbox UI</h1></div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/layout' activeStyle={{ fontWeight: 'bold', color: 'red' }}>
+          <div className='name'>布局</div>
+          <div className='info'>layout</div>
+        </NavLink>
+      </div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/collapse' activeStyle={{ fontWeight: 'bold', color: 'red' }}>
+          <div className='name'>折叠面板</div>
+          <div className='info'>collapse</div>
+        </NavLink>
+      </div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/select' activeStyle={{ fontWeight: 'bold', color: 'red' }}>
+          <div className='name'>选择器</div>
+          <div className='info'>select</div>
+        </NavLink>
+      </div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/button' activeStyle={{ fontWeight: 'bold', color: 'red' }}>
+          <div className='name'>按钮</div>
+          <div className='info'>button</div>
+        </NavLink>
+      </div><div className='widget-item'>
+        <NavLink className='widget-wrap' to='/radio' activeStyle={{ fontWeight: 'bold', color: 'red' }}>
+          <div className='name'>单选框</div>
+          <div className='info'>radio</div>
+        </NavLink>
+      </div>
     </div>
 );
 }
