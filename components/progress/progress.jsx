@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import React, { Component} from 'react'
+import React, { Component } from 'react'
 // import Icon from '../icon'
 import { Circle } from 'rc-progress'
 import classNames from 'classnames'
@@ -42,7 +42,7 @@ export default class Progress extends Component {
     // let progressInfo;
     let progress;
     // const textFormatter = format || (percentNumber => `${percentNumber}%`);
-    if (showInfo) {
+    // if (showInfo) {
       // let text;
       // const iconType = (type === 'circle' || type === 'dashboard') ? '' : '-circle';
       // if (progressStatus === 'exception') {
@@ -53,7 +53,7 @@ export default class Progress extends Component {
       //   text = textFormatter(percent);
       // }
       // progressInfo = <span className={`${prefixCls}-text`} >{text}</span>;
-    }
+    // }
     if (type === 'line') {
       const percentStyle = {
         width: `${percent}%`,
