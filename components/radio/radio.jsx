@@ -23,8 +23,8 @@ export default class Radio extends React.Component {
     this.rcCheckbox.blur();
   }
   render() {
-    console.info(this.props);
-    console.info(this.context);
+    // console.info(this.props);
+    // console.info(this.context);
     const { props, context } = this;
     const { prefixCls, className, children, style, ...restProps } = props;
     const { radioGroup } = context;

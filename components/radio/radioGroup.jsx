@@ -20,16 +20,93 @@ function getCheckedValue(children) {
 export default class RadioGroup extends React.Component {
   constructor(props) {
     super(props);
-    this.onRadioChange = (ev) => {
-      const lastValue = this.state.value;
-      const { value } = ev.target;
-      if (!('value' in this.props)) {
+    let value;
+    if ('value' in props) {
+      value = props.value;
+    } else if ('defaultValue' in props) {
+      value = props.defaultValue;
+    } else {
+      const checkedValue = getCheckedValue(props.children);
+      value = checkedValue && checkedValue.value;
+    }
+    this.state = {
+      value
+    }
+  }
+  getChildContext() {
+    return {
+      radioGroup: {
+        onChange: this.onRadioChange,
+        value: this.state.value,
+        disabled: this.props.disabled,
+        name: this.props.name
+      }
+    }
+  }
+  componentWillReceiveProps(nextProps) {
+    if ('value' in nextProps) {
+      this.setState({
+        value: nextProps.value
+      })
+    } else {
+      const checkedValue = getCheckedValue(nextProps.children);
+      if (checkedValue) {
         this.setState({
-          value
+          value: checkedValue
         })
       }
     }
   }
+  shouldComponentUpdate(nextProps, nextState) {
+    return !shallowEqual(this.peops, nextProps) ||
+      !shallowEqual(this.state, nextState);
+  }
+  onRadioChange = (ev) => {
+    const lastValue = this.state.value;
+    const { value } = ev.target;
+    if (!('value' in this.props)) {
+      this.setState({
+        value
+      })
+    }
+    const onChange = this.props.onChange;
+    if (onChange && value !== lastValue) {
+      onChange(ev);
+    }
+  }
+  render() {
+    const props = this.props;
+    const { prefixCls = 'idoll-radio-group', className = '', options, ...restProps } = props;
+    const classString = classNames(prefixCls, {
+      [`${prefixCls}-${props.size}`]: props.size
+    }, className);
+    let children = props.children;
+    if (options && options.length > 0) {
+      children = options.map((option, index) => {
+        if (typeof option === 'string') {
+          return (<Radio key={index} disabled={this.props.disabled} value={option} onChange={this.onRadioChange} checked={this.state.value === option.value} >
+            {option}
+          </Radio>)
+        } else {
+          return (
+            <Radio key={index} disabled={option.disabled || this.props.disabled} value={option.value} onChange={this.onRadioChange} checked={this.state.value === option.value}>
+              {option.label}
+            </Radio>
+          )
+        }
+      })
+    }
+    return (<div className={classString} style={props.style} onMouseEnter={props.onMouseEnter} onMouseLeave={props.onMouseLeave} id={props.id} >
+      {children}
+    </div>)
+  }
 }
 
+RadioGroup.defaultProps = {
+  disabled: false
+}
+
+RadioGroup.childContextTypes = {
+  radioGroup: PropTypes.any
+}
 
