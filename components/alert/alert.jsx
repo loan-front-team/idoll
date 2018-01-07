@@ -39,7 +39,7 @@ export default class Alert extends React.Component {
   render() {
     let {
       closable, description, type, prefixCls = 'idoll-alert', message, closeText, showIcon, banner,
-      className = '', style,
+      className = '', style
     } = this.props;
     // banner模式默认有Icon
     showIcon = banner && showIcon === undefined ? true : showIcon;
@@ -62,7 +62,7 @@ export default class Alert extends React.Component {
     }
 
     // use outline icon in alert with description
-    if (!!description) {
+    if (description) {
       iconType += '-o';
     }
 
@@ -87,10 +87,10 @@ export default class Alert extends React.Component {
 
     return this.state.closed ? null : (
       <Animate
-      component=""
-      showProp="data-show"
-      transitionName={`${prefixCls}-slide-up`}
-      onEnd={this.animationEnd}
+        component=''
+        showProp='data-show'
+        transitionName={`${prefixCls}-slide-up`}
+        onEnd={this.animationEnd}
       >
         <div data-show={this.state.closing} className={alertCls} style={style}>
           {showIcon ? <Icon className={`${prefixCls}-icon`} type={iconType} /> : null}

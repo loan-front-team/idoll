@@ -8,17 +8,17 @@ const onClose = function (e) {
 export default class AlertView extends React.Component {
   render() {
     return (
-      <div id="main-container">
+      <div id='main-container'>
         <Alert
-        message="warning Text Warning Text Warning TextW arning Text Warning Text Warning TextWarning Text"
-        type="warning"
-        closable
-        onClose={onClose}
+          message='warning Text Warning Text Warning TextW arning Text Warning Text Warning TextWarning Text'
+          type='warning'
+          closable
+          onClose={onClose}
         />
-        <Alert 
-          message="Error Text"
-          description="Error Description Error Description Error Description Error Description Error Description Error Description"
-          type="error"
+        <Alert
+          message='Error Text'
+          description='Error Description Error Description Error Description Error Description Error Description Error Description'
+          type='error'
           closeable
           onClose={onClose}
         />
