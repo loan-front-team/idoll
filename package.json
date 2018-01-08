@@ -20,6 +20,7 @@
     "prop-types": "^15.6.0",
     "rc-calendar": "^9.4.0",
     "rc-collapse": "^1.7.7",
+    "rc-progress": "^2.2.5",
     "rc-select": "^7.5.0",
     "react": "^15.6.2",
     "react-dom": "^15.6.2",
