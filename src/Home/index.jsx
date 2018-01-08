@@ -61,6 +61,12 @@ function Home() {
           <div className='info'>switch</div>
         </NavLink>
       </div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/input'>
+          <div className='name'>输入框</div>
+          <div className='info'>input</div>
+        </NavLink>
+      </div>
     </div>
   );
 }
