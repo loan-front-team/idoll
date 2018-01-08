@@ -56,12 +56,19 @@ function Home() {
           </NavLink>
         </div>
         <div className='widget-item'>
-          <NavLink className='widget-wrap' to='/message'>
+          <NavLink className='widget-wrap' to='/switch'>
             <div className='name'>switch开关</div>
             <div className='info'>switch</div>
           </NavLink>
         </div>
       </div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/input'>
+          <div className='name'>输入框</div>
+          <div className='info'>input</div>
+        </NavLink>
+      </div>
+    </div>
   );
 }
 export default Home;
