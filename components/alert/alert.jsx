@@ -4,7 +4,7 @@ import Animate from 'rc-animate';
 import classNames from 'classnames';
 // import Icon from '../icon';
 import PropTypes from 'prop-types';
-import styles from './style/index';
+import './style/index';
 
 function noop() {}
 
@@ -46,25 +46,25 @@ export default class Alert extends React.Component {
     // banner模式默认警告
     type = banner && type === undefined ? 'warning' : type || 'info';
 
-    let iconType = '';
-    switch (type) {
-      case 'success':
-        iconType = 'check-circle';
-        break;
-      case 'info':
-        iconType = 'info-circle';
-        break;
-      case 'error':
-        iconType = 'cross-circle';
-        break;
-      default:
-        iconType = 'default';
-    }
+    // let iconType = '';
+    // switch (type) {
+    //   case 'success':
+    //     iconType = 'check-circle';
+    //     break;
+    //   case 'info':
+    //     iconType = 'info-circle';
+    //     break;
+    //   case 'error':
+    //     iconType = 'cross-circle';
+    //     break;
+    //   default:
+    //     iconType = 'default';
+    // }
 
     // use outline icon in alert with description
-    if (description) {
-      iconType += '-o';
-    }
+    // if (description) {
+    //   iconType += '-o';
+    // }
 
     let alertCls = classNames(prefixCls, {
       [`${prefixCls}-${type}`]: true,
@@ -93,7 +93,7 @@ export default class Alert extends React.Component {
         onEnd={this.animationEnd}
       >
         <div data-show={this.state.closing} className={alertCls} style={style}>
-          {showIcon ? <Icon className={`${prefixCls}-icon`} type={iconType} /> : null}
+          {/* {showIcon ? <Icon className={`${prefixCls}-icon`} type={iconType} /> : null} */}
           <span className={`${prefixCls}-message`}>{message}</span>
           <span className={`${prefixCls}-description`}>{description}</span>
           {closeIcon}
@@ -103,7 +103,7 @@ export default class Alert extends React.Component {
   }
 }
 
-Alert.PropTypes = {
+Alert.propTypes = {
   closable: PropTypes.bool,
   description: PropTypes.node,
   type: PropTypes.oneOf(['success', 'info', 'warning', 'error']),
@@ -111,5 +111,8 @@ Alert.PropTypes = {
   closeText: PropTypes.node,
   showIcon: PropTypes.bool,
   banner: PropTypes.bool,
-  style: PropTypes.object
+  style: PropTypes.object,
+  prefixCls: PropTypes.string,
+  className: PropTypes.string,
+  onClose: PropTypes.func
 }

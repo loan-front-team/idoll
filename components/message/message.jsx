@@ -2,7 +2,7 @@
 import * as React from 'react';
 import Notification from 'rc-notification';
 // import Icon from '../icon';
-import style from './style/index';
+import './style/index';
 
 let defaultDuration = 3;
 let defaultTop;
@@ -31,13 +31,13 @@ function getMessageInstance(callback) {
 }
 
 function notice(content, duration = defaultDuration, type, onClose) {
-  let iconType = ({
-    infor: 'info-circle',
-    success: 'check-circle',
-    error: 'cross-circles',
-    warning: 'exclamation-circle',
-    loading: 'loading'
-  })[type];
+  // let iconType = ({
+  //   infor: 'info-circle',
+  //   success: 'check-circle',
+  //   error: 'cross-circles',
+  //   warning: 'exclamation-circle',
+  //   loading: 'loading'
+  // })[type];
 
   if (typeof duration === 'function') {
     onClose = duration;
