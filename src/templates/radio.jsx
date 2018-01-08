@@ -24,7 +24,7 @@ export default class RadioView extends React.Component {
     return (
       <div id='main-container'>
         <h1 className='h1'>通用单选框</h1>
-        <Radio />  世界很大
+        <Radio autoFocus={false} />  世界很大
         <h1 className='h1'>禁用单选框</h1>
         <div>
           <Radio defaultChecked={false} disabled={'true'} >Disabled</Radio>
@@ -44,7 +44,7 @@ export default class RadioView extends React.Component {
           <Radio value={4}>D</Radio>
         </RadioGroup>
         <h1 className='h1'>按钮单选框</h1>
-        <RadioGroup defaultValue='a' size='small'>
+        <RadioGroup defaultValue='a' size='large'>
           <RadioButton value='a'>杭州</RadioButton>
           <RadioButton value='b'>上海</RadioButton>
           <RadioButton value='c'>北京</RadioButton>

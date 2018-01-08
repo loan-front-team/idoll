@@ -135,17 +135,6 @@ span.@{radio-prefix-cls} + * {
   padding-right: 8px;
 }
 
-.@{radio-group-prefix-cls}-large {
-  height: @input-height-lg;
-  line-height: @input-height-lg - 2px;
-}
-
-.@{radio-group-prefix-cls}-small {
-  height: @input-height-sm;
-  line-height: @input-height-sm - 2px;
-  padding: 0 @control-padding-horizontal-sm - 1px;
-}
-
 .@{radio-prefix-cls}-button-wrapper {
   margin: 0;
   height: @btn-height-base;
@@ -169,6 +158,17 @@ span.@{radio-prefix-cls} + * {
     display: block;
     width: 0;
     height: 0;
+  }
+
+  .@{radio-group-prefix-cls}-large & {
+    height: @input-height-lg;
+    line-height: @input-height-lg - 2px;
+  }
+
+  .@{radio-group-prefix-cls}-small & {
+    height: @input-height-sm;
+    line-height: @input-height-sm - 2px;
+    padding: 0 @control-padding-horizontal-sm - 1px;
   }
 
   &:not(:first-child) {

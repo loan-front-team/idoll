@@ -4,6 +4,7 @@ import Radio from './radio'
 
 export default class RadioButton extends React.Component {
   render() {
+    // console.info(this.props);
     const radioProps = Object.assign({}, this.props);
     if (this.context.radioGroup) {
       radioProps.onChange = this.context.radioGroup.onChange;
