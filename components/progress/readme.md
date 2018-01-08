@@ -1,4 +1,4 @@
-#progress
+# progress
 
 ---
 category: Components
