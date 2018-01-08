@@ -5,6 +5,7 @@ import Home from './Home'
 import Collapse from './templates/collapse'
 import Progress from './templates/progress'
 import Select from './templates/select'
+import Switch from './templates/switch';
 import Alert from './templates/alert'
 import Button from './templates/button'
 import message from './templates/message'
@@ -20,6 +21,7 @@ const App = () => (
       <Route exact path='/collapse' component={Collapse} />
       <Route exact path='/progress' component={Progress} />
       <Route exact path='/select' component={Select} />
+      <Route exact path='/switch' component={Switch} />
       <Route exact path='/alert' component={Alert} />
       <Route exact path='/button' component={Button} />
       <Route exact path='/message' component={message} />

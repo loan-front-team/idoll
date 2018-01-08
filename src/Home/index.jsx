@@ -5,17 +5,6 @@ import './style'
 
 function Home() {
   	return (
-    <div>
-      <div>
-        <NavLink className='nav' to='/layout' activeStyle={{ fontWeight: 'bold', color: 'red' }}>layout</NavLink>
-        <NavLink className='nav' to='/collapse' activeStyle={{ fontWeight: 'bold', color: 'red' }}>collapse</NavLink>
-        <NavLink className='nav' to='/select' activeStyle={{ fontWeight: 'bold', color: 'red' }}>select</NavLink>
-        <NavLink className='nav' to='/button' activeStyle={{ fontWeight: 'bold', color: 'red' }}>button</NavLink>
-        <NavLink className='nav' to='/alert' activeStyle={{ fontWeight: 'bold', color: 'red' }}>alert</NavLink>
-        <NavLink className='nav' to='/radio' activeStyle={{ fontWeight: 'bold', color: 'red' }}>radio</NavLink>
-        <NavLink className='nav' to='/progress' activeStyle={{ fontWeight: 'bold', color: 'red' }}>progress</NavLink>
-        <NavLink className='nav' to='/message' activeStyle={{ fontWeight: 'bold', color: 'red' }}>message</NavLink>
-      </div>
       <div className='widget-list'>
         <div className='header'><h1>Dbox UI</h1></div>
         <div className='widget-item'>
@@ -66,8 +55,13 @@ function Home() {
             <div className='info'>message</div>
           </NavLink>
         </div>
+        <div className='widget-item'>
+          <NavLink className='widget-wrap' to='/message'>
+            <div className='name'>switch开关</div>
+            <div className='info'>switch</div>
+          </NavLink>
+        </div>
       </div>
-    </div>
   );
 }
 export default Home;
