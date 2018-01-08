@@ -27,7 +27,7 @@ export default class RadioView extends React.Component {
         <Radio autoFocus={false} />  世界很大
         <h1 className='h1'>禁用单选框</h1>
         <div>
-          <Radio defaultChecked={false} disabled={'true'} >Disabled</Radio>
+          <Radio defaultChecked={false} disabled={true} >Disabled</Radio>
           <br />
           <Radio disabled={this.state.disabled}>Disabled</Radio>
           <div style={{ marginTop: 20 }}>
