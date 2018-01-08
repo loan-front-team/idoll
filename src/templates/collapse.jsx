@@ -22,9 +22,7 @@ const text = `
   Known for its loyalty and faithfulness,
   it can be found as a welcome guest in many households across the world.
 `;
-export default class CollapseView extends React.Component {
-	render() {
-		return (
+export default () => (
   <div id='main-container'>
     <h1 className='h1'>折叠面板</h1>
     <Collapse defaultActiveKey={['1']} onChange={callback}>
@@ -64,7 +62,5 @@ export default class CollapseView extends React.Component {
     </Collapse>
   </div>
 			)
-		}
-}
 
 
