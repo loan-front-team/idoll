@@ -31,6 +31,12 @@ function Home() {
           <div className='info'>button</div>
         </NavLink>
       </div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/dropdown'>
+          <div className='name'>下拉菜单</div>
+          <div className='info'>dropdown</div>
+        </NavLink>
+      </div>
     </div>
   			);
 }
