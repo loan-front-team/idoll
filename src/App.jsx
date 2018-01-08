@@ -5,7 +5,6 @@ import Home from './Home'
 import MainLayout from './templates/layout'
 import Collapse from './templates/collapse'
 import Select from './templates/select'
-import Tag from './templates/tag';
 import Switch from './templates/switch';
 
 import './App.css';
@@ -17,7 +16,6 @@ const App = () => (
       <Route exact path='/layout' component={MainLayout} />
       <Route exact path='/collapse' component={Collapse} />
       <Route exact path='/select' component={Select} />
-      <Route exact path='/tag' component={Tag} />
       <Route exact path='/switch' component={Switch} />
     </div>
   </Router>
