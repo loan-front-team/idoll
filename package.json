@@ -53,6 +53,7 @@
     "less": "^2.7.3",
     "less-loader": "^4.0.5",
     "rc-collapse": "^1.7.7",
+    "rc-notification": "^3.0.0",
     "rc-progress": "^2.2.5",
     "rc-select": "^7.5.0",
     "react-hot-loader": "^3.1.3",
