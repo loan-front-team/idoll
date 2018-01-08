@@ -1,19 +1,19 @@
 @import '../../../style/theme/default/index';
 @import '../../../style/mixins/index';
 
-//size mixins for input
+// size mixins for input
 .input-lg() {
   padding: @input-padding-vertical-lg @input-padding-horizontal;
   height: @input-height-lg;
 }
 
-.input-sm {
+.input-sm() {
   padding: @input-padding-vertical-sm @input-padding-horizontal;
   height: @input-height-sm;
   border-radius: @border-radius-sm;
 }
 
-//input status
+// input status
 // == when focus or actived
 .active(@color: @input-hover-border-color) {
   border-color: tint(@color, 20%);
@@ -37,7 +37,7 @@
 }
 
 // Basic style for input
-.input() {
+.input() { 
   position: relative;
   display: inline-block;
   padding: @input-padding-vertical-base @input-padding-horizontal;
@@ -51,7 +51,7 @@
   background-image: none;
   border: 1px solid @input-border-color;
   border-radius: @border-radius-base;
-  .placeholder(); //Reset placeholder
+  .placeholder(); // Reset placeholder
   transition: border .2s @ease-in-out, background .2s @ease-in-out, box-shadow .2s @ease-in-out;
 
   &:hover {
@@ -64,17 +64,17 @@
 
   &[disabled],
   fieldset[disabled] & {
-    .disabled();
+   .disabled();
   }
 
-  // reset height for `textarea`s
+  // Reset height for `textarea`s
   textarea& {
-    max-width: 100%; //prevent textarea resize from coming out o its container
+    max-width: 100%; // prevent textearea resize from coming out of its container
     height: auto;
     vertical-align: bottom;
   }
 
-  // size
+  // Size
   &-lg {
     .input-lg();
   }
@@ -84,8 +84,8 @@
   }
 }
 
-// Input with icons, you can define @height if you wish change the input size
-.input-width-icon(@height: @input-height-base) {
+// Input with icons, you can define @height if you wish to change the input size
+.input-with-icon(@height: @input-height-base) {
   position: relative;
 
   .@{iconfont-css-prefix} {
@@ -105,27 +105,36 @@
 .input-group(@inputClass) {
   position: relative;
   display: table;
-  border-collapse: separete;
+  border-collapse: separate;
+  border: 1px solid @input-border-color;
+  border-radius: @border-radius-base;
   width: 100%;
 
-  //Undo padding and float of grid classes
-  &[class*='col-'] {
+  // Undo padding and float of grid classes
+  &[class*="col-"] {
     float: none;
     padding-left: 0;
     padding-right: 0;
   }
 
-  > [class*='col-'] {
+  > [class*="col-"] {
     padding-right: 8px;
+  }
+  
+  &:hover {
+    .hover();
   }
 
   &-addon,
   &-wrap,
   > .@{inputClass} {
+    display: table-cell;
 
     &:not(:first-child):not(:last-child) {
       border-radius: 0;
     }
+    border: 0;
+    box-shadow: none;
   }
 
   &-addon,
@@ -154,14 +163,14 @@
     line-height: 1;
     color: @input-color;
     text-align: center;
-    background-color: @input-color;
-    border: 1px solid @input-border-color;
+    background-color: @input-addon-bg;
+    // border: 1px solid @input-border-color;
     border-radius: @border-radius-base;
 
     // Reset Select's style in addon
     .idoll-select {
-      margin: -(@input-padding-vertical-base+1) (-@input-padding-horizontal); //lesshint spaceAroundOperator: false
-    
+      margin: -(@input-padding-vertical-base + 1) (-@input-padding-horizontal);  // lesshint spaceAroundOperator: false
+
       .idoll-select-selection {
         background-color: inherit;
         border: 0;
@@ -171,21 +180,21 @@
 
       &-open,
       &-focused {
-        .idoll-select-selection {
+        .ant-select-selection {
           border-color: tint(@primary-color, 20%);
         }
       }
     }
   }
 
-  //Reset rounded corners
+  // Reset rounded corners
   > span > .@{inputClass}:first-child,
   > .@{inputClass}:first-child,
   &-addon:first-child {
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
 
-    //Reset Select's style in addon
+    // Reset Select's style in addon
     .idoll-select .idoll-select-selection {
       border-bottom-right-radius: 0;
       border-top-right-radius: 0;
@@ -203,11 +212,22 @@
   &-addon:last-child {
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
+
+    // Reset Select's style in addon
+    .idoll-select .idoll-select-selection {
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+    }
   }
 
   // Sizing options
   &-lg .@{inputClass},
   &-lg > &-addon {
+    .input-lg();
+  }
+
+  &-sm .@{inputClass},
+  &-sm > &-addon {
     .input-sm();
   }
 }
