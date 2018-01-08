@@ -36,6 +36,12 @@ function Home() {
           <div className='info'>radio</div>
         </NavLink>
       </div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/progress'>
+          <div className='name'>进度条</div>
+          <div className='info'>progress</div>
+        </NavLink>
+      </div>
     </div>
 );
 }
