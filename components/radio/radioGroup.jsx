@@ -16,6 +16,13 @@ function getCheckedValue(children) {
 }
 
 export default class RadioGroup extends React.Component {
+  static defaultProps = {
+    disabled: false
+  }
+
+  static childContextTypes = {
+    radioGroup: PropTypes.any
+  }
   constructor (props) {
     super(props);
     let value;
@@ -62,13 +69,11 @@ export default class RadioGroup extends React.Component {
   onRadioChange = (ev) => {
     const lastValue = this.state.value;
     const { value } = ev.target;
-    // console.info(value);
     if (!('value' in this.props)) {
       this.setState({
         value
       })
     }
-    // console.info(this.state);
     const onChange = this.props.onChange;
     if (onChange && value !== lastValue) {
       onChange(ev);
@@ -76,7 +81,6 @@ export default class RadioGroup extends React.Component {
   }
   render() {
     const props = this.props;
-    console.info(props);
     const { prefixCls = 'idoll-radio-group', className = '', options } = props;
     const classString = classNames(prefixCls, {
       [`${prefixCls}-${props.size}`]: props.size
@@ -107,13 +111,7 @@ export default class RadioGroup extends React.Component {
   }
 }
 
-RadioGroup.defaultProps = {
-  disabled: false
-}
 
-RadioGroup.childContextTypes = {
-  radioGroup: PropTypes.any
-}
 
 
 

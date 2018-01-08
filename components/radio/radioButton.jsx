@@ -3,8 +3,13 @@ import PropTypes from 'prop-types'
 import Radio from './radio'
 
 export default class RadioButton extends React.Component {
+  static defaultProps = {
+    prefixCls: 'idoll-radio-button'
+  }
+  static contextTypes = {
+    radioGroup: PropTypes.any
+  }
   render() {
-    // console.info(this.props);
     const radioProps = Object.assign({}, this.props);
     if (this.context.radioGroup) {
       radioProps.onChange = this.context.radioGroup.onChange;
@@ -15,10 +20,3 @@ export default class RadioButton extends React.Component {
   }
 }
 
-RadioButton.defaultProps = {
-  prefixCls: 'idoll-radio-button'
-}
-
-RadioButton.contextTypes = {
-  radioGroup: PropTypes.any
-}

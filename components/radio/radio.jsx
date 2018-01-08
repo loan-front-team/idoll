@@ -5,6 +5,14 @@ import classNames from 'classnames'
 import shallowEqual from 'shallowequal'
 import './style/index.js'
 export default class Radio extends React.Component {
+  static defaultProps = {
+    prefixCls: 'idoll-radio',
+    type: 'radio'
+  }
+
+  static contextTypes = {
+    radioGroup: PropTypes.any
+  }
   constructor() {
     super(...arguments);
     this.saveCheckbox = (node) => {
@@ -23,8 +31,6 @@ export default class Radio extends React.Component {
     this.rcCheckbox.blur();
   }
   render() {
-    // console.info(this.props);
-    // console.info(this.context);
     const { props, context } = this;
     const { prefixCls, className, children, style, ...restProps } = props;
     const { radioGroup } = context;
@@ -49,11 +55,4 @@ export default class Radio extends React.Component {
   }
 }
 
-Radio.defaultProps = {
-  prefixCls: 'idoll-radio',
-  type: 'radio'
-}
 
-Radio.contextTypes = {
-  radioGroup: PropTypes.any
-}
