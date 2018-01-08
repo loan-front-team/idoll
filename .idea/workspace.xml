@@ -14,7 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+<<<<<<< HEAD
       <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
+=======
+      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
+>>>>>>> 337963524cdd35dd858dd43123a2f86b367372e9
         <entry file="file://$PROJECT_DIR$/src/index.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="416">
@@ -24,6 +28,19 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+=======
+      <file leaf-file-name="index.jsx" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Home/index.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="559">
+              <caret line="39" column="2" lean-forward="true" selection-start-line="39" selection-start-column="2" selection-end-line="39" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+>>>>>>> 337963524cdd35dd858dd43123a2f86b367372e9
     </leaf>
   </component>
   <component name="FindInProjectRecents">
@@ -112,6 +129,7 @@
               <item name="idoll" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
+<<<<<<< HEAD
             <path>
               <item name="idoll" type="b2602c69:ProjectViewProjectNode" />
               <item name="idoll" type="462c0819:PsiDirectoryNode" />
@@ -123,6 +141,8 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
+=======
+>>>>>>> 337963524cdd35dd858dd43123a2f86b367372e9
           </expand>
           <select />
         </subPane>
@@ -165,12 +185,20 @@
       <updated>1514971557468</updated>
       <workItem from="1514971559173" duration="9780000" />
       <workItem from="1515373954840" duration="2683000" />
+<<<<<<< HEAD
       <workItem from="1515377049854" duration="6731000" />
+=======
+      <workItem from="1515377049854" duration="6476000" />
+>>>>>>> 337963524cdd35dd858dd43123a2f86b367372e9
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="48603000" />
+=======
+    <option name="totallyTimeSpent" value="48389000" />
+>>>>>>> 337963524cdd35dd858dd43123a2f86b367372e9
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -416,6 +444,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/components/progress/progress.jsx" />
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/style/theme/colors/index.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -423,6 +452,9 @@
         </state>
       </provider>
     </entry>
+=======
+    <entry file="file://$PROJECT_DIR$/style/theme/colors/index.less" />
+>>>>>>> 337963524cdd35dd858dd43123a2f86b367372e9
     <entry file="file://$PROJECT_DIR$/style/theme/colors/colors.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
@@ -446,6 +478,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/Home/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -454,6 +487,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> 337963524cdd35dd858dd43123a2f86b367372e9
     <entry file="file://$PROJECT_DIR$/src/App.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -489,7 +524,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
           <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+<<<<<<< HEAD
           <folding />
+=======
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+>>>>>>> 337963524cdd35dd858dd43123a2f86b367372e9
         </state>
       </provider>
     </entry>
@@ -500,6 +541,17 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/src/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> 337963524cdd35dd858dd43123a2f86b367372e9
     <entry file="file://$PROJECT_DIR$/components/radio/style/index.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4550">
@@ -512,7 +564,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
           <caret line="5" column="23" lean-forward="false" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+<<<<<<< HEAD
           <folding />
+=======
+>>>>>>> 337963524cdd35dd858dd43123a2f86b367372e9
         </state>
       </provider>
     </entry>
@@ -520,7 +575,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="110" column="10" lean-forward="false" selection-start-line="110" selection-start-column="2" selection-end-line="110" selection-end-column="10" />
+<<<<<<< HEAD
           <folding />
+=======
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+>>>>>>> 337963524cdd35dd858dd43123a2f86b367372e9
         </state>
       </provider>
     </entry>
@@ -528,7 +589,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
           <caret line="18" column="33" lean-forward="true" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="33" />
+<<<<<<< HEAD
           <folding />
+=======
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+>>>>>>> 337963524cdd35dd858dd43123a2f86b367372e9
         </state>
       </provider>
     </entry>
@@ -536,6 +603,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="520">
           <caret line="53" column="2" lean-forward="false" selection-start-line="53" selection-start-column="2" selection-end-line="53" selection-end-column="15" />
+<<<<<<< HEAD
           <folding />
         </state>
       </provider>
@@ -560,6 +628,35 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
           <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+=======
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/radio/readme.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/templates/radio.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="30" column="16" lean-forward="true" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Home/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="559">
+          <caret line="39" column="2" lean-forward="true" selection-start-line="39" selection-start-column="2" selection-end-line="39" selection-end-column="2" />
+>>>>>>> 337963524cdd35dd858dd43123a2f86b367372e9
           <folding />
         </state>
       </provider>

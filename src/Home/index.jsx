@@ -30,8 +30,13 @@ function Home() {
           <div className='name'>按钮</div>
           <div className='info'>button</div>
         </NavLink>
+      </div><div className='widget-item'>
+        <NavLink className='widget-wrap' to='/radio' activeStyle={{ fontWeight: 'bold', color: 'red' }}>
+          <div className='name'>单选框</div>
+          <div className='info'>radio</div>
+        </NavLink>
       </div>
     </div>
-  			);
+);
 }
 export default Home;
