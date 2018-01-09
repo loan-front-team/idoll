@@ -50,7 +50,7 @@ class Sider extends Component {
 
 Sider.propTypes = {
   span: PropTypes.number,
-  toggle: PropTypes.number,
+  toggle: PropTypes.bool,
   children: PropTypes.node
 }
 

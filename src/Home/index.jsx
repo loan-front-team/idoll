@@ -31,7 +31,43 @@ function Home() {
           <div className='info'>button</div>
         </NavLink>
       </div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/alert'>
+          <div className='name'>警示框</div>
+          <div className='info'>alert</div>
+        </NavLink>
+      </div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/radio' activeStyle={{ fontWeight: 'bold', color: 'red' }}>
+          <div className='name'>单选框</div>
+          <div className='info'>radio</div>
+        </NavLink>
+      </div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/progress'>
+          <div className='name'>进度条</div>
+          <div className='info'>progress</div>
+        </NavLink>
+      </div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/message'>
+          <div className='name'>信息提示</div>
+          <div className='info'>message</div>
+        </NavLink>
+      </div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/switch'>
+          <div className='name'>switch开关</div>
+          <div className='info'>switch</div>
+        </NavLink>
+      </div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/input'>
+          <div className='name'>输入框</div>
+          <div className='info'>input</div>
+        </NavLink>
+      </div>
     </div>
-  			);
+  );
 }
 export default Home;
