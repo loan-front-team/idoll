@@ -1,4 +1,7 @@
 /* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */
+/* stylelint-disable no-duplicate-selectors */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors */
 .idoll-alert {
   font-family: "Helvetica Neue For Number", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -13,18 +16,25 @@
   border-radius: 4px;
 }
 .idoll-alert-warning {
-  border: 1px solid #faad14;
+  border: 1px solid #ff9000;
   background-color: #E6F7FF;
 }
 .idoll-alert-warning .idoll-alert-icon {
-  color: #faad14;
+  color: #ff9000;
 }
 .idoll-alert-error {
   border: 1px solid #91D5FF;
-  background-color: #f5222d;
+  background-color: #f75274;
 }
 .idoll-alert-error .idoll-alert-icon {
-  color: #f5222d;
+  color: #f75274;
+}
+.idoll-alert-info {
+  border: 1px solid #91d5ff;
+  background-color: #e6f7ff;
+}
+.idoll-alert-info .idoll-alert-icon {
+  color: #134867;
 }
 .idoll-alert-with-description .idoll-alert-message {
   font-size: 16px;
