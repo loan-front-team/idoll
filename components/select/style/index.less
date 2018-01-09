@@ -412,7 +412,7 @@
   
         &:hover,
         &-active {
-          background-color: tint(@primary-color, 90%);
+          background-color: @option-hover-bg;
         }
   
         &-disabled {
@@ -429,9 +429,8 @@
         &-selected {
           &,
           &:hover {
-            background-color: #f7f7f7;
-            font-weight: bold;
-            color: #666;
+            background-color: @option-selected-bg;
+            color: #fff;
           }
         }
   
