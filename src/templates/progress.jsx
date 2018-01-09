@@ -5,20 +5,24 @@ export default class ProgressView extends React.Component {
   constructor() {
     super();
     this.state = {
-      percentValue: 0
+      percentValue: 0,
+      interval: null
     }
   }
-  componentDidMount() {
-    let interval = setInterval(() => {
+  componentWillMount() {
+    this.state.interval = setInterval(() => {
       let percentValue = this.state.percentValue + 1;
       if (percentValue < 100) {
         this.setState({percentValue: percentValue});
       } else {
         percentValue = 100;
         this.setState({percentValue: percentValue});
-        clearInterval(interval)
+        clearInterval(this.state.interval);
       }
     }, 100)
+  }
+  componentWillUnmount() {
+    clearInterval(this.state.interval);
   }
   render() {
     return (
