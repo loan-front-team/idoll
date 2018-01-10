@@ -8,7 +8,7 @@
 
 # production
 /build
-*.css
+.idea
 
 # misc
 .DS_Store
@@ -22,3 +22,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+<<<<<<< HEAD
+=======
+/.idea
+>>>>>>> 9dce3064d10c4c86a78db3c6ea8e799ae8446098
