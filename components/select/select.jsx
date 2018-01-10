@@ -20,16 +20,6 @@ export default class Select extends React.Component {
     antLocale: PropTypes.object
   }
 
-  static propTypes = {
-    size: PropTypes.string,
-    className: PropTypes.string,
-    combobox: PropTypes.bool,
-    notFoundContent: PropTypes.string,
-    prefixCls: PropTypes.string,
-    showSearch: PropTypes.bool,
-    optionLabelProp: PropTypes.func
-  }
-
   render() {
     let {
       size, className, combobox, notFoundContent, prefixCls, showSearch, optionLabelProp

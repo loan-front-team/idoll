@@ -17,7 +17,7 @@ function animate(node, show, done) {
     end() {
       node.style.height = '';
       done();
-    },
+    }
   });
 }
 
