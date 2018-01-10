@@ -27,6 +27,14 @@
     }
   }
 
+  &-info {
+    border: @border-width-base @border-style-base #91d5ff;//~`colorPalette("@{success-color}", 3)`
+    background-color: #e6f7ff;
+    .@{alert-prefix-cls}-icon {
+      color: @info-color;
+    }
+  }
+
   &-with-description &-message {
     font-size: @font-size-lg;
     color: @alert-message-color;
