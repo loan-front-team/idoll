@@ -1,16 +1,17 @@
 import React from 'react';
 import Progress from '../../components/progress';
 
+let interval
+
 export default class ProgressView extends React.Component {
   constructor() {
     super();
     this.state = {
-      percentValue: 0,
-      interval: null
+      percentValue: 0
     }
   }
   componentWillMount() {
-    this.state.interval = setInterval(() => {
+    interval = setInterval(() => {
       let percentValue = this.state.percentValue + 1;
       if (percentValue < 100) {
         this.setState({percentValue: percentValue});
@@ -22,7 +23,7 @@ export default class ProgressView extends React.Component {
     }, 100)
   }
   componentWillUnmount() {
-    clearInterval(this.state.interval);
+    clearInterval(interval);
   }
   render() {
     return (
