@@ -17,17 +17,7 @@ export default class Select extends React.Component {
   }
 
   static contextTypes = {
-    antLocale: React.PropTypes.object
-  }
-
-  static propTypes = {
-    size: PropTypes.string,
-    className: PropTypes.string,
-    combobox: PropTypes.bool,
-    notFoundContent: PropTypes.string,
-    prefixCls: PropTypes.string,
-    showSearch: PropTypes.bool,
-    optionLabelProp: PropTypes.func
+    antLocale: PropTypes.object
   }
 
   render() {
