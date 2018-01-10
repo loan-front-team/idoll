@@ -1,0 +1,36 @@
+@import "../../../style/theme/default/default.less";
+@import "../../../style/mixins/index.less";
+
+@alert-prefix-cls: ~"@{idoll-prefix}-alert";//idoll-alert
+@alert-message-color: @heading-color;
+@alert-text-color: @text-color;
+
+.@{alert-prefix-cls} {
+  .reset-component;
+  position: relative;
+  padding: 8px 15px 8px 37px;
+  border-radius: @border-radius-base;
+
+  &-warning {
+    border: @border-width-base @border-style-base @gold-6;//~`colorPalette("@{warning-color}", 3)
+    background-color: @primary-1;//~`colorPalette("@{warning-color}", 1)`
+    .@{alert-prefix-cls}-icon {
+      color: @warning-color;
+    }
+  }
+
+  &-error {
+    border: @border-width-base @border-style-base @primary-3;//~`colorPalette("@{error-color}", 3)`;
+    background-color: @red-6;//~`colorPalette("@{error-color}", 1)`
+    .@{alert-prefix-cls}-icon {
+      color: @error-color
+    }
+  }
+
+  &-with-description &-message {
+    font-size: @font-size-lg;
+    color: @alert-message-color;
+    display: block;
+    margin-top: 4px;
+  }
+}

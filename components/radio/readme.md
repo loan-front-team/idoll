@@ -1,10 +1,12 @@
-### Radio ###【http://naotu.baidu.com/file/5d81a5f547ed312adee8dbff13c10a38?token=94ede8163d76a361】
+# [Radio](http://naotu.baidu.com/file/5d81a5f547ed312adee8dbff13c10a38?token=94ede8163d76a361)
 
 ---
+
 category: Components
 subtitle: 单选框
 type: Data Entry
 title: Radio
+
 ---
 
 单选框。
@@ -38,9 +40,9 @@ title: Radio
 | value | 用于设置当前选中的值 | any | 无 |
 | onChange | 选项变化时的回调函数 | Function(e:Event) | 无 |
 
-## 方法
+## method
 
-### Radio
+### Radio method
 
 | 名称 | 描述 |
 | ---- | ----------- |

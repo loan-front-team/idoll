@@ -32,6 +32,7 @@ export default class Radio extends React.Component {
   }
   render() {
     const { props, context } = this;
+    // console.info('radio this', this);
     const { prefixCls, className, children, style, ...restProps } = props;
     const { radioGroup } = context;
     let radioProps = Object.assign({}, restProps);
