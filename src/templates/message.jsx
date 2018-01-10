@@ -24,13 +24,18 @@ export default class messageView extends React.Component {
   render() {
     return (
       <div id='main-container'>
+        <h1 className='h1'>
+          普通信息
+        </h1>
         <Button type='primary' onClick={info}>Customized display duration</Button>
         <h1 className='h1'>
-          <Button type='default' onClick={success}>Success</Button>
+         成功信息
         </h1>
+        <Button type='default' onClick={success}>Success</Button>       
         <h1 className='h1'>
-          <Button type='dashed' onClick={warning}>Warning</Button>
+          警告信息
         </h1>
+        <Button type='dashed' onClick={warning}>Warning</Button>
         <h1 className='h1'>
           <Button type='danger' onClick={loading}>Display a loading indicator</Button>
         </h1>

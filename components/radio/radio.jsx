@@ -36,6 +36,8 @@ export default class Radio extends React.Component {
     const { radioGroup } = context;
     let radioProps = Object.assign({}, restProps);
     if (radioGroup) {
+      console.info(props.disabled);
+      console.info(radioGroup.disabled);
       radioProps.name = radioGroup.name;
       radioProps.onChange = radioGroup.onChange;
       radioProps.checked = props.value === radioGroup.value;
