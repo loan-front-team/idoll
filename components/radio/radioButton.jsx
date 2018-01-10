@@ -11,10 +11,7 @@ export default class RadioButton extends React.Component {
     radioGroup: PropTypes.any
   }
   render() {
-    console.info('button props', this.props);
     const radioProps = Object.assign({}, this.props);
-    console.info('radioProps', radioProps);
-    console.info('context', this.context);
     if (this.context.radioGroup) {
       radioProps.onChange = this.context.radioGroup.onChange;
       radioProps.checked = this.props.value === this.context.radioGroup.value;

@@ -8,7 +8,6 @@ function getCheckedValue(children) {
   let value = null;
   let matched = false;
   React.Children.forEach(children, (radio) => {
-    // console.info(radio);
     if (radio && radio.props && radio.props.checked) {
       value = radio.propos.value;
       matched = true;
@@ -21,20 +20,11 @@ export default class RadioGroup extends React.Component {
   static defaultProps = {
     disabled: false
   }
-  // 声明Context类型
+  // 声明子Context类型
   static childContextTypes = {
     radioGroup: PropTypes.any
   }
-  // static propTypes = {
-  //   radioGroup: {
-  //     onChange: PropTypes.func,
-  //     value: PropTypes.any,
-  //     disabled: PropTypes.boolean,
-  //     name: PropTypes.any
-  //   }
-  // }
   constructor (props) {
-    console.info('group props', props);
     super(props);
     let value;
     if ('value' in props) {
@@ -45,7 +35,6 @@ export default class RadioGroup extends React.Component {
       const checkedValue = getCheckedValue(props.children);
       value = checkedValue && checkedValue.value;
     }
-    console.info('value', value);
     this.state = {
       value
     }
@@ -74,7 +63,6 @@ export default class RadioGroup extends React.Component {
         })
       }
     }
-    console.info('receive', this.state.value);
   }
   shouldComponentUpdate(nextProps, nextState) {
     return !shallowEqual(this.props, nextProps) ||
@@ -96,12 +84,10 @@ export default class RadioGroup extends React.Component {
   render() {
     const props = this.props;
     const { prefixCls = 'idoll-radio-group', className = '', options } = props;
-    console.info('options', options);
     const classString = classNames(prefixCls, {
       [`${prefixCls}-${props.size}`]: props.size
     }, className);
     let children = props.children;
-    console.info('children', children);
     if (options && options.length > 0) {
       children = options.map((option, index) => {
         if (typeof option === 'string') {
