@@ -17,7 +17,7 @@ export default class Select extends React.Component {
   }
 
   static contextTypes = {
-    antLocale: React.PropTypes.object
+    antLocale: PropTypes.object
   }
 
   static propTypes = {
