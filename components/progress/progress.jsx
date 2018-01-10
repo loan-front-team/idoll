@@ -65,6 +65,7 @@ export default class Progress extends Component {
             <div className={`${prefixCls}-bg`} style={percentStyle} />
           </div>
         </div>
+        {progressInfo}
       </div>)
     } else if (type === 'circle' || type === 'dashboard') {
       const circleSize = width || 120;
