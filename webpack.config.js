@@ -26,7 +26,6 @@ module.exports = {
   // devserver 配置
   devServer: {
     historyApiFallback: true,
-    colors: true,
     hot: true,
     inline: true,
     progress: true,
