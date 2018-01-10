@@ -19,70 +19,6 @@
     }
   }
 }
-
-.button-variant-primary(@color; @background) {
-  .button-color(@color; @background; @background);
-  &:hover,
-  &:focus {
-    .button-color(@color; ~`colorPalette("@{background}", 5)`; ~`colorPalette("@{background}", 5)`);
-  }
-
-  &:active,
-  &.active {
-    .button-color(@color; ~`colorPalette("@{background}", 7)`; ~`colorPalette("@{background}", 7)`);
-  }
-
-  .button-disabled();
-}
-
-.button-variant-other(@color; @background; @border) {
-  .button-color(@color; @background; @border);
-
-  &:hover,
-  &:focus {
-    .button-color(@primary-5; @background; @primary-5);
-  }
-
-  &:active,
-  &.active {
-    .button-color(@primary-7; @background; @primary-7);
-  }
-
-  .button-disabled();
-}
-
-.button-variant-danger(@color; @background; @border) {
-  .button-color(@color; @background; @border);
-
-  &:hover,
-  &:focus {
-    .button-color(@btn-primary-color; ~`colorPalette("@{color}", 5)`; ~`colorPalette("@{color}", 5)`);
-  }
-
-  &:active,
-  &.active {
-    .button-color(@btn-primary-color; ~`colorPalette("@{color}", 7)`; ~`colorPalette("@{color}", 7)`);
-  }
-
-  .button-disabled();
-}
-
-.button-variant-ghost(@color) {
-  .button-color(@color; transparent; @color);
-
-  &:hover,
-  &:focus {
-    .button-color(~`colorPalette("@{color}", 5)`; transparent; ~`colorPalette("@{color}", 5)`);
-  }
-
-  &:active,
-  &.active {
-    .button-color(~`colorPalette("@{color}", 7)`; transparent; ~`colorPalette("@{color}", 7)`);
-  }
-
-  .button-disabled();
-}
-
 .button-color(@color; @background; @border) {
   color: @color;
   background-color: @background;
@@ -102,6 +38,73 @@
     }
   }
 }
+
+
+//  重要按钮
+.button-variant-primary(@color; @background) {
+  .button-color(@color; @background; @background);
+  &:hover,
+  &:focus {
+    .button-color(@color; ~`colorPalette("@{background}", 5)`; ~`colorPalette("@{background}", 5)`);
+  }
+
+  &:active,
+  &.active {
+    .button-color(@color; ~`colorPalette("@{background}", 7)`; ~`colorPalette("@{background}", 7)`);
+  }
+
+  .button-disabled();
+}
+// 次要按钮
+.button-variant-other(@color; @background; @border) {
+  .button-color(@color; @background; @border);
+
+  &:hover,
+  &:focus {
+    .button-color(@primary-spread-color; @background; @primary-spread-color);
+  }
+
+  &:active,
+  &.active {
+    .button-color(@primary-spread-color; @background; @primary-spread-color);
+  }
+
+  .button-disabled();
+}
+
+
+.button-variant-danger(@color; @background; @border) {
+  .button-color(@color; @background; @border);
+
+  &:hover,
+  &:focus {
+    .button-color(@btn-primary-color; ~`colorPalette("@{color}", 5)`; ~`colorPalette("@{color}", 5)`);
+  }
+
+  &:active,
+  &.active {
+    .button-color(@btn-primary-color; ~`colorPalette("@{color}", 7)`; ~`colorPalette("@{color}", 7)`);
+  }
+
+  .button-disabled();
+}
+// 幽灵按钮
+.button-variant-ghost(@color) {
+  .button-color(@color; transparent; @color);
+
+  &:hover,
+  &:focus {
+    .button-color(~`colorPalette("@{color}", 5)`; transparent; ~`colorPalette("@{color}", 5)`);
+  }
+
+  &:active,
+  &.active {
+    .button-color(~`colorPalette("@{color}", 7)`; transparent; ~`colorPalette("@{color}", 7)`);
+  }
+
+  .button-disabled();
+}
+
 
 .button-group-base(@btnClassName) {
   position: relative;
