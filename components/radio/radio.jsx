@@ -9,15 +9,9 @@ export default class Radio extends React.Component {
     prefixCls: 'idoll-radio',
     type: 'radio'
   }
-
+  // 在这里声明 contextTypes 用于访问 radioGroup 组件中定义的Context数据.
   static contextTypes = {
     radioGroup: PropTypes.any
-  }
-  constructor() {
-    super(...arguments);
-    this.saveCheckbox = (node) => {
-      this.rcCheckbox = node;
-    }
   }
   shouldComponentUpdate(nextProps, nextState, nextContext) {
     return !shallowEqual(this.props, nextProps) ||
@@ -29,6 +23,9 @@ export default class Radio extends React.Component {
   }
   blur() {
     this.rcCheckbox.blur();
+  }
+  saveCheckbox = (node) => {
+    this.rcCheckbox = node;
   }
   render() {
     const { props, context } = this;
