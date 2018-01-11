@@ -13,13 +13,14 @@ function getCheckedValue(children) {
       matched = true;
     }
   })
+  return matched ? { value } : undefined;
 }
 
 export default class RadioGroup extends React.Component {
   static defaultProps = {
     disabled: false
   }
-
+  // 声明子Context类型
   static childContextTypes = {
     radioGroup: PropTypes.any
   }
@@ -38,6 +39,7 @@ export default class RadioGroup extends React.Component {
       value
     }
   }
+  // 定义Context需要实现的方法
   getChildContext() {
     return {
       radioGroup: {
