@@ -1,7 +1,6 @@
 // rc-notification:https://github.com/fis-components/rc-notification;
 import * as React from 'react';
 import Notification from 'rc-notification';
-// import Icon from '../icon';
 import './style/index';
 
 let defaultDuration = 3;
@@ -31,14 +30,6 @@ function getMessageInstance(callback) {
 }
 
 function notice(content, duration = defaultDuration, type, onClose) {
-  // let iconType = ({
-  //   infor: 'info-circle',
-  //   success: 'check-circle',
-  //   error: 'cross-circles',
-  //   warning: 'exclamation-circle',
-  //   loading: 'loading'
-  // })[type];
-
   if (typeof duration === 'function') {
     onClose = duration;
     duration = defaultDuration;
@@ -52,7 +43,6 @@ function notice(content, duration = defaultDuration, type, onClose) {
       style: {},
       content: (
         <div className={`${prefixCls}-custom-content ${prefixCls}-${type}`}>
-          {/* <Icon type={iconType} /> */}
           <span>{content}</span>
         </div>
       ),
@@ -67,24 +57,14 @@ function notice(content, duration = defaultDuration, type, onClose) {
 }
 
 export default {
-  info(content, duration, onClose) {
-    return notice(content, duration, 'info', onClose);
-  },
   success(content, duration, onClose) {
     return notice(content, duration, 'success', onClose)
   },
   error(content, duration, onClose) {
     return notice(content, duration, 'error', onClose);
   },
-  // Departed usage, please use warning()
-  warn(content, duration, onClose) {
-    return notice(content, duration, 'warning', onClose);
-  },
   warning(content, duration, onClose) {
-    return notice(content, duration, 'warining', onClose);
-  },
-  loading(content, duration, onClose) {
-    return notice(content, duration, 'loading', onClose);
+    return notice(content, duration, 'warning', onClose);
   },
   config(options) {
     if (options.top !== undefined) {

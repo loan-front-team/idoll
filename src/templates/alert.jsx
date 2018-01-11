@@ -11,7 +11,7 @@ export default class AlertView extends React.Component {
       <div id='main-container'>
         <h1 className='h1'>带有关闭按钮的警告提示</h1>
         <Alert
-          message='warning Text Warning Text Warning TextW arning Text Warning Text Warning TextWarning Text'
+          message='Warning Text Warning Text Warning TextW arning Text Warning Text Warning TextWarning Text'
           type='warning'
           closable
           onClose={onClose}
@@ -20,7 +20,7 @@ export default class AlertView extends React.Component {
           message='Error Text'
           description='Error Description Error Description Error Description Error Description Error Description Error Description'
           type='error'
-          closeable
+          closable
           onClose={onClose}
         />
         <h1 className='h1'>带有图标的警告提示</h1>
@@ -52,7 +52,7 @@ export default class AlertView extends React.Component {
           message='Warning Text'
           description='Warning Description Warning Description Warning Description Warning Description'
           type='warning'
-    />
+        />
       </div>
     )
   }
