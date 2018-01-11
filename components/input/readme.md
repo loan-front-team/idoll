@@ -1,4 +1,4 @@
-# input[http://naotu.baidu.com/file/16cb7711732e8567b985a181505e2bfe?token=4cb434845c75e538]
+# [input](http://naotu.baidu.com/file/16cb7711732e8567b985a181505e2bfe?token=4cb434845c75e538)
 
 ---
 
