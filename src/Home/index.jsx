@@ -32,12 +32,6 @@ function Home() {
         </NavLink>
       </div>
       <div className='widget-item'>
-        <NavLink className='widget-wrap' to='/dropdown'>
-          <div className='name'>下拉菜单</div>
-          <div className='info'>dropdown</div>
-        </NavLink>
-      </div>
-      <div className='widget-item'>
         <NavLink className='widget-wrap' to='/alert'>
           <div className='name'>警示框</div>
           <div className='info'>alert</div>
@@ -71,6 +65,18 @@ function Home() {
         <NavLink className='widget-wrap' to='/input'>
           <div className='name'>输入框</div>
           <div className='info'>input</div>
+        </NavLink>
+      </div>
+      <div className='widget-item' >
+        <NavLink className='widget-wrap' to='/icon'>
+          <div className='name'>图标</div>
+          <div className='info'>Icon</div>
+        </NavLink>
+      </div>
+      <div className='widget-item' >
+        <NavLink className='widget-wrap' to='/dropdown'>
+          <div className='name'>下拉菜单</div>
+          <div className='info'>dropdown</div>
         </NavLink>
       </div>
     </div>

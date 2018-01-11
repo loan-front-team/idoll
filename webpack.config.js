@@ -1,5 +1,8 @@
 var path = require('path');
 var HtmlwebpackPlugin = require('html-webpack-plugin');
+var webpack = require('webpack')
+var OpenBrowserPlugin = require('open-browser-webpack-plugin');
+
 // 定义了一些文件夹的路径
 var ROOT_PATH = path.resolve(__dirname);
 var APP_PATH = path.resolve(ROOT_PATH, 'src');
@@ -16,6 +19,7 @@ module.exports = {
     path: BUILD_PATH,
     filename: 'bundle.js'
   },
+  devtool: '#eval-source-map',
   resolve: {
         extensions: ['.js', '.jsx', '.json', '.less']
   },
@@ -68,12 +72,20 @@ module.exports = {
       }
     ]
   },
-  // 添加我们的插件 会自动生成一个html文件
+  // 添加我们的插件
   plugins: [
+    // 会自动生成一个html文件
     new HtmlwebpackPlugin({
       filename: 'index.html',
       template: 'index.html',
       inject: true
-    })
+    }),
+    // 热加载插件
+    new webpack.HotModuleReplacementPlugin(),
+
+    // 打开浏览器
+    new OpenBrowserPlugin({
+      url: 'http://localhost:8080'
+    }),
   ]
 };
