@@ -3,7 +3,6 @@ import Button from '../button'
 import Icon from '../icon'
 import Dropdown from './dropdown'
 import classNames from 'classnames'
-const ButtonGroup = Button.Group;
 
 export default class DropdownButton extends React.Component {
   static defaultProps = {
@@ -25,14 +24,13 @@ export default class DropdownButton extends React.Component {
       [className]: !!className
     })
     return (
-      <ButtonGroup {...restProps} className={cls}>
-        <Button type={type} onClick={onClick}>{children}</Button>
+      <div {...restProps} className={cls}>
         <Dropdown align={align} overlay={overlay} trigger={trigger}>
           <Button type={type}>
-            <Icon type='down' />
+            按钮<Icon type='down' />
           </Button>
         </Dropdown>
-      </ButtonGroup>
+      </div>
     )
   }
 }
