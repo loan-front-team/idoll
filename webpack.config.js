@@ -28,7 +28,7 @@ module.exports = {
     historyApiFallback: true,
     hot: true,
     inline: true,
-    progress: true,
+    progress: true
   },
   // css 处理
   module: {
@@ -44,17 +44,11 @@ module.exports = {
         use: ['style-loader', 'css-loader', 'less-loader']
       },
       {
-        test: /\.(png|jpg)$/,
-        use: 'url?limit=40000'
-      },
-      {
-        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
-        use: [{
-          loader: 'url-loader',
-          query: {
-            limit: 10000
-          }
-        }]
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [
+           'file-loader'
+         ],
+         exclude: /node_modules/
       },
       {
         test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
@@ -86,6 +80,6 @@ module.exports = {
     // 打开浏览器
     new OpenBrowserPlugin({
       url: 'http://localhost:8080'
-    }),
+    })
   ]
 };
