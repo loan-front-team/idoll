@@ -14,9 +14,9 @@ function handleMenu1Click(e) {
 
 const menu = (
   <Menu onClick={handleMenu1Click}>
-    <MenuItem key='1'>第一个选项</MenuItem>
-    <MenuItem key='2'>第二个选项</MenuItem>
-    <MenuItem key='3'>第三个选项</MenuItem>
+    <MenuItem key='1'>第一个选项111111</MenuItem>
+    <MenuItem key='2'>第二个选项222222</MenuItem>
+    <MenuItem key='3'>第三个选项333333</MenuItem>
   </Menu>
 )
 const menu1 = (
@@ -76,6 +76,30 @@ export default class DropView extends React.Component {
           <a href='#'>
             Hover me
           </a>
+        </Dropdown>
+        <br />
+        <br />
+        <br />
+        <br />
+        <h1 className='h1'>下拉菜单展示位置</h1>
+        <Dropdown overlay={menu} placement='bottomLeft'>
+          <Button>botLeft</Button>
+        </Dropdown>
+        <Dropdown overlay={menu} placement='bottomCenter'>
+          <Button>botCenter</Button>
+        </Dropdown>
+        <Dropdown overlay={menu} placement='bottomRight'>
+          <Button>botRight</Button>
+        </Dropdown>
+        <br />
+        <Dropdown overlay={menu} placement='topLeft'>
+          <Button>topLeft</Button>
+        </Dropdown>
+        <Dropdown overlay={menu} placement='topCenter'>
+          <Button>topCenter</Button>
+        </Dropdown>
+        <Dropdown overlay={menu} placement='topRight'>
+          <Button>topRight</Button>
         </Dropdown>
       </div>
     )

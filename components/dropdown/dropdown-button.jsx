@@ -6,15 +6,6 @@ import classNames from 'classnames'
 
 export default class DropdownButton extends React.Component {
   static defaultProps = {
-    align: {
-      point: ['tr', 'br'],
-      overlay: {
-        adjustX: 1,
-        adjustY: 1
-      },
-      offset: [0, 4],
-      targetOffset: [0, 0]
-    },
     type: 'default'
   }
   render() {
@@ -25,9 +16,10 @@ export default class DropdownButton extends React.Component {
     })
     return (
       <div {...restProps} className={cls}>
+        <Button type={type} onClick={onClick}>{children}</Button>
         <Dropdown align={align} overlay={overlay} trigger={trigger}>
           <Button type={type}>
-            按钮<Icon type='down' />
+            <Icon type='down' />
           </Button>
         </Dropdown>
       </div>
