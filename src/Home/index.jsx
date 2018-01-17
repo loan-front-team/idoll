@@ -67,6 +67,18 @@ function Home() {
           <div className='info'>input</div>
         </NavLink>
       </div>
+      <div className='widget-item' >
+        <NavLink className='widget-wrap' to='/icon'>
+          <div className='name'>图标</div>
+          <div className='info'>Icon</div>
+        </NavLink>
+      </div>
+      <div className='widget-item' >
+        <NavLink className='widget-wrap' to='/modal'>
+          <div className='name'>对话框</div>
+          <div className='info'>Modal</div>
+        </NavLink>
+      </div>
     </div>
   );
 }

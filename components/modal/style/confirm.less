@@ -1,0 +1,61 @@
+@confirm-prefix-cls: idoll-confirm;
+
+.@{confirm-prefix-cls} {
+  .idoll-modal-header {
+    display: none;
+  }
+
+  .idoll-modal-body {
+    padding: 30px 40px;
+  }
+
+  &-body {
+    .@{confirm-prefix-cls}-title {
+      color: @text-color;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .@{confirm-prefix-cls}-content {
+      margin-left: 37px;
+      font-size: @font-size-base;
+      color: @text-color;
+      margin-top: 8px;
+    }
+
+    > .idollicon {
+      font-size: 24px;
+      margin-right: 10px;
+      padding: 0 1px;
+      position: relative;
+      top: 5px;
+    }
+  }
+
+  .@{confirm-prefix-cls}-btns {
+    margin-top: 30px;
+    float: right;
+
+    button + button {
+      margin-left: 10px;
+      margin-bottom: 0;
+    }
+  }
+
+  &-error &-body > .idollicon {
+    color: @error-color;
+  }
+
+  &-warning &-body >.idollicon,
+  &-confirm &-body > .idollicon {
+    color: @warning-color;
+  }
+
+  &-info &-body > .idollicon {
+    color: @primary-color;
+  }
+
+  &-success &-body > .idollicon {
+    color: @success-color;
+  }
+}

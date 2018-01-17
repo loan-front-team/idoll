@@ -9,6 +9,19 @@ import './style/index';
 function noop() {}
 
 export default class Alert extends React.Component {
+  static propTypes = {
+    closable: PropTypes.bool,
+    description: PropTypes.node,
+    type: PropTypes.oneOf(['success', 'info', 'warning', 'error']),
+    message: PropTypes.node,
+    closeText: PropTypes.node,
+    showIcon: PropTypes.bool,
+    banner: PropTypes.bool,
+    style: PropTypes.object,
+    prefixCls: PropTypes.string,
+    className: PropTypes.string,
+    onClose: PropTypes.func
+  }
   constructor(props) {
     super(props);
     this.state = {
@@ -101,18 +114,4 @@ export default class Alert extends React.Component {
       </Animate>
     );
   }
-}
-
-Alert.propTypes = {
-  closable: PropTypes.bool,
-  description: PropTypes.node,
-  type: PropTypes.oneOf(['success', 'info', 'warning', 'error']),
-  message: PropTypes.node,
-  closeText: PropTypes.node,
-  showIcon: PropTypes.bool,
-  banner: PropTypes.bool,
-  style: PropTypes.object,
-  prefixCls: PropTypes.string,
-  className: PropTypes.string,
-  onClose: PropTypes.func
 }

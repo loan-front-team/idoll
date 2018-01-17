@@ -12,6 +12,8 @@ import Input from './templates/input'
 import message from './templates/message'
 import Layout from './templates/layout'
 import Radio from './templates/radio'
+import Icon from './templates/icon'
+import Modal from './templates/modal';
 
 import './App.css';
 
@@ -29,6 +31,8 @@ const App = () => (
       <Route exact path='/message' component={message} />
       <Route exact path='/layout' component={Layout} />
       <Route exact path='/radio' component={Radio} />
+      <Route exact path='/icon' component={Icon} />
+      <Route exact path='/modal' component={Modal} />
     </div>
   </Router>
 )

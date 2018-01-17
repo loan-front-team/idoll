@@ -2,8 +2,9 @@ import React, { PropTypes } from 'react';
 // https://www.npmjs.com/package/rc-dialog
 import Dialog from 'rc-dialog';
 // https://www.npmjs.com/package/rc-util
-import addEvenListener from 'rc-util/lib/Dom/addEvenListener';
+import addEventListener from 'rc-util/lib/Dom/addEventListener';
 import Button from '../button';
+import './style/index';
 
 function noop() {}
 
@@ -54,7 +55,7 @@ export default class Modal extends React.Component {
       return;
     }
     // 只有点击事件支持从鼠标位置动画展开
-    addEvenListener(document.documentElement, 'click', (e) => {
+    addEventListener(document.documentElement, 'click', (e) => {
       mousePosition = {
         x: e.pageX,
         y: e.pageY
@@ -78,7 +79,7 @@ export default class Modal extends React.Component {
     const defaultFooter = [
       <Button
         key='cancel'
-        type=''ghost
+        type='ghost'
         size='large'
         onClick={this.handleCancel}
         >
