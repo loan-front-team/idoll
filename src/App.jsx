@@ -5,7 +5,7 @@ import Home from './Home'
 import Collapse from './templates/collapse'
 import Progress from './templates/progress'
 import Select from './templates/select'
-import Switch from './templates/switch';
+import Switch from './templates/switch'
 import Alert from './templates/alert'
 import Button from './templates/button'
 import Input from './templates/input'
@@ -13,13 +13,15 @@ import message from './templates/message'
 import Layout from './templates/layout'
 import Radio from './templates/radio'
 import Icon from './templates/icon'
+import Index from './HomeIndex'
 
 import './App.css';
 
 const App = () => (
   <Router>
     <div>
-      <Route exact path='/' component={Home} />
+      <Route exact path='/' component={Index} />
+      <Route exact path='/home' component={Home} />
       <Route exact path='/collapse' component={Collapse} />
       <Route exact path='/progress' component={Progress} />
       <Route exact path='/select' component={Select} />

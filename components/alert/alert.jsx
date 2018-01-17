@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import Animate from 'rc-animate';
 import classNames from 'classnames';
-// import Icon from '../icon';
+import Icon from '../icon';
 import PropTypes from 'prop-types';
 import './style/index';
 
@@ -59,25 +59,25 @@ export default class Alert extends React.Component {
     // banner模式默认警告
     type = banner && type === undefined ? 'warning' : type || 'info';
 
-    // let iconType = '';
-    // switch (type) {
-    //   case 'success':
-    //     iconType = 'check-circle';
-    //     break;
-    //   case 'info':
-    //     iconType = 'info-circle';
-    //     break;
-    //   case 'error':
-    //     iconType = 'cross-circle';
-    //     break;
-    //   default:
-    //     iconType = 'default';
-    // }
+    let iconType = '';
+    switch (type) {
+      case 'success':
+        iconType = 'up';// check-circle
+        break;
+      case 'info':
+        iconType = 'down';// info-circle
+        break;
+      case 'error':
+        iconType = 'up';// cross-circle
+        break;
+      default:
+        iconType = 'default';
+    }
 
     // use outline icon in alert with description
-    // if (description) {
-    //   iconType += '-o';
-    // }
+    if (description) {
+      iconType = 'down';
+    }
 
     let alertCls = classNames(prefixCls, {
       [`${prefixCls}-${type}`]: true,
@@ -93,8 +93,8 @@ export default class Alert extends React.Component {
     }
 
     const closeIcon = closable ? (
-      <a onClick={this.handleClose} className={`${prefixCls}-close-icons`}>
-        {/* {closeText || <Icon type="cross" />} */}
+      <a onClick={this.handleClose} className={`${prefixCls}-close-icon`}>
+        {closeText || <Icon type='close' />}
       </a>
     ) : null;
 
@@ -106,7 +106,7 @@ export default class Alert extends React.Component {
         onEnd={this.animationEnd}
       >
         <div data-show={this.state.closing} className={alertCls} style={style}>
-          {/* {showIcon ? <Icon className={`${prefixCls}-icon`} type={iconType} /> : null} */}
+          {showIcon ? <Icon type={iconType} /> : null}
           <span className={`${prefixCls}-message`}>{message}</span>
           <span className={`${prefixCls}-description`}>{description}</span>
           {closeIcon}
