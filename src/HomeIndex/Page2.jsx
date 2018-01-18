@@ -12,16 +12,16 @@ export class Page2 extends Component {
     </div>
     <div className='image-wrapper'>
       <ul>
-        <img src='../../assets/images/customer-case.png' alt='customer-case' />
+        <img src='assets/images/customer-case.png' alt='customer-case' />
       </ul>
       <ul>
-        <img src='../../assets/images/department-build.png' alt='department-build' />
+        <img src='assets/images/department-build.png' alt='department-build' />
       </ul>
       <ul>
-        <img src='../../assets/images/research_resources.png' alt='research_resources' />
+        <img src='assets/images/research_resources.png' alt='research_resources' />
       </ul>
       <ul>
-        <img src='../../assets/images/platform-system.png' alt='platform-system' />
+        <img src='assets/images/platform-system.png' alt='platform-system' />
       </ul>
     </div>
     <div className='image-wrapper'>
