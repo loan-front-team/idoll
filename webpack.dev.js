@@ -1,10 +1,10 @@
 const merge = require('webpack-merge');
 const HtmlwebpackPlugin = require('html-webpack-plugin');
-const webpack = require('webpack')
+const webpack = require('webpack');
+
 // webpack错误信息提示插件
 // https://github.com/geowarin/friendly-errors-webpack-plugin
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
-
 
 const common = require('./webpack.common.js');
 

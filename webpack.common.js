@@ -4,11 +4,7 @@ const webpack = require('webpack');
 // 定义了一些文件夹的路径
 const ROOT_PATH = path.resolve(__dirname);
 const APP_PATH = path.resolve(ROOT_PATH, 'src');
-const BUILD_PATH = path.resolve(ROOT_PATH, 'build');
-const TEST_PATH = path.resolve(ROOT_PATH, 'test');
-const STYLE_PATH = path.resolve(ROOT_PATH, 'style');
-const COMPONENT_PATH = path.resolve(ROOT_PATH, '/components');
-
+const BUILD_PATH = path.resolve(ROOT_PATH, 'dist');
 
 module.exports = {
   // 项目的文件夹 可以直接用文件夹名称 默认会找index.js 也可以确定是哪个文件名字
@@ -45,7 +41,7 @@ module.exports = {
       // 需要和webpack.dll.config.js中配置的context保持一致，用来指导webpack匹配manifest中库的路径
       context: __dirname,
       // 用来引入webpack.dll.config.js中输出的manifest文件
-      manifest: require(path.resolve(__dirname, './build/vendors-manifest.json'))
+      manifest: path.resolve(__dirname, './dist/dll/vendors-manifest.json')
     })
   ],
   // css 处理

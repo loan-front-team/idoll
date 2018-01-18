@@ -31,7 +31,7 @@ const common = require('./webpack.common.js');
 	new CopyWebpackPlugin([
 		{
 			from: path.resolve(__dirname, 'assets'),
-			to: path.resolve(__dirname, 'build/assets'),
+			to: path.resolve(__dirname, 'dist/assets'),
 			ignore: ['.*']
 		}
 	]),
