@@ -66,16 +66,16 @@ export default class BreadcrumBreadcrumView extends React.Component {
         <h1 className='h1'>基本的面包屑</h1>
         <Breadcrumb>
           <Breadcrumb.Item>Home</Breadcrumb.Item>
-          <Breadcrumb.Item><a href='#'>Application Center</a></Breadcrumb.Item>
-          <Breadcrumb.Item><a href='#'>Application List</a></Breadcrumb.Item>
+          <Breadcrumb.Item><a href='javascript:void(0);'>Application Center</a></Breadcrumb.Item>
+          <Breadcrumb.Item><a href='javascript:void(0);'>Application List</a></Breadcrumb.Item>
           <Breadcrumb.Item>An Application</Breadcrumb.Item>
         </Breadcrumb>
         <h1 className='h1'>带图标的面包屑</h1>
         <Breadcrumb>
-          <Breadcrumb.Item href=''>
+          <Breadcrumb.Item href='javascript:void(0);'>
             <Icon type='home' />
           </Breadcrumb.Item>
-          <Breadcrumb.Item href=''>
+          <Breadcrumb.Item href='javascript:void(0);'>
             <Icon type='user' />
             <span>Application List</span>
           </Breadcrumb.Item>
