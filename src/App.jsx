@@ -14,6 +14,7 @@ import Layout from './templates/layout'
 import Radio from './templates/radio'
 import Icon from './templates/icon'
 import Index from './HomeIndex'
+import Breadcrumb from './templates/breadcrumb'
 
 import './App.css';
 
@@ -33,6 +34,7 @@ const App = () => (
       <Route exact path='/layout' component={Layout} />
       <Route exact path='/radio' component={Radio} />
       <Route exact path='/icon' component={Icon} />
+      <Route exact path='/breadcrumb' component={Breadcrumb} />
     </div>
   </Router>
 )
