@@ -5,7 +5,7 @@ export class Banner extends Component {
 		return (
   <section className='banner banner-wrapper'>
     <a id='logo'>
-      <img src='../../assets/images/logo.png' alt='logo' />
+      <img src='assets/images/logo.png' alt='logo' />
     </a>
   </section>
 		);
