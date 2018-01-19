@@ -1,9 +1,9 @@
 import React from 'react';
-import Breadcrumb from '../../components/breadcrumb/index';
+import Breadcrumb from 'components/breadcrumb/index';
 import { HashRouter as Router, Route, Switch, Link, withRouter } from 'react-router-dom';
-import Icon from '../../components/icon/index';
-import Alert from '../../components/alert/index';
-import '../../components/breadcrumb/style/index'
+import Icon from 'components/icon/index';
+import Alert from 'components/alert/index';
+import 'components/breadcrumb/style/index'
 
 export default class BreadcrumBreadcrumView extends React.Component {
   render() {
