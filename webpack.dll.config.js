@@ -1,13 +1,13 @@
 const webpack = require('webpack')
 const path = require('path')
+const dependencies = require('./package.json').dependencies
 
-
+let x;
+const vendors = [];
+for (x in dependencies) {
+	vendors.push(x)
+}
 const library = '[name]_[chunkhash]'
-const vendors = [
-  'antd',
-  'react',
-  'react-dom'
-];
 
 module.exports = {
 	entry: {

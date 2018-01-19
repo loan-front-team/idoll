@@ -28,22 +28,9 @@ module.exports = {
   // devserver 配置
   devServer: {
     historyApiFallback: true,
-    hot: true,
     inline: true,
     progress: true
   },
-  // Dll user的配置
-  // 分割公共 js 到独立的文件并缓存
-  // node_modules中的任何所需模块都提取到vendor
-  // 这里的路径要和 webpack.dll.config.js 里面的对应。
-  plugins: [
-    new webpack.DllReferencePlugin({
-      // 需要和webpack.dll.config.js中配置的context保持一致，用来指导webpack匹配manifest中库的路径
-      context: __dirname,
-      // 用来引入webpack.dll.config.js中输出的manifest文件
-      manifest: path.resolve(__dirname, './dist/dll/vendors-manifest.json')
-    })
-  ],
   // css 处理
   module: {
     rules: [
