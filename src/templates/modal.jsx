@@ -1,6 +1,6 @@
 import React from 'react';
-import { Modal } from '../../components/modal/index';
-import Button from '../../components/button/button';
+import { Modal } from 'components/modal/index';
+import Button from 'components/button/button';
 const confirm = Modal.confirm;
 
 export default class ModalView extends React.Component {

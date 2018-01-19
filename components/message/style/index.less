@@ -21,16 +21,32 @@
   }
 
   &-notice-content {
-    padding: 10px 16px;
-    border-radius: @border-radius-base;
+    // .size(360px; 30px);
     box-shadow: @shadow-2;
     background: @component-background;
     display: inline-block;
     pointer-events: all;
+    font-size: @font-size-base;
   }
 
-  &-info .@{iconfont-css-prefix} {
-    color: @info-color;
+  &-notice-content &-custom-content {
+    .size(360px; 30px);
+    padding: @padding-xs @padding-sm+2;
+    border-radius: @border-radius-base;
+    box-sizing: border-box;
+    line-height: 14px;
+  }
+
+  &-success {
+    background-color: @success-color;
+  }
+
+  &-error {
+    background-color: @error-color;
+  }
+
+  &-warning {
+    background-color: @warning-color;
   }
 
   .@{iconfont-css-prefix} {
