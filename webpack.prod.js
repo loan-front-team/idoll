@@ -9,7 +9,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const common = require('./webpack.common.js');
 
  let webpackConfig = merge(common, {
-	devtool: 'source-map',
+	devtool: '#source-map',
 	module: {
 		rules: [
 			{
@@ -26,7 +26,7 @@ const common = require('./webpack.common.js');
 	// 会自动生成一个html文件
 	new HtmlwebpackPlugin({
 		filename: 'dbox.html',
-		template: 'index.html',
+		template: 'dbox.html',
 		inject: true,
 		minify: {
                 removeComments: true,
@@ -46,6 +46,10 @@ const common = require('./webpack.common.js');
 			from: path.resolve(__dirname, 'assets'),
 			to: path.resolve(__dirname, 'dist/assets'),
 			ignore: ['.*']
+		},
+		{
+			from: path.resolve(__dirname, 'favicon.ico'),
+			to: path.resolve(__dirname, 'dist/')
 		}
 	]),
 	// 压缩js文件
