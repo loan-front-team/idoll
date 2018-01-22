@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --open --config webpack.dev.js",
-    "build": "webpack --config webpack.dll.config.js && webpack --config webpack.prod.js"
+    "build": "NODE_ENV=production webpack --config webpack.dll.config.js && webpack --config webpack.prod.js"
   },
   "keywords": [
     "idoll",
@@ -39,6 +39,7 @@
     "warning": "^3.0.0"
   },
   "devDependencies": {
+    "autoprefixer": "^7.2.5",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.0.3",
     "babel-loader": "^7.1.2",
@@ -47,8 +48,10 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.17",
     "copy-webpack-plugin": "^4.3.1",
     "css-loader": "^0.28.7",
+    "cssnano": "^3.10.0",
     "eslint": "^4.12.1",
     "eslint-config-standard": "^10.2.1",
     "eslint-config-standard-react": "^5.0.0",
@@ -67,6 +70,7 @@
     "less": "^2.7.3",
     "less-loader": "^4.0.5",
     "open-browser-webpack-plugin": "^0.0.5",
+    "postcss-loader": "^2.0.10",
     "react-hot-loader": "^3.1.3",
     "react-router-dom": "^4.2.2",
     "style-loader": "^0.19.1",
