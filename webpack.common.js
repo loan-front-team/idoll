@@ -1,5 +1,4 @@
 const path = require('path');
-const webpack = require('webpack');
 
 // 定义了一些文件夹的路径
 const ROOT_PATH = path.resolve(__dirname);
@@ -38,18 +37,19 @@ module.exports = {
       {
         test: /\.(jsx|js)$/,
         use: 'babel-loader',
-        exclude: /node_modules/
+        exclude: path.resolve(__dirname, 'node_modules')
       },
       {
         test: /\.(less|css)$/,
-        use: ['style-loader', 'css-loader', 'less-loader']
+        use: ['style-loader', 'css-loader', 'less-loader'],
+        // exclude: path.resolve(__dirname, 'node_modules')
       },
       {
-        test: /\.(png|svg|jpg|gif)$/,
+        test: /\.(png|svg|jpg|gif|webp|ico)$/,
         use: [
            'file-loader'
          ],
-         exclude: /node_modules/
+         exclude: path.resolve(__dirname, 'node_modules')
       },
       {
         test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
@@ -58,12 +58,13 @@ module.exports = {
           query: {
             limit: 10000
           }
-        }]
+        }],
+        include: path.resolve(__dirname, 'assets/fonts')
       },
       {
-        test: /\.js$/,
+        test: /\.(jsx|js)$/,
         use: 'eslint-loader',
-        exclude: /node_modules/
+        exclude: path.resolve(__dirname, 'node_modules')
       }
     ]
   }

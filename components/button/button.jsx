@@ -36,7 +36,7 @@ export default class Button extends React.Component {
 	handleClick = (...args) => {
 		const buttonNode = findDOMNode(this);
 		this.clearButton(buttonNode);
-		this.clickedTimeout = setTimeout(() => buttonNode.className += ` ${this.props.prefixCls}-clicked`, 10);
+		this.clickedTimeout = setTimeout(() => (buttonNode.className += ` ${this.props.prefixCls}-clicked`), 10);
 		clearTimeout(this.timeout);
 		this.timeout = setTimeout(() => this.clearButton(buttonNode), 500)
 

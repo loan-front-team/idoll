@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Icon } from 'antd'
 
 export class Page2 extends Component {
 	render() {
