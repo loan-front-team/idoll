@@ -138,6 +138,9 @@ export default class ModalView extends React.Component {
           <p>对话框的内容</p>
           <p>对话框的内容</p>
           <p>对话框的内容</p>
+          <p>对话框的内容</p>
+          <p>对话框的内容</p>
+          <p>对话框的内容</p>
         </Modal>
 
         {/* 异步关闭弹出框 */}

@@ -13,7 +13,7 @@ export default function confirm(config) {
 
   props.iconType = props.iconType || 'warning-circle';
 
-  let width = props.width || 416;
+  let width = props.width || 480;
   let style = props.style || {};
 
   // 默认为true，保持向下兼容
