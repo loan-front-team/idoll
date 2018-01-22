@@ -65,10 +65,11 @@
       top: (@radio-size - @radio-dot-size)/2-1px;
       border-radius: @border-radius-base;
       display: table;
-      border-top: 0;
-      border-left: 0;
+      //border-top: 0;
+      //border-left: 0;
       content: '';
-      background-color: @primary-color;
+      //background-color: @primary-color;
+      border: 1px solid @primary-color;
       opacity: 0;
       transform: scale(0);
       transition: all @radio-duration @ease-in-out-circ;
@@ -116,7 +117,8 @@
     border-color: @border-color-base !important;
     background-color: @input-disabled-bg;
     &:after {
-      background-color: #ccc;
+      //background-color: #ccc;
+      border-color: @border-color-base;
     }
   }
 
@@ -131,15 +133,16 @@
 }
 
 span.@{radio-prefix-cls} + * {
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: @padding-xs;
+  padding-right: @padding-xs;
 }
 
 .@{radio-prefix-cls}-button-wrapper {
   margin: 0;
   height: @btn-height-base;
   line-height: @btn-height-base - 2px;
-  color: @radio-button-color;
+  //color: @radio-button-color;
+  color: @text-color-secondary;
   display: inline-block;
   transition:all 0.3s ease;
   cursor: pointer;
@@ -150,7 +153,7 @@ span.@{radio-prefix-cls} + * {
   position: relative;
 
   a {
-    color: @radio-button-color;
+    color: @text-color-secondary;
   }
 
   .@{radio-prefix-cls}-button {
@@ -193,9 +196,9 @@ span.@{radio-prefix-cls} + * {
     border-radius: 0 @border-radius-base @border-radius-base 0;
   }
 
-    //&:first-child:last-child {
-    //  border-radius: @border-radius-base;
-    //}
+    &:first-child:last-child {
+      border-radius: @border-radius-base;
+    }
 
   &:hover,
   &-focused {
@@ -236,6 +239,7 @@ span.@{radio-prefix-cls} + * {
       color: @primary-7;
     }
   }
+
   &:disabled {
     border-color: @border-color-base;
     background-color: @input-disabled-bg;
