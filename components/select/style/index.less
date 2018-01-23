@@ -1,4 +1,5 @@
 @import '../../../style/theme/default/index';
+@import '../../../style/mixins/index';
 @import '../../input/style/index';
 
 @select-prefix-cls: idoll-select;
@@ -26,7 +27,7 @@
     transition: color 0.3s ease, opacity 0.15s ease;
     &:before {
       display: block;
-      //.iconfont-font("\e631");
+      .iconfont-font("\e631");
     }
     &:hover {
       color: #999;
@@ -48,20 +49,20 @@
 
   // arrow
   &-arrow {
-      //.confont-mixin();
+      .iconfont-mixin();
       position: absolute;
       top: 50%;
       right: 8px;
       line-height: 1;
       margin-top: -6px;
-      //.iconfont-size-under-12px(8px);
+      .iconfont-size-under-12px(8px);
       
       * {
           display: none;
       }
 
       &:before {
-          //content: '\e603';
+          content: '\e603';
           transition: transform 0.2s ease;
       }
   }
@@ -141,12 +142,6 @@
       padding-left: 8px;
       padding-right: 24px;
       line-height: 26px;
-
-      &:focus,
-      :hover,
-      :active{
-          color: @primary-color;
-      }
     }
   }
 
@@ -316,46 +311,46 @@
     }
 
     .@{select-prefix-cls}-selection__choice__remove {
-      //.iconfont-mixin();
+      .iconfont-mixin();
       color: #999;
       line-height: inherit;
       cursor: pointer;
       display: inline-block;
       font-weight: bold;
       transition: all 0.3s @ease-in-out;
-      //.iconfont-size-under-12px(8px);
+      .iconfont-size-under-12px(8px);
       position: absolute;
       right: 4px;
       padding: 0 0 0 8px;
       &:hover {
         color: #404040;
       }
-      //&:before {
-        //content: "\e62d";
-      //}
+      &:before {
+        content: "\e62d";
+      }
     }
   }
 
 }
 
 .@{select-prefix-cls}-dropdown {
-    // &.slide-up-enter.slide-up-enter-active&-placement-bottomLeft,
-    // &.slide-up-appear.slide-up-appear-active&-placement-bottomLeft {
-    //   animation-name: antSlideUpIn;
-    // }
+    &.slide-up-enter.slide-up-enter-active&-placement-bottomLeft,
+    &.slide-up-appear.slide-up-appear-active&-placement-bottomLeft {
+      animation-name: antSlideUpIn;
+    }
   
-    // &.slide-up-enter.slide-up-enter-active&-placement-topLeft,
-    // &.slide-up-appear.slide-up-appear-active&-placement-topLeft {
-    //   animation-name: antSlideDownIn;
-    // }
+    &.slide-up-enter.slide-up-enter-active&-placement-topLeft,
+    &.slide-up-appear.slide-up-appear-active&-placement-topLeft {
+      animation-name: antSlideDownIn;
+    }
   
-    // &.slide-up-leave.slide-up-leave-active&-placement-bottomLeft {
-    //   animation-name: antSlideUpOut;
-    // }
+    &.slide-up-leave.slide-up-leave-active&-placement-bottomLeft {
+      animation-name: antSlideUpOut;
+    }
   
-    // &.slide-up-leave.slide-up-leave-active&-placement-topLeft {
-    //   animation-name: antSlideDownOut;
-    // }
+    &.slide-up-leave.slide-up-leave-active&-placement-topLeft {
+      animation-name: antSlideDownOut;
+    }
   
     &-hidden {
       display: none;
@@ -447,9 +442,9 @@
     &&--multiple {
       .@{select-prefix-cls}-dropdown-menu-item {
         &:after {
-          //.iconfont-font("\e62e");
+          .iconfont-font("\e62e");
           color: transparent;
-          //.iconfont-size-under-12px(10px);
+          .iconfont-size-under-12px(10px);
           transition: all 0.2s ease;
           position: absolute;
           right: 15px;
