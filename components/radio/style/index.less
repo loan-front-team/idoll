@@ -57,13 +57,13 @@
 
   &-inner {
     &:after {
-      @radio-dot-size: @radio-size - 10px;
+      @radio-dot-size: @radio-size - 6px;
       position: absolute;
       width: @radio-dot-size;
       height: @radio-dot-size;
-      left: (@radio-size - @radio-dot-size)/2 - 2px;
-      top: (@radio-size - @radio-dot-size)/2 - 2px;
-      border-radius: @border-radius-base;
+      left: (@radio-size - @radio-dot-size)/2 - 1px;
+      top: (@radio-size - @radio-dot-size)/2 - 1px;
+      border-radius: @border-radius-base + 1px;
       display: table;
       //border-top: 0;
       //border-left: 0;
@@ -79,10 +79,10 @@
     top: 0;
     left: 0;
     display: block;
-    width: @radio-size;
-    height: @radio-size;
+    width: @radio-size + 2px;
+    height: @radio-size + 2px;
     border: 2px solid @border-color-base;
-    border-radius: 100px;
+    border-radius: (@radio-size + 2px)/2;
     background-color: @radio-button-bg;
     transition:all @radio-duration;
 
@@ -139,8 +139,8 @@ span.@{radio-prefix-cls} + * {
 
 .@{radio-prefix-cls}-button-wrapper {
   margin: 0;
-  height: @btn-height-base - 4px;
-  line-height: @btn-height-base - 6px;
+  height: @btn-height-base - 2px;
+  line-height: @btn-height-base - 4px;
   //color: @radio-button-color;
   color: @text-color-secondary;
   display: inline-block;
@@ -149,7 +149,7 @@ span.@{radio-prefix-cls} + * {
   border: @border-width-base @border-style-base @border-color-base;
   border-left: 0;
   background: @radio-button-bg;
-  padding: 0 @padding-md - 1px;
+  padding: 0 @padding-md - 2px;
   position: relative;
 
   a {
