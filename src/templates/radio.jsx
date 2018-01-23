@@ -47,7 +47,7 @@ export default class RadioView extends React.Component {
           <Radio value={4}>D</Radio>
         </RadioGroup>
         <h1 className='h1'>按钮单选框</h1>
-        <RadioGroup defaultValue='a' size='large'>
+        <RadioGroup defaultValue='a'>
           <RadioButton value='a'>杭州</RadioButton>
           <RadioButton value='b'>上海</RadioButton>
           <RadioButton value='c'>北京</RadioButton>
