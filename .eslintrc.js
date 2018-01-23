@@ -55,6 +55,7 @@ module.exports = {
     //"eol-last": 0, //文件以单一的换行符结束
     "handle-callback-err": 0,
     "keyword-spacing": ["error", { "before": true }],
-    'react/prop-types': 0
+    'react/prop-types': 0,
+    'comma-dangle':0
   }
 }

@@ -1,8 +1,8 @@
-import React from 'react'
-import RcDropdown from 'rc-dropdown'
+import React from 'react';
+import RcDropdown from 'rc-dropdown';
 import './style/index.js'
 
-export default class dropdown extends React.Component {
+export default class Dropdown extends React.Component {
   static defaultProps = {
     transitionName: 'slide-up',
     prefixCls: 'idoll-dropdown',
