@@ -150,8 +150,8 @@ export default class Input extends Component {
     }
 
     const prefix = props.prefix ? (
-      <span className={`${props.prefixCls}-suffix`}>
-        {props.suffix}
+      <span className={`${props.prefixCls}-prefix`}>
+        {props.prefix}
       </span>
     ) : null;
 
@@ -167,7 +167,7 @@ export default class Input extends Component {
         style={props.style}
       >
         {prefix}
-        {React.cloneElement(children, { style: null, className: this.getInputClassNam() })}
+        {React.cloneElement(children, { style: null, className: this.getInputClassName() })}
         {suffix}
       </span>
     );
@@ -192,7 +192,7 @@ export default class Input extends Component {
       // specify either the value prop, or the defaultValue props, but no both
       delete otherProps.defaultValue;
     }
-    return (
+    return this.renderLaybeldIcon(
       <input
         {...otherProps}
         className={classNames(this.getInputClassName(), className)}
