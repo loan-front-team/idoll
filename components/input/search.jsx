@@ -2,8 +2,10 @@ import React, { Component } from 'react'
 import classNames from 'classnames'
 import { PropTypes } from 'prop-types'
 import Input from './input'
-import Icon from './icon'
+import Icon from '../icon'
 import Button from '../button'
+
+import './style'
 
 export default class Search extends Component {
   static defaultProps = {
@@ -30,6 +32,7 @@ export default class Search extends Component {
 
   render() {
     const { className, prefixCls, inputPrefixCls, size, enterButton, suffix, ...others } = this.props;
+    delete others.onSearch;
     const buttonOrIcon = enterButton ? (
       <Button
         className={`${prefixCls}-button`}
