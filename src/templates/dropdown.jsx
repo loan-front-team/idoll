@@ -2,7 +2,7 @@ import React from 'react';
 import Dropdown from '../../components/dropdown';
 import Menu, { MenuItem, SubMenu } from 'rc-menu';
 import Button from '../../components/button'
-const DropdownButton = Dropdown.Button;
+// const DropdownButton = Dropdown.Button;
 
 function handleButtonClick(e) {
   console.info('click left button', e);
@@ -64,9 +64,9 @@ export default class DropView extends React.Component {
         <br />
         <br />
         <h1 className='h1'>鼠标移入，显示菜单</h1>
-        <DropdownButton overlay={menu1}>
-          功能按钮
-        </DropdownButton>
+        <Dropdown overlay={menu1}>
+          <Button type='ghost'>功能按钮</Button>
+        </Dropdown>
         <br />
         <br />
         <br />
