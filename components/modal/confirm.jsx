@@ -8,12 +8,13 @@ import { getConfirmLocale } from './locale';
 
 export default function confirm(config) {
   const props = { ...config };
+  console.log(props);
   let div = document.createElement('div');
   document.body.appendChild(div);
 
   props.iconType = props.iconType || 'warning-circle';
 
-  let width = props.width || 480;
+  let width = props.width || 416;
   let style = props.style || {};
 
   // 默认为true，保持向下兼容

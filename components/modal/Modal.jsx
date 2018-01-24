@@ -22,7 +22,6 @@ export default class Modal extends React.Component {
     confirmLoading: false,
     visible: false
   }
-
   static propTypes = {
     prefixCls: PropTypes.string,
     onOk: PropTypes.func,
@@ -44,6 +43,7 @@ export default class Modal extends React.Component {
 
   handleCancel = (e) => {
     this.props.onCancel(e);
+    // console.log(this.props);
   }
 
   handleOk = () => {
@@ -77,10 +77,13 @@ export default class Modal extends React.Component {
     }
 
     const defaultFooter = [
+      <span key='link' className='link'>
+        <a href='#'>baidu</a>
+      </span>,
       <Button
         key='cancel'
         type='ghost'
-        size='large'
+        size='small'
         onClick={this.handleCancel}
         >
         {cancelText || '取消'}
@@ -88,7 +91,7 @@ export default class Modal extends React.Component {
       <Button
         key='confirm'
         type='primary'
-        size='large'
+        size='small'
         loading={confirmLoading}
         onClick={this.handleOk}
       >
@@ -99,6 +102,7 @@ export default class Modal extends React.Component {
       <Dialog
         onClose={this.handleCancel}
         footer={footer || defaultFooter}
+        // footer={null}
         {...this.props}
         visible={visible}
         mousePosition={mousePosition}

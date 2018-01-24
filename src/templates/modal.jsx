@@ -79,7 +79,7 @@ export default class ModalView extends React.Component {
     Modal.info({
       title: '这是一条通知信息',
       content: '一些附加信息一些附加信息一些附加信息',
-      onOk: function() {}
+      onOk: function() {},
     });
   }
 
@@ -100,6 +100,7 @@ export default class ModalView extends React.Component {
   // 确认对话框
   showConfirm = () => {
     confirm({
+      iconType: 'close-circle',
       title: '您是否确认要删除这项内容',
       content: '一些解释',
       onOk: function() {
@@ -130,12 +131,11 @@ export default class ModalView extends React.Component {
     return (
       <div id='main-container'>
         <div className='h1'>
-        普通弹出框
+        普通弹出框(可用于展示和提交)
         </div>
         <Button type='primary' onClick={this.showModal}>显示对话框</Button>
         <Modal title='第一个 Modal' visible={this.state.visible}
-          onOk={this.handleOk} onCancel={this.handleCancel}>
-          <p>对话框的内容</p>
+          onOk={this.handleOk} onCancel={this.handleCancel} width={800}>
           <p>对话框的内容</p>
           <p>对话框的内容</p>
           <p>对话框的内容</p>
@@ -164,8 +164,8 @@ export default class ModalView extends React.Component {
           visible={this.state.footervisible}
           title='对话框标题' onOk={this.footerhandleOk} onCancel={this.footerhandleCancel}
           footer={[
-            <Button key='back' type='ghost' size='large' onClick={this.footerhandleCancel}>返 回</Button>,
-            <Button key='submit' type='primary' size='large' loading={this.state.loading} onClick={this.footerhandleOk}>
+            <Button key='back' type='ghost' size='small' onClick={this.footerhandleCancel}>返 回</Button>,
+            <Button key='submit' type='primary' size='small' loading={this.state.loading} onClick={this.footerhandleOk}>
             提 交
             </Button>
         ]}>
@@ -209,7 +209,10 @@ export default class ModalView extends React.Component {
           visible={this.state.modal1Visible}
           onOk={() => this.setModal1Visible(false)}
           onCancel={() => this.setModal1Visible(false)}
-        >
+          footer={[
+            <Button key='cancel' type='ghost' size='small' onClick={() => this.setModal1Visible(false)}>返 回</Button>,
+            <Button key='ok' type='primary' size='small' onClick={() => this.setModal1Visible(false)}>确定</Button>
+          ]}>
           <p>对话框的内容</p>
           <p>对话框的内容</p>
           <p>对话框的内容</p>
@@ -221,6 +224,10 @@ export default class ModalView extends React.Component {
           visible={this.state.modal2Visible}
           onOk={() => this.setModal2Visible(false)}
           onCancel={() => this.setModal2Visible(false)}
+          footer={[
+            <Button key='cancel' type='ghost' size='small' onClick={() => this.setModal2Visible(false)}>返 回</Button>,
+            <Button key='ok' type='primary' size='small' onClick={() => this.setModal2Visible(false)}>确定</Button>
+          ]}
         >
           <p>对话框的内容</p>
           <p>对话框的内容</p>
