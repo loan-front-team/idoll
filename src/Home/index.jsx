@@ -77,6 +77,9 @@ function Home() {
         <NavLink className='widget-wrap' to='/modal'>
           <div className='name'>对话框</div>
           <div className='info'>Modal</div>
+        <NavLink className='widget-wrap' to='/checkbox'>
+          <div className='name'>多选按钮</div>
+          <div className='info'>checkbox</div>
         </NavLink>
       </div>
     </div>
