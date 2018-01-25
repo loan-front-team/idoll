@@ -29,10 +29,26 @@ export default class ProgressView extends React.Component {
     return (
       <div id='main-container'>
         <h1 className='h1'>线条型进度条</h1>
-        <Progress type='line' percent={30} strokeWidth={10} />
+        <Progress type='line' percent={60} strokeWidth={16} />
+        <br />
+        <br />
+        <br />
+        <br />
         <Progress type='line' percent={50} status='active' />
+        <br />
+        <br />
+        <br />
+        <br />
         <Progress type='line' percent={70} status='exception' />
+        <br />
+        <br />
+        <br />
+        <br />
         <Progress type='line' percent={100} />
+        <br />
+        <br />
+        <br />
+        <br />
         <Progress type='line' percent={30} showInfo={false} />
         <h1 className='h1'>圆形进度条</h1>
         <Progress type='circle' percent={50} status='active' gapPosition='bottom' />

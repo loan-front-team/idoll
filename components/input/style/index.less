@@ -13,4 +13,12 @@
   .input-group(~"idoll-input");
 }
 
-  
+// Input with affix: prefix or suffix
+.idoll-input-affix-wrapper {
+  .reset-component;
+  .input-affix-wrapper(~"idoll-input");
+
+  .idoll-input {
+    min-height: 100%;  // use min-height, assume that no smaller height to override
+  }
+}
