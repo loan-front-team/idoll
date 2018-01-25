@@ -2,6 +2,7 @@ import React from 'react';
 import { HashRouter as Router, Route } from 'react-router-dom'
 
 import Home from './Home'
+import Checkbox from 'templates/checkbox'
 import Collapse from 'templates/collapse'
 import Progress from 'templates/progress'
 import Select from 'templates/select'
@@ -35,6 +36,7 @@ const App = () => (
       <Route exact path='/radio' component={Radio} />
       <Route exact path='/icon' component={Icon} />
       <Route exact path='/breadcrumb' component={Breadcrumb} />
+      <Route exact path='/checkbox' component={Checkbox} />
     </div>
   </Router>
 )
