@@ -1,5 +1,5 @@
 import React from 'react';
-import Progress from '../../components/progress';
+import Progress from 'components/progress';
 
 let interval
 
