@@ -2,8 +2,8 @@
 @import "../../../style/mixins/index";
 
 @progress-prefix-cls: ~"@{idoll-prefix}-progress";
-@progress-default-color: @processing-color;
-@progress-remaining-color: @background-color-base;
+@progress-default-color: @highlight-color;
+@progress-remaining-color: @section-background-dark;
 
 .@{progress-prefix-cls} {
   .reset-component;
@@ -29,6 +29,7 @@
       padding-right: ~"calc(2em + 8px)";
       margin-right: ~"calc(-2em-8px)";
     }
+    position: relative;
   }
 
   &-inner {
@@ -36,6 +37,8 @@
     width: 100%;
     background-color: @progress-remaining-color;
     vertical-align: middle;
+    border-radius: 100px;
+    padding: 4px 4px;
   }
 
   &-circle-trail {
@@ -51,7 +54,6 @@
     border-radius: 100px;
     background-color: @progress-default-color;
     transition: all 0.4s @ease-out-circ 0;
-    position: relative;
   }
 
   &-text {
@@ -62,14 +64,20 @@
     margin-left: 8px;
     vertical-align: middle;
     display: inline-block;
-    color: @text-color-secondary;
+    color: @highlight-color;
     position: absolute;
-    top: 5px;
-    right: -10px;
+    left: 49%;
     line-height: 1;
     .@{iconfont-css-prefix} {
       font-size: @font-size-base;
     }
+  }
+
+  &-import {
+    display: inline-block;
+    color: @highlight-color;
+    position: absolute;
+    left: 46%;
   }
 
   &-status-active {
