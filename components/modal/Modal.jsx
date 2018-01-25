@@ -77,9 +77,6 @@ export default class Modal extends React.Component {
     }
 
     const defaultFooter = [
-      <span key='link' className='link'>
-        <a href='#'>baidu</a>
-      </span>,
       <Button
         key='cancel'
         type='ghost'
