@@ -1,45 +1,35 @@
 @import '../../../style/theme/default/index';
 @import '../../../style/mixins/index';
 @import '../../button/style/mixin';
+@import './mixin';
 
-.idoll-search-input-wrapper {
-  display: inline-block;
-  vertical-align: middle;
-}
+@idoll-prefix: ~'idoll';
+@search-prefix: ~'idoll-input-search';
 
-.idoll-search-input {
-  &.idoll-input-group .idoll-input:first-child,
-  &.idoll-input-group .idoll-input:first-child {
-    border-radius: @border-radius-base;
-    position: absolute;
-    top: -1px;
-    width: 100%;
+
+.@{search-prefix} {
+  &-icon {
+    pointer-events: none;
+    color: @text-color-secondary;
   }
 
-  .idoll-search-btn {
-    .btn-default;
-    border-radius: 0 @border-radius-base - 1 @border-radius-base - 1 0;
-    left: -1px;
-    position: relative;
-    border-width: 0 0 0 1px;
-    z-index: 2;
-    padding-left: 8px;
-    padding-right: 8px;
-    &:hover {
-      border-color: @border-color-base;
-    }
-    form & {
-      padding-top: 6px;
-      padding-bottom: 6px;
+  &:not(&-small) > .@{idoll-prefix}-input-suffix {
+    right: @control-padding-horizontal;
+  }
+
+  > .@{idoll-prefix}-input-suffix > .@{search-prefix}-button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    > .@{iconfont-css-prefix}-search {
+      font-size: @font-size-lg;
     }
   }
-  &&-fucus .idoll-search-btn-noempty,
-  &:hover .idoll-search-btn-noempty {
-    .btn-primary;
+
+  &.@{search-prefix}-enter-button > .@{idoll-prefix}-input {
+    padding-right: 46px;
   }
-  .idoll-select-combobox {
-    .idoll-select-selection__rendered {
-      right: 29px;
-    }
+
+  &.@{search-prefix}-enter-button > .@{idoll-prefix}-input-suffix {
+    right: 0;
   }
 }
