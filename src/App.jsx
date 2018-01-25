@@ -14,6 +14,7 @@ import message from 'templates/message'
 import Layout from 'templates/layout'
 import Radio from 'templates/radio'
 import Icon from 'templates/icon'
+import Modal from 'templates/modal'
 import Index from './HomeIndex'
 
 import './App.css';
@@ -34,6 +35,7 @@ const App = () => (
       <Route exact path='/layout' component={Layout} />
       <Route exact path='/radio' component={Radio} />
       <Route exact path='/icon' component={Icon} />
+      <Route exact path='/modal' component={Modal} />
       <Route exact path='/checkbox' component={Checkbox} />
     </div>
   </Router>
