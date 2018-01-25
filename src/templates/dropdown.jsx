@@ -1,8 +1,10 @@
 import React from 'react';
-import Dropdown from '../../components/dropdown';
+import Dropdown from 'components/dropdown';
 import Menu, { MenuItem, SubMenu } from 'rc-menu';
-import Button from '../../components/button'
-// const DropdownButton = Dropdown.Button;
+import Button from 'components/button'
+// import Icon from 'components/icon'
+import './dropdown.less'
+const DropdownButton = Dropdown.Button;
 
 function handleButtonClick(e) {
   console.info('click left button', e);
@@ -37,11 +39,15 @@ export default class DropView extends React.Component {
   };
   handleMenuClick = (e) => {
     if (e.key === '2.3') {
-      this.setState({ visible: false });
+      this.setState({
+        visible: false
+      });
     }
   }
   handleVisibleChange = (flag) => {
-    this.setState({ visible: flag });
+    this.setState({
+      visible: flag
+    });
   }
   render() {
     const menu2 = (
@@ -55,7 +61,7 @@ export default class DropView extends React.Component {
       <div id='main-container'>
         <h1 className='h1'>鼠标点击，显示菜单</h1>
         <Dropdown overlay={menu} trigger={['click']} onClick={handleButtonClick}>
-          <Button type='ghost'>
+          <Button className='button-default'>
             按钮
           </Button>
         </Dropdown>
@@ -64,18 +70,20 @@ export default class DropView extends React.Component {
         <br />
         <br />
         <h1 className='h1'>鼠标移入，显示菜单</h1>
-        <Dropdown overlay={menu1}>
-          <Button type='ghost'>功能按钮</Button>
-        </Dropdown>
+        <DropdownButton overlay={menu1}>
+          功能按钮
+        </DropdownButton>
         <br />
         <br />
         <br />
         <br />
         <h1 className='h1'>在下拉列表中点击内容关闭菜单</h1>
         <Dropdown overlay={menu2} onVisibleChange={this.handleVisibleChange} visible={this.state.visible} >
-          <a href='#'>
-            Hover me
-          </a>
+          <span className='dropdown-span'>
+            <a href='#' className='dropdown-a'>
+              Hover me
+            </a>
+          </span>
         </Dropdown>
         <br />
         <br />
