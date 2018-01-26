@@ -79,6 +79,24 @@ function Home() {
           <div className='info'>Pagination</div>
         </NavLink>
       </div>
+      <div className='widget-item' >
+        <NavLink className='widget-wrap' to='/tag'>
+          <div className='name'>Tag标签</div>
+          <div className='info'>tag</div>
+        </NavLink>
+      </div>
+      <div>
+        <NavLink className='widget-wrap' to='/modal'>
+          <div className='name'>对话框</div>
+          <div className='info'>Modal</div>
+        </NavLink>
+      </div>
+      <div>
+        <NavLink className='widget-wrap' to='/checkbox'>
+          <div className='name'>多选按钮</div>
+          <div className='info'>checkbox</div>
+        </NavLink>
+      </div>
     </div>
   );
 }

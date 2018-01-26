@@ -39,33 +39,55 @@ export default class Progress extends Component {
     const { prefixCls, className, percent = 0, status, format, trailColor, size, type, strokeWidth, width, showInfo,
       gapDegree = 0, gapPosition, ...restProps } = props;
     const progressStatus = parseInt(percent.toString(), 10) >= 100 && !('status' in props) ? 'success' : (status || 'normal');
-    let progressInfo;
+    let text;
     let progress;
     const textFormatter = format || (percentNumber => `${percentNumber}%`);
     if (showInfo) {
-      let text;
       const iconType = (type === 'circle' || type === 'dashboard') ? '' : '-circle';
       if (progressStatus === 'exception') {
-        text = format ? textFormatter(percent) : <Icon type={`cross${iconType}`} />;
+        if (type !== 'line') {
+          text = format ? textFormatter(percent) : <Icon type={`cross${iconType}`} />;
+        } else {
+          text = textFormatter(percent);
+        }
       } else if (progressStatus === 'success') {
-        text = format ? textFormatter(percent) : <Icon type={`check${iconType}`} />
+        if (type !== 'line') {
+          text = format ? textFormatter(percent) : <Icon type={`check${iconType}`} />
+        } else {
+          text = textFormatter(percent);
+        }
       } else {
         text = textFormatter(percent);
       }
-      progressInfo = <span className={`${prefixCls}-text`} >{text}</span>;
     }
     if (type === 'line') {
       const percentStyle = {
         width: `${percent}%`,
         height: strokeWidth || (size === 'small' ? 6 : 8)
       };
+      const innerStyle = {
+        height: percentStyle.height + 8,
+      };
+      const importStyle = {
+        top: -innerStyle.height - 5
+      }
+      const textStyle = {
+        top: innerStyle.height + 10
+      }
+      let importProgress;
+      if (progressStatus === 'exception' || progressStatus === 'success') {
+        importProgress = null;
+      } else {
+        importProgress = <span className={`${prefixCls}-import`} style={importStyle}>正在导入中，请稍后...</span>;
+      }
       progress = (<div>
         <div className={`${prefixCls}-outer`}>
-          <div className={`${prefixCls}-inner`}>
+          <div className={`${prefixCls}-inner`} style={innerStyle}>
             <div className={`${prefixCls}-bg`} style={percentStyle} />
           </div>
+          {importProgress}
+          <span className={`${prefixCls}-text`} style={textStyle} >{text}</span>
         </div>
-        {progressInfo}
       </div>)
     } else if (type === 'circle' || type === 'dashboard') {
       const circleSize = width || 120;
@@ -79,7 +101,7 @@ export default class Progress extends Component {
       const gapDeg = gapDegree || (type === 'dashboard' && 75);
       progress = (<div className={`${prefixCls}-inner`} style={circleStyle}>
         <Circle percent={percent} strokeWidth={circleWidth} trailWidth={circleWidth} strokeColor={statusColorMap[progressStatus]} trailColor={trailColor} prefixCls={prefixCls} gapDegree={gapDeg} gapPosition={gapPos} />
-        {progressInfo}
+        <span className={`${prefixCls}-text`}>{text}</span>;
       </div>);
     }
     const classString = classNames(prefixCls, {
