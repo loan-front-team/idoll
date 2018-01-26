@@ -73,6 +73,12 @@ function Home() {
           <div className='info'>Icon</div>
         </NavLink>
       </div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/breadcrumb'>
+          <div className='name'>面包屑</div>
+          <div className='info'>breadcrumb</div>
+        </NavLink>
+      </div>
       <div className='widget-item' >
         <NavLink className='widget-wrap' to='/tag'>
           <div className='name'>Tag标签</div>
