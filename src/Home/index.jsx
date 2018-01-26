@@ -79,6 +79,12 @@ function Home() {
           <div className='info'>dropdown</div>
         </NavLink>
       </div>
+      <div className='widget-item' >
+        <NavLink className='widget-wrap' to='/checkbox'>
+          <div className='name'>多选按钮</div>
+          <div className='info'>checkbox</div>
+        </NavLink>
+      </div>
     </div>
   );
 }
