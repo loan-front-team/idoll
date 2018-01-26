@@ -1,10 +1,11 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 // https://www.npmjs.com/package/rc-dialog
 import Dialog from 'rc-dialog';
 // https://www.npmjs.com/package/rc-util
 import addEventListener from 'rc-util/lib/Dom/addEventListener';
 import Button from '../button';
 import './style/index';
+import PropTypes from 'prop-types';
 
 function noop() {}
 
