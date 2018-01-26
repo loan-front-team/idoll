@@ -1,4 +1,4 @@
-import * as React from 'React'
+import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import RcCheckbox from 'rc-checkbox'
@@ -30,7 +30,6 @@ export default class Checkbox extends React.Component {
   }
   render() {
     const { props, context } = this;
-    console.info('this++++++++', this);
     const { prefixCls, className, children, indeterminate, style, onMouseEnter, onMouseLeave, ...restProps } = this.props;
     const { checkboxGroup } = context;
     let checkboxProps = { ...restProps };
