@@ -1,0 +1,24 @@
+@import '../../../style/theme/default/index';
+@import '../../../style/mixins/index';
+@import './mixin';
+@import './search-input';
+
+//Input styles
+.idoll-input {
+  .input;
+}
+
+// style for input-group: input with label, with button or dropdown...
+.idoll-input-group {
+  .input-group(~"idoll-input");
+}
+
+// Input with affix: prefix or suffix
+.idoll-input-affix-wrapper {
+  .reset-component;
+  .input-affix-wrapper(~"idoll-input");
+
+  .idoll-input {
+    min-height: 100%;  // use min-height, assume that no smaller height to override
+  }
+}
