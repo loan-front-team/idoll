@@ -13,14 +13,15 @@ import message from 'templates/message'
 import Layout from 'templates/layout'
 import Radio from 'templates/radio'
 import Icon from 'templates/icon'
-import Index from './HomeIndex'
+import Pagination from 'templates/pagination'
+// import Index from './HomeIndex'
 
 import './App.css';
 
 const App = () => (
   <Router>
     <div>
-      <Route exact path='/' component={Index} />
+      <Route exact path='/' component={Pagination} />
       <Route exact path='/home' component={Home} />
       <Route exact path='/collapse' component={Collapse} />
       <Route exact path='/progress' component={Progress} />

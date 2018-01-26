@@ -73,6 +73,12 @@ function Home() {
           <div className='info'>Icon</div>
         </NavLink>
       </div>
+      <div className='widget-item' >
+        <NavLink className='widget-wrap' to='/pagination'>
+          <div className='name'>分页</div>
+          <div className='info'>Pagination</div>
+        </NavLink>
+      </div>
     </div>
   );
 }
