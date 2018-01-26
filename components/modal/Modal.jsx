@@ -38,7 +38,7 @@ export default class Modal extends React.Component {
   }
 
   static contextTypes = {
-    idollLocale: React.PropTypes.object
+    idollLocale: PropTypes.object
   }
 
   handleCancel = (e) => {
