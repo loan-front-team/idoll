@@ -15,7 +15,7 @@ import Layout from 'templates/layout'
 import Radio from 'templates/radio'
 import Icon from 'templates/icon'
 import Modal from 'templates/modal'
-import Index from './HomeIndex'
+// import Index from './HomeIndex'
 import Breadcrumb from './templates/breadcrumb'
 import Tag from 'templates/tag';
 
@@ -24,7 +24,7 @@ import './App.css';
 const App = () => (
   <Router>
     <div>
-      <Route exact path='/' component={Index} />
+      <Route exact path='/' component={Button} />
       <Route exact path='/home' component={Home} />
       <Route exact path='/collapse' component={Collapse} />
       <Route exact path='/progress' component={Progress} />
