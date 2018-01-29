@@ -16,7 +16,7 @@
   > span {
     pointer-events: none;
   }
-
+  
   &-primary {
     .btn-primary;
 
@@ -46,7 +46,9 @@
       }
     }
   }
-
+  &-normal {
+    .btn-normal；
+  }
   &-ghost {
     .btn-ghost;
   }
@@ -58,7 +60,14 @@
   &-danger {
     .btn-danger;
   }
-
+  &-create {
+    .btn-special(@btn-prefix-cls);
+    .btn-create;
+  }
+  &-quit {
+    .btn-special(@btn-prefix-cls);
+    .btn-quit;
+  }
   &-circle,
   &-circle-outline {
     .btn-circle(@btn-prefix-cls);

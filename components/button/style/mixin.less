@@ -1,12 +1,13 @@
 // mixins for button
 // ------------------------
+// 按钮大小
 .button-size(@height; @padding; @font-size; @border-radius) {
   padding: @padding;
   font-size: @font-size;
   border-radius: @border-radius;
   height: @height;
 }
-
+// 不可用按钮
 .button-disabled() {
   &.disabled,
   &[disabled] {
@@ -19,11 +20,12 @@
     }
   }
 }
+// 按钮颜色
 .button-color(@color; @background; @border) {
   color: @color;
   background-color: @background;
   border-color: @border;
-  // a inside Button which only work in Chrome
+  // 里面的按钮只能在 Chrome中实现
   // http://stackoverflow.com/a/17253457
   > a:only-child {
     color: currentColor;
@@ -45,34 +47,34 @@
   .button-color(@color; @background; @background);
   &:hover,
   &:focus {
-    .button-color(@color; ~`colorPalette("@{background}", 5)`; ~`colorPalette("@{background}", 5)`);
+    .button-color(@color; @primary-spread-color; @primary-spread-color);
   }
 
   &:active,
   &.active {
-    .button-color(@color; ~`colorPalette("@{background}", 7)`; ~`colorPalette("@{background}", 7)`);
+    .button-color(@color; @primary-spread-color; @primary-spread-color);
   }
 
   .button-disabled();
 }
-// 次要按钮
+// 特殊场景按钮
 .button-variant-other(@color; @background; @border) {
   .button-color(@color; @background; @border);
 
   &:hover,
   &:focus {
-    .button-color(@primary-spread-color; @background; @primary-spread-color);
+    .button-color(@primary-color; @background; @primary-color);
   }
 
   &:active,
   &.active {
-    .button-color(@primary-spread-color; @background; @primary-spread-color);
+    .button-color(@primary-color; @background; @primary-color);
   }
 
   .button-disabled();
 }
 
-
+// 危险按钮
 .button-variant-danger(@color; @background; @border) {
   .button-color(@color; @background; @border);
 
@@ -105,7 +107,7 @@
   .button-disabled();
 }
 
-
+// 按钮组
 .button-group-base(@btnClassName) {
   position: relative;
   display: inline-block;
@@ -138,7 +140,7 @@
   }
 }
 
-// Base styles of buttons
+// 按钮的基本样式
 // --------------------------------------------------
 .btn() {
   display: inline-block;
@@ -150,7 +152,7 @@
   background-image: none;
   border: @border-width-base @border-style-base transparent;
   white-space: nowrap;
-  line-height: 1.15; // https://github.com/ant-design/ant-design/issues/7070
+  line-height: 1;
   .button-size(@btn-height-base; @btn-padding-base; @font-size-base; @btn-border-radius-base);
   user-select: none;
   transition: all .3s @ease-in-out;
@@ -191,13 +193,22 @@
     .button-size(@btn-height-sm; @btn-padding-sm; @btn-font-size-sm; @btn-border-radius-sm);
   }
 }
-
-// primary button style
+// 重要按钮
 .btn-primary() {
   .button-variant-primary(@btn-primary-color; @btn-primary-bg);
 }
 
-// default button style
+// 通用按钮
+.btn-normal() {
+  .button-variant-other(@btn-default-color; @btn-default-bg; @btn-default-border);
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    .button-color(@btn-primary-color; @btn-primary-bg; @btn-primary-bg);
+  }
+}
+// 次按钮
 .btn-default() {
   .button-variant-other(@btn-default-color; @btn-default-bg; @btn-default-border);
   &:hover,
@@ -208,39 +219,54 @@
   }
 }
 
-// ghost button style
+// 幽灵按钮
 .btn-ghost() {
   .button-variant-other(@btn-ghost-color, @btn-ghost-bg, @btn-ghost-border);
 }
 
-// dashed button style
+// 虚线按钮
 .btn-dashed() {
   .button-variant-other(@btn-default-color, @btn-default-bg, @btn-default-border);
   border-style: dashed;
 }
 
-// danger button style
+// 危险按钮
 .btn-danger() {
   .button-variant-danger(@btn-danger-color, @btn-danger-bg, @btn-danger-border);
 }
 
-// circle button: the content only contains icon
+// 特定按钮
+.btn-special(@btnClassName: btn){
+  .button-size(@btn-special-size; 0; @font-size-base + 10px; @btn-border-radius-base);
+  width: @btn-special-width;
+  &.@{btnClassName}-lg {
+    .button-size(@btn-special-size-lg; 0; @btn-font-size-lg + 10px; @btn-border-radius-base);
+  }
+}
+
+.btn-create() {
+  .btn-primary;
+}
+.btn-quit() {
+  .btn-default;
+}
+// 圆圈按钮: 内容只包含 icon
 .btn-circle(@btnClassName: btn) {
   .square(@btn-circle-size);
-  .button-size(@btn-circle-size; 0; @font-size-base + 2px; 50%);
+  .button-size(@btn-circle-size; -1px; @font-size-base + 2px; 50%);
 
   &.@{btnClassName}-lg {
     .square(@btn-circle-size-lg);
-    .button-size(@btn-circle-size-lg; 0; @btn-font-size-lg + 2px; 50%);
+    .button-size(@btn-circle-size-lg; -1px; @btn-font-size-lg + 2px; 50%);
   }
 
   &.@{btnClassName}-sm {
     .square(@btn-circle-size-sm);
-    .button-size(@btn-circle-size-sm; 0; @font-size-base; 50%);
+    .button-size(@btn-circle-size-sm; -1px; @font-size-base; 50%);
   }
 }
 
-// Horizontal button groups styl
+// 垂直排列的 button groups styl
 // --------------------------------------------------
 .btn-group(@btnClassName: btn) {
   .button-group-base(@btnClassName);
