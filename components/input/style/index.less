@@ -3,22 +3,23 @@
 @import './mixin';
 @import './search-input';
 
+
 //Input styles
-.idoll-input {
+.@{idoll-prefix}-input {
   .input;
 }
 
 // style for input-group: input with label, with button or dropdown...
-.idoll-input-group {
-  .input-group(~"idoll-input");
+.@{idoll-prefix}-input-group {
+  .input-group(~"@{idoll-prefix}-input");
 }
 
 // Input with affix: prefix or suffix
-.idoll-input-affix-wrapper {
+.@{idoll-prefix}-input-affix-wrapper {
   .reset-component;
-  .input-affix-wrapper(~"idoll-input");
+  .input-affix-wrapper(~"@{idoll-prefix}-input");
 
-  .idoll-input {
+  .@{idoll-prefix}-input {
     min-height: 100%;  // use min-height, assume that no smaller height to override
   }
 }
