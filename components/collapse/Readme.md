@@ -1,9 +1,13 @@
+# Collapse
+
 ---
+
 category: Components
 type: Data Display
 title: Collapse
 subtitle: 折叠面板
 cols: 1
+
 ---
 
 可以折叠、展开的内容区域
@@ -15,7 +19,8 @@ cols: 1
 
 ## API
 
-### Collapse
+### Collapse api
+
 | 参数 | 说明 | 类型 | 默认值 |
 | --- | --- | --- | --- |
 | activeKey | 当前激活tab面板的key | string\[]\|string |默认无，accordion模式下默认第一个元素 |
@@ -23,6 +28,7 @@ cols: 1
 | onChange | 切换面板的回调 | Function | 无 |
 
 ### Collapse.Panel
+
 | 参数 | 说明 | 类型 | 默认值 |
 | --- | --- | --- | --- |
 | disabled | 禁用后的面板展开与否将无法通过用户交互改变 | boolean | false |
