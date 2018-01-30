@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Radio from '../../components/radio';
-import Button from '../../components/button';
+import Radio from 'components/radio';
+import Button from 'components/button';
 const RadioGroup = Radio.RadioGroup;
 const RadioButton = Radio.RadioButton;
 

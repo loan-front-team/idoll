@@ -4,7 +4,6 @@ import { PropTypes } from 'prop-types';
 import { findDOMNode } from 'react-dom'
 import './style/index.js'
 
-
 export default class Button extends React.Component {
 	static defaultProps = {
 	    prefixCls: 'idoll-btn',
