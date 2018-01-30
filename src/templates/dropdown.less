@@ -6,10 +6,14 @@
   border: 1px solid @primary-color;
 }
 
-.button-default:hover,
-.button-default:active {
-  background-color: @primary-spread-color;
-  color: @body-background;
+.button-default:hover {
+  background-color: @primary-spread-color !important;
+  color: @body-background !important;
+}
+
+.button-default:focus {
+  background-color: red !important;
+  color: @body-background !important;
 }
 
 .dropdown-span {

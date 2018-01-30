@@ -1,6 +1,6 @@
 @import "../../../style/theme/default/index";
 @import "../../../style/mixins/index";
-
+@import "./mixin";
 @dropdown-prefix-cls: ~"@{idoll-prefix}-dropdown";
 
 .@{dropdown-prefix-cls} {
@@ -88,6 +88,9 @@
 
       &:hover {
         background-color: @section-background-dark;
+      }
+      &:visited, &:focus {
+        .sub-active('#fff'; @primary-color; @primary-color)
       }
 
       &-disabled {
