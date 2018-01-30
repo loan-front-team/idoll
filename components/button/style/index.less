@@ -7,10 +7,12 @@
 // Button styles
 // -----------------------------
 .@{btn-prefix-cls} {
+  .reset-component;
   .btn;
   .btn-default;
 
   // Make sure that the target of Button's click event always be `button`
+  // 保证子元素不会成为鼠标事件的target
   // Ref: https://github.com/ant-design/ant-design/issues/7034
   > i,
   > span {
@@ -128,7 +130,7 @@
     position: relative;
   }
 
-  // To ensure that a space will be placed between character and `Icon`.
+  // 确保在两个字符的中间及Icon中间插入一个空格
   > .@{iconfont-css-prefix} + span,
   > span + .@{iconfont-css-prefix} {
     margin-left: 8px;
