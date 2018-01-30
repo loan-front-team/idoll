@@ -2,7 +2,7 @@
 @import '../../../style/mixins/index';
 @import '../../input/style/index';
 
-@select-prefix-cls: idoll-select;
+@select-prefix-cls: ~'@{idoll-prefix}-select';
 
 .selection__clear() {
     display: inline-block;
@@ -408,6 +408,7 @@
         &:hover,
         &-active {
           background-color: @option-hover-bg;
+          color: @select-hover-color;
         }
   
         &-disabled {
@@ -425,7 +426,7 @@
           &,
           &:hover {
             background-color: @option-selected-bg;
-            color: #fff;
+            color: @select-hover-color;
           }
         }
   
