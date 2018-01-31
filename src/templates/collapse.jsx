@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Collapse from '../../components/collapse';
+import Collapse from 'components/collapse';
 
 
 const Panel = Collapse.Panel;

@@ -1,5 +1,5 @@
 import React from 'react';
-import Alert from '../../components/alert/index';
+import Alert from 'components/alert/index';
 
 const onClose = function (e) {
   console.log(e, 'I was closed.');
