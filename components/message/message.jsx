@@ -1,5 +1,5 @@
 // rc-notification:https://github.com/fis-components/rc-notification;
-import * as React from 'react';
+import React from 'react';
 import Notification from 'rc-notification';
 import './style/index';
 
