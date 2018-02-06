@@ -138,8 +138,8 @@ span.@{radio-prefix-cls} + * {
 
 .@{radio-prefix-cls}-button-wrapper {
   margin: 0;
-  height: @btn-height-base - 2px;
-  line-height: @btn-height-base - 4px;
+  height: @btn-height-base + 2px;
+  line-height: @btn-height-base;
   //color: @radio-button-color;
   color: @text-color-secondary;
   display: inline-block;
@@ -228,14 +228,14 @@ span.@{radio-prefix-cls} + * {
       box-shadow: none !important;
     }
     &:hover {
-      border-color:@primary-5;
-      box-shadow: -1px 0 0 0 @primary-5;
-      color: @primary-5;
+      border-color:@primary-color;
+      box-shadow: -1px 0 0 0 @primary-color;
+      color: @primary-color;
     }
     &:active {
-      border-color: @primary-7;
-      box-shadow: -1px 0 0 0 @primary-7;
-      color: @primary-7;
+      border-color: @primary-color;
+      box-shadow: -1px 0 0 0 @primary-color;
+      color: @primary-color;
     }
   }
 
