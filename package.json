@@ -36,6 +36,7 @@
     "rc-time-picker": "^3.2.1",
     "rc-trigger": "^2.3.3",
     "react": "^15.6.2",
+    "react-copy-to-clipboard": "^5.0.1",
     "react-document-title": "^2.0.3",
     "react-dom": "^15.6.2",
     "react-github-button": "^0.1.11",
