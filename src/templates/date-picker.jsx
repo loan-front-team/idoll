@@ -1,6 +1,6 @@
 import React from 'react';
 
-import DatePicker from '../../components/date-picker';
+import DatePicker from 'components/date-picker';
 import Radio from '../../components/radio';
 
 const { MonthPicker, RangePicker, WeekPicker } = DatePicker;

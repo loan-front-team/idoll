@@ -2,7 +2,7 @@
 @import '../../../style/mixins/index';
 @import '../../input/style/index';
 
-@select-prefix-cls: idoll-select;
+@select-prefix-cls: ~'@{idoll-prefix}-select';
 
 .selection__clear() {
     display: inline-block;
@@ -39,7 +39,7 @@
   display: inline-block;
   position: relative;
   vertical-align: middle;
-  color: #666;
+  color: @select-color;
   font-size: @font-size-base;
 
   > ul > li > a {
@@ -129,19 +129,19 @@
   }
 
   &-selection--single {
-    height: 28px;
+    height: @select-height-base;
     position: relative;
     cursor: pointer;
 
     .@{select-prefix-cls}-selection__rendered {
-      height: 26px;
+      height: @select-height-base - 2px;
       display: block;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
       padding-left: 8px;
       padding-right: 24px;
-      line-height: 26px;
+      line-height: @select-height-base - 2px;
     }
   }
 
@@ -153,18 +153,18 @@
   
   &-lg {
     .@{select-prefix-cls}-selection--single {
-      height: 32px;
+      height: @select-height-lg;
       .@{select-prefix-cls}-selection__rendered {
-        line-height: 30px;
+        line-height: @select-height-lg  -2px;
       }
     }
   
     .@{select-prefix-cls}-selection--multiple {
-      min-height: 32px;
+      min-height: @select-height-base;
       .@{select-prefix-cls}-selection__rendered {
         li {
-          height: 24px;
-          line-height: 24px;
+          height: @select-height-base - 8px;
+          line-height: @select-height-base - 8px;
         }
       }
     }
@@ -175,17 +175,17 @@
       border-radius: @border-radius-sm;
     }
     .@{select-prefix-cls}-selection--single {
-      height: 22px;
+      height: @select-height-sm;
       .@{select-prefix-cls}-selection__rendered {
-        line-height: 20px;
+        line-height: @select-height-sm -2px;
       }
     }
     .@{select-prefix-cls}-selection--multiple {
-      min-height: 22px;
+      min-height: @select-height-sm;
       .@{select-prefix-cls}-selection__rendered {
         li {
-          height: 14px;
-          line-height: 14px;
+          height: @select-height-sm - 8px;
+          line-height: @select-height-sm - 8px;
         }
       }
     }
@@ -408,6 +408,7 @@
         &:hover,
         &-active {
           background-color: @option-hover-bg;
+          color: @select-hover-color;
         }
   
         &-disabled {
@@ -425,7 +426,7 @@
           &,
           &:hover {
             background-color: @option-selected-bg;
-            color: #fff;
+            color: @select-hover-color;
           }
         }
   

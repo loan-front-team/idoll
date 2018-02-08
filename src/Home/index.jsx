@@ -80,6 +80,12 @@ function Home() {
         </NavLink>
       </div>
       <div className='widget-item' >
+        <NavLink className='widget-wrap' to='/dropdown'>
+          <div className='name'>下拉菜单</div>
+          <div className='info'>dropdown</div>
+        </NavLink>
+      </div>
+      <div className='widget-item' >
         <NavLink className='widget-wrap' to='/tag'>
           <div className='name'>Tag标签</div>
           <div className='info'>tag</div>
