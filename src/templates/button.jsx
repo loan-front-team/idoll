@@ -14,10 +14,10 @@ export default () => (
     <Button type='dashed'>虚线</Button>
     <Button type='danger'>危险</Button>
     <Button icon='tag'>图标</Button>
-    <Button shape='circle' icon='plus' />
+    <Button icon='plus-circle-o' text>文字按钮</Button>
     <h1 className='h1'>特定按钮</h1>
     <Button type='create' icon='plus' />
-    <Button type='quit' icon='plus' />
+    <Button type='quit' icon='logout' />
     <h1 className='h1'>幽灵按钮</h1>
     <div className='youling'>
       <Button ghost>默认</Button>
@@ -28,7 +28,7 @@ export default () => (
     <h1 className='h1'>组合按钮</h1>
     <ButtonGroup>
       <Button>取消</Button>
-      <Button>确定</Button>
+      <Button type='primary'>确定</Button>
     </ButtonGroup><br />
   </div>
 	)
