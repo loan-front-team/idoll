@@ -1,6 +1,6 @@
 import React from 'react'
 import RcCollapse from 'rc-collapse'
-import classNames from 'classNames'
+import classNames from 'classnames'
 
 import animation from '../_util/openAnimation.jsx'
 import './style/index.js'
