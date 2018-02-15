@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Input from '../../components/input';
-import Icon from '../../components/icon';
+import Input from 'components/input';
+import Icon from 'components/icon';
 
 // const InputGroup = Input.Group
 const Textarea = Input.Textarea

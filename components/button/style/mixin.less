@@ -235,7 +235,7 @@
   .button-variant-danger(@btn-danger-color, @btn-danger-bg, @btn-danger-border);
 }
 
-// 特定按钮
+// 特定按钮: 内容只包含 icon
 .btn-special(@btnClassName: btn){
   .button-size(@btn-special-size; 0; @font-size-base + 10px; @btn-border-radius-base);
   width: @btn-special-width;
@@ -250,19 +250,23 @@
 .btn-quit() {
   .btn-default;
 }
+// 文字按钮
+.btn-text() {
+  border: none;
+}
 // 圆圈按钮: 内容只包含 icon
 .btn-circle(@btnClassName: btn) {
   .square(@btn-circle-size);
-  .button-size(@btn-circle-size; -1px; @font-size-base + 2px; 50%);
+  .button-size(@btn-circle-size; 0; @font-size-base + 2px; 50%);
 
   &.@{btnClassName}-lg {
     .square(@btn-circle-size-lg);
-    .button-size(@btn-circle-size-lg; -1px; @btn-font-size-lg + 2px; 50%);
+    .button-size(@btn-circle-size-lg; 0; @btn-font-size-lg + 2px; 50%);
   }
 
   &.@{btnClassName}-sm {
     .square(@btn-circle-size-sm);
-    .button-size(@btn-circle-size-sm; -1px; @font-size-base; 50%);
+    .button-size(@btn-circle-size-sm; 0; @font-size-base; 50%);
   }
 }
 
