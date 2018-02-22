@@ -101,7 +101,7 @@ export default function createPicker(TheCalendar) {
 
       const clearIcon = (!props.disabled && this.state.value)
         ? <Icon type='close-circle'
-          className='idoll-calendar-picker-clear'
+          className='idoll-calendar-picker-clear '
           onClick={this.clearSelection}
         /> : null;
         return (

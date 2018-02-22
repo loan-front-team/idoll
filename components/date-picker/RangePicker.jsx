@@ -109,7 +109,7 @@ export default class RangePicker extends React.Component {
       const clearIcon = (!props.disabled && state.value && (state.value[0] || state.value[1]))
       ? <Icon
         type='close-circle'
-        className='idoll-calendar-picker-clear'
+        className='idoll-calendar-picker-clear '
         onClick={this.clearSelection}
       /> : null;
 
