@@ -103,6 +103,18 @@ function Home() {
           <div className='info'>checkbox</div>
         </NavLink>
       </div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/timepicker'>
+          <div className='name'>时间选择框</div>
+          <div className='info'>timepicker</div>
+        </NavLink>
+      </div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/datepicker'>
+          <div className='name'>日期选择框</div>
+          <div className='info'>datepicker</div>
+        </NavLink>
+      </div>
     </div>
   );
 }
