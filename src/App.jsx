@@ -17,15 +17,16 @@ import Radio from 'templates/radio'
 import Icon from 'templates/icon'
 import Modal from 'templates/modal'
 import Breadcrumb from 'templates/breadcrumb'
-import Index from './HomeIndex'
+// import Index from './HomeIndex'
 import Tag from 'templates/tag';
+import Tooltip from 'templates/tooltip';
 
 import './App.css';
 
 const App = () => (
   <Router>
     <div>
-      <Route exact path='/' component={Index} />
+      <Route exact path='/' component={Tooltip} />
       <Route exact path='/home' component={Home} />
       <Route exact path='/collapse' component={Collapse} />
       <Route exact path='/progress' component={Progress} />
@@ -43,6 +44,7 @@ const App = () => (
       <Route exact path='/modal' component={Modal} />
       <Route exact path='/checkbox' component={Checkbox} />
       <Route exact path='/breadcrumb' component={Breadcrumb} />
+      <Route exact path='/tooltip' component={Tooltip} />
     </div>
   </Router>
 )

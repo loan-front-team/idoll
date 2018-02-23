@@ -103,6 +103,12 @@ function Home() {
           <div className='info'>checkbox</div>
         </NavLink>
       </div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/tooltip'>
+          <div className='name'>文字提示</div>
+          <div className='info'>tooltip</div>
+        </NavLink>
+      </div>
     </div>
   );
 }
