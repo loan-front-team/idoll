@@ -42,7 +42,7 @@ export default class Select extends React.Component {
       // children 带 dom 结构时，无法填入输入框
       optionLabelProp = optionLabelProp || 'value';
     }
-
+    console.log('select props: ', this.props);
     return (
       <RcSelect {...this.props}
         className={classs}
