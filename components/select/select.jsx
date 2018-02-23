@@ -22,7 +22,7 @@ export default class Select extends React.Component {
 
   render() {
     let {
-      size, className, combobox, notFoundContent, prefixCls, showSearch, optionLabelProp
+      size, className, mode, notFoundContent, prefixCls, showSearch, optionLabelProp
     } = this.props;
 
     const classs = classNames({
@@ -36,15 +36,23 @@ export default class Select extends React.Component {
     if (antLocale && antLocale.Select) {
       notFoundContent = notFoundContent || antLocale.Select.notFoundContent;
     }
-
-    if (combobox) {
+    const isCombobox = mode === 'combobox';
+    if (isCombobox) {
       notFoundContent = null;
       // children 带 dom 结构时，无法填入输入框
       optionLabelProp = optionLabelProp || 'value';
     }
+
+    const modeConfig = {
+      multiple: mode === 'multiple',
+      tags: mode === 'tags',
+      combobox: isCombobox,
+    };
+
     console.log('select props: ', this.props);
     return (
       <RcSelect {...this.props}
+        {...modeConfig}
         className={classs}
         optionLabelProp={optionLabelProp || 'children'}
         notFoundContent={notFoundContent}

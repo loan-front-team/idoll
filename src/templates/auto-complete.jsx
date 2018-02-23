@@ -21,16 +21,19 @@ export default class Complete extends React.Component {
   render() {
     const { result } = this.state;
     const children = result.map((email) => {
-      return <Option key={email}>{email}</Option>;
+      return <Option style={{ width: 240 }} key={email}>{email}</Option>;
     });
     return (
-      <AutoComplete
-        style={{ width: 200 }}
-        onSearch={this.handleSearch}
-        placeholder='input here'
-      >
-        {children}
-      </AutoComplete>
+      <div id='main-container'>
+        <h1 className='h1'>自动完成</h1>
+        <AutoComplete
+          style={{ width: 200 }}
+          onSearch={this.handleSearch}
+          placeholder='input here'
+        >
+          {children}
+        </AutoComplete>
+      </div>
     );
   }
 }

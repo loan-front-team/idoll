@@ -20,7 +20,7 @@ export default class AutoComplete extends React.Component {
     transitionName: 'slide-up',
     optionLabelProp: 'children',
     choiceTransitionName: 'zoom',
-    showSearch: false,
+    showSearch: true,
     filterOption: false
   };
 
