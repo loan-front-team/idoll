@@ -1,12 +1,9 @@
 import * as React from 'react';
 import { Option, OptGroup } from 'rc-select';
-// import { PropTypes } from 'prop-types';
 import classNames from 'classnames';
 import Select from '../select';
 import Input from '../input';
 import InputElement from './inputElement';
-
-// import './style/index.less';
 
 function isSelectOptionOrSelectOptGroup(child) {
   return child && child.type && (child.type.isSelectOption || child.type.isSelectOptGroup);
@@ -23,10 +20,6 @@ export default class AutoComplete extends React.Component {
     showSearch: true,
     filterOption: false
   };
-
-  // static propTypes = {
-  //   value: PropTypes.
-  // }
 
   getInputElement = () => {
     const { children } = this.props;

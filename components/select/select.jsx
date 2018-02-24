@@ -49,7 +49,6 @@ export default class Select extends React.Component {
       combobox: isCombobox,
     };
 
-    console.log('select props: ', this.props);
     return (
       <RcSelect {...this.props}
         {...modeConfig}
