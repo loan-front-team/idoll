@@ -104,6 +104,11 @@ function Home() {
         </NavLink>
       </div>
       <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/tooltip'>
+          <div className='name'>文字提示</div>
+          <div className='info'>tooltip</div>
+        </NavLink>
+      </div>
         <NavLink className='widget-wrap' to='/timepicker'>
           <div className='name'>时间选择框</div>
           <div className='info'>timepicker</div>
