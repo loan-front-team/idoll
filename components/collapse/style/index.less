@@ -9,7 +9,7 @@
   transform: rotate(0);
 }
 .collapse-open() {
-  transform: rotate(90deg);
+  transform: rotate(-90deg);
 }
 
 .@{collapse-prefix-cls} {
@@ -38,7 +38,7 @@
 			transition: all .3s;
 
 			.arrow {
-				// .iconfont-mixin();@todo
+				.iconfont-mixin();
 				.collapse-close();
 				font-size: @font-size-sm;
 				position: absolute;
@@ -49,11 +49,11 @@
 				top: 0;
 				left: @padding-md;
 				&:before {
-					content: "\E61F";
+					content: "\E92C";
 				}
 			}
 		}
-	} 
+	}
 
 	&-anim-active {
 		transition: height .2s @ease-out
@@ -78,10 +78,10 @@
 
 	&-item:last-child {
 		> .@{collapse-prefix-cls}-content {
-			border-radius: 0 0 @border-radius-base @border-radius-base; 
+			border-radius: 0 0 @border-radius-base @border-radius-base;
 		}
 	}
-	
+
 	& > &-item > &-header[aria-expanded="true"] {
 		.arrow {
 			.collapse-open();
