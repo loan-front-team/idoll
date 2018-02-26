@@ -115,6 +115,12 @@ function Home() {
           <div className='info'>datepicker</div>
         </NavLink>
       </div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/autocomplete'>
+          <div className='name'>自动完成</div>
+          <div className='info'>auto-complete</div>
+        </NavLink>
+      </div>
     </div>
   );
 }
