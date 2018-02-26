@@ -109,6 +109,7 @@ function Home() {
           <div className='info'>tooltip</div>
         </NavLink>
       </div>
+      <div className='widget-item'>
         <NavLink className='widget-wrap' to='/timepicker'>
           <div className='name'>时间选择框</div>
           <div className='info'>timepicker</div>
