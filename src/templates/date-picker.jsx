@@ -18,7 +18,7 @@ export default class DatePickerView extends React.Component {
         <h1 className='h1'>
          基本日历
         </h1>
-        <RangePicker />
+        <RangePicker style={{ width: 230 }} />
         <h1 className='h1'>
          基本日历
         </h1>
