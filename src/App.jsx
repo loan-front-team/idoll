@@ -20,6 +20,9 @@ import Breadcrumb from 'templates/breadcrumb'
 import Index from './HomeIndex'
 import Tag from 'templates/tag';
 import Tooltip from 'templates/tooltip';
+import TimePicker from './templates/timepicker';
+import DatePicker from './templates/date-picker';
+import AutoComplete from 'templates/auto-complete';
 
 import './App.css';
 
@@ -45,6 +48,9 @@ const App = () => (
       <Route exact path='/checkbox' component={Checkbox} />
       <Route exact path='/breadcrumb' component={Breadcrumb} />
       <Route exact path='/tooltip' component={Tooltip} />
+      <Route exact path='/timepicker' component={TimePicker} />
+      <Route exact path='/datepicker' component={DatePicker} />
+      <Route exact path='/autocomplete' component={AutoComplete} />
     </div>
   </Router>
 )
