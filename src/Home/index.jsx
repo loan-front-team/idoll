@@ -73,6 +73,18 @@ function Home() {
           <div className='info'>Icon</div>
         </NavLink>
       </div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/breadcrumb'>
+          <div className='name'>面包屑</div>
+          <div className='info'>breadcrumb</div>
+        </NavLink>
+      </div>
+      <div className='widget-item' >
+        <NavLink className='widget-wrap' to='/dropdown'>
+          <div className='name'>下拉菜单</div>
+          <div className='info'>dropdown</div>
+        </NavLink>
+      </div>
       <div className='widget-item' >
         <NavLink className='widget-wrap' to='/pagination'>
           <div className='name'>分页</div>
@@ -85,16 +97,34 @@ function Home() {
           <div className='info'>tag</div>
         </NavLink>
       </div>
-      <div>
+      <div className='widget-item'>
         <NavLink className='widget-wrap' to='/modal'>
           <div className='name'>对话框</div>
           <div className='info'>Modal</div>
         </NavLink>
       </div>
-      <div>
+      <div className='widget-item'>
         <NavLink className='widget-wrap' to='/checkbox'>
           <div className='name'>多选按钮</div>
           <div className='info'>checkbox</div>
+        </NavLink>
+      </div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/timepicker'>
+          <div className='name'>时间选择框</div>
+          <div className='info'>timepicker</div>
+        </NavLink>
+      </div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/datepicker'>
+          <div className='name'>日期选择框</div>
+          <div className='info'>datepicker</div>
+        </NavLink>
+      </div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/autocomplete'>
+          <div className='name'>自动完成</div>
+          <div className='info'>auto-complete</div>
         </NavLink>
       </div>
     </div>

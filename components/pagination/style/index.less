@@ -55,18 +55,18 @@
             }
         }
         &-active {
-            background-color: @primary-color;
+            // background-color: @primary-color;
             border-color: @primary-color;
 
             &:focus,
             &:hover {
-                background-color: @primary-color;
+                // background-color: @primary-color;
                 border-color: @primary-color;
             }
             a,
             &:focus a,
             &:hover a {
-                color: #fff;
+                color: @primary-color;
             }
         }
     }
@@ -104,6 +104,31 @@
             color: @disabled-color;
             text-align: center;
         }
+        &:focus,
+        &:hover {
+          &:after {
+            color: @primary-color;
+            .iconfont-size-under-12px(8px);
+            letter-spacing: -1px;
+            font-family: "idollicon";
+          }
+        }
+    }
+    &-jump-prev {
+      &:focus,
+      &:hover {
+        &:after {
+          content: "\E925";
+        }
+      }
+    }
+    &-jump-next {
+      &:focus,
+      &:hover {
+        &:after {
+          content: "\E92D";
+        }
+      }
     }
     &-prev,
     &-next {
@@ -143,11 +168,13 @@
     }
     &-prev {
         .@{pagination-prefix-cls}-item-link:after {
+            content: "\E927";
             display: block;
         }
     }
     &-next {
         .@{pagination-prefix-cls}-item-link:after {
+            content: "\E928";
             display: block;
         }
     }

@@ -1,38 +1,30 @@
 import React from 'react';
+import DatePicker from 'components/date-picker/index';
+const RangePicker = DatePicker.RangePicker;
+const MonthPicker = DatePicker.MonthPicker;
 
-import DatePicker from '../../components/date-picker';
-import Radio from '../../components/radio';
-
-const { MonthPicker, RangePicker, WeekPicker } = DatePicker;
-
-function onChange(date, dateString) {
-  console.log(date, dateString);
-}
-
-
-export default class DatePickerDemo extends React.Component {
-  state = {
-    size: 'default',
-  };
-
-  handleSizeChange = (e) => {
-    this.setState({ size: e.target.value });
+export default class DatePickerView extends React.Component {
+  onChange = (value, dateString) => {
+    console.log(value, dateString);
   }
 
   render() {
-    const { size } = this.state;
     return (
-      <div>
-        <DatePicker onChange={onChange} />
-        <br />
-        <MonthPicker onChange={onChange} placeholder='Select month' />
-        <br />
-        <RangePicker onChange={onChange} />
-        <br />
-        <WeekPicker onChange={onChange} placeholder='Select week' />
+      <div id='main-container'>
+        <h1 className='h1'>
+         基本日历
+        </h1>
+        <MonthPicker onChange={this.onChange} />
+        <h1 className='h1'>
+         基本日历
+        </h1>
+        <RangePicker style={{ width: 230 }} />
+        <h1 className='h1'>
+         基本日历
+        </h1>
+        <DatePicker defaultValue='2015-06-06' disabled />
       </div>
-    );
+    )
   }
 }
-
 

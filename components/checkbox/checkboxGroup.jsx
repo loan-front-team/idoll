@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import shallowEqual from 'shallowequal';
@@ -71,7 +71,6 @@ export default class checkboxGroup extends React.Component {
         value
       })
     }
-    console.info('value+++++++', value);
     const onChange = this.props.onChange;
     if (onChange) {
       onChange(value);
@@ -80,8 +79,6 @@ export default class checkboxGroup extends React.Component {
   render() {
     const { props, state } = this;
     const { prefixCls, className, style, options } = props;
-    console.info('props++++++', props);
-    console.info('state++++++', state);
     let children = props.children;
     if (options && options.length > 0) {
       children = this.getOptions().map(option => (

@@ -57,19 +57,18 @@
 
   &-inner {
     &:after {
-      @radio-dot-size: @radio-size - 8px;
       position: absolute;
-      width: @radio-dot-size;
-      height: @radio-dot-size;
-      left: (@radio-size - @radio-dot-size)/2 - 1px;
-      top: (@radio-size - @radio-dot-size)/2 - 1px;
-      border-radius: @border-radius-base;
+      width: @radio-radius-sm;
+      height: @radio-radius-sm;
+      left: (@radio-radius-base - @radio-radius-sm)/2 - 2px;
+      top: (@radio-radius-base - @radio-radius-sm)/2 - 2px;
+      border-radius: @border-radius-base + 1px;
       display: table;
       //border-top: 0;
       //border-left: 0;
       content: '';
       //background-color: @primary-color;
-      border: 2px solid @primary-color;
+      border: @border-width-base+1px solid @primary-color;
       opacity: 0;
       transform: scale(0);
       transition: all @radio-duration @ease-in-out-circ;
@@ -79,10 +78,10 @@
     top: 0;
     left: 0;
     display: block;
-    width: @radio-size + 2px;
-    height: @radio-size + 2px;
-    border: 2px solid @border-color-base;
-    border-radius: (@radio-size + 2px)/2;
+    width: @radio-radius-base;
+    height: @radio-radius-base;
+    border: @border-width-base+1px solid @border-color-base;
+    border-radius: @radio-radius-base/2;
     background-color: @radio-button-bg;
     transition:all @radio-duration;
 
@@ -139,8 +138,8 @@ span.@{radio-prefix-cls} + * {
 
 .@{radio-prefix-cls}-button-wrapper {
   margin: 0;
-  height: @btn-height-base - 2px;
-  line-height: @btn-height-base - 4px;
+  height: @btn-height-base + 2px;
+  line-height: @btn-height-base;
   //color: @radio-button-color;
   color: @text-color-secondary;
   display: inline-block;
@@ -229,14 +228,14 @@ span.@{radio-prefix-cls} + * {
       box-shadow: none !important;
     }
     &:hover {
-      border-color:@primary-5;
-      box-shadow: -1px 0 0 0 @primary-5;
-      color: @primary-5;
+      border-color:@primary-color;
+      box-shadow: -1px 0 0 0 @primary-color;
+      color: @primary-color;
     }
     &:active {
-      border-color: @primary-7;
-      box-shadow: -1px 0 0 0 @primary-7;
-      color: @primary-7;
+      border-color: @primary-color;
+      box-shadow: -1px 0 0 0 @primary-color;
+      color: @primary-color;
     }
   }
 

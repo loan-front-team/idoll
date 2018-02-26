@@ -1,5 +1,5 @@
 import React from 'react';
-import Icon from '../../components/icon';
+import Icon from 'components/icon';
 
 export default () => (
   <div id='main-container'>
@@ -81,13 +81,43 @@ export default () => (
       <li className=''>
         <Icon type='left-circle-o' />
         <span className='icon-class'>
-          <span className='icon-name' >up-circle</span>
+          <span className='icon-name' >left-circle-o</span>
         </span>
       </li>
       <li className=''>
         <Icon type='right-circle-o' />
         <span className='icon-class'>
           <span className='icon-name' >right-circle-o</span>
+        </span>
+      </li>
+      <li className=''>
+        <Icon type='down-circle-o' />
+        <span className='icon-class'>
+          <span className='icon-name' >down-circle-o</span>
+        </span>
+      </li>
+      <li className=''>
+        <Icon type='up-circle-o' />
+        <span className='icon-class'>
+          <span className='icon-name' >up-circle-o</span>
+        </span>
+      </li>
+      <li className=''>
+        <Icon type='menu-fold' />
+        <span className='icon-class'>
+          <span className='icon-name' >menu-fold</span>
+        </span>
+      </li>
+      <li className=''>
+        <Icon type='menu-unfold' />
+        <span className='icon-class'>
+          <span className='icon-name' >menu-unfold</span>
+        </span>
+      </li>
+      <li className=''>
+        <Icon type='swap' />
+        <span className='icon-class'>
+          <span className='icon-name' >swap</span>
         </span>
       </li>
     </ul>
@@ -106,15 +136,9 @@ export default () => (
         </span>
       </li>
       <li className=''>
-        <Icon type='check-circle' />
+        <Icon type='check-circle-o' />
         <span className='icon-class'>
-          <span className='icon-name' >check-circle</span>
-        </span>
-      </li>
-      <li className=''>
-        <Icon type='success-circle' />
-        <span className='icon-class'>
-          <span className='icon-name' >success-circle</span>
+          <span className='icon-name' >check-circle-o</span>
         </span>
       </li>
       <li className=''>
@@ -130,15 +154,27 @@ export default () => (
         </span>
       </li>
       <li className=''>
-        <Icon type='radio-circle-o' />
+        <Icon type='plus-circle-o' />
         <span className='icon-class'>
-          <span className='icon-name' >radio-circle-o</span>
+          <span className='icon-name' >plus-circle-o</span>
         </span>
       </li>
       <li className=''>
-        <Icon type='selected-circle-o' />
+        <Icon type='remove-circle-o' />
         <span className='icon-class'>
-          <span className='icon-name' >selected-circle-o</span>
+          <span className='icon-name' >remove-circle-o</span>
+        </span>
+      </li>
+      <li className=''>
+        <Icon type='remove-circle' />
+        <span className='icon-class'>
+          <span className='icon-name' >remove-circle</span>
+        </span>
+      </li>
+      <li className=''>
+        <Icon type='check' />
+        <span className='icon-class'>
+          <span className='icon-name' >check</span>
         </span>
       </li>
       <li className=''>
@@ -147,6 +183,26 @@ export default () => (
           <span className='icon-name' >plus-circle</span>
         </span>
       </li>
+      <li className=''>
+        <Icon type='check-circle' />
+        <span className='icon-class'>
+          <span className='icon-name' >check-circle</span>
+        </span>
+      </li>
+      <li className=''>
+        <Icon type='close-circle-o' />
+        <span className='icon-class'>
+          <span className='icon-name' >close-circle-o</span>
+        </span>
+      </li>
+      <li className=''>
+        <Icon type='remove' />
+        <span className='icon-class'>
+          <span className='icon-name' >remove</span>
+        </span>
+      </li>
+
+
     </ul>
     <h2 className='h2'>网站通用性图标</h2>
     <ul className='iconlist clearfix'>
@@ -198,6 +254,24 @@ export default () => (
           <span className='icon-name' >tag</span>
         </span>
       </li>
+      <li className=''>
+        <Icon type='search' />
+        <span className='icon-class'>
+          <span className='icon-name' >search</span>
+        </span>
+      </li>
+      <li className=''>
+        <Icon type='filter' />
+        <span className='icon-class'>
+          <span className='icon-name' >filter</span>
+        </span>
+      </li>
+      <li className=''>
+        <Icon type='logout' />
+        <span className='icon-class'>
+          <span className='icon-name' >logout</span>
+        </span>
+      </li>
     </ul>
     <h1>二、业务图标</h1>
     <ul className='iconlist clearfix'>
@@ -208,21 +282,15 @@ export default () => (
         </span>
       </li>
       <li className=''>
-        <Icon type='car' />
-        <span className='icon-class'>
-          <span className='icon-name' >car</span>
-        </span>
-      </li>
-      <li className=''>
-        <Icon type='card' />
-        <span className='icon-class'>
-          <span className='icon-name' >card</span>
-        </span>
-      </li>
-      <li className=''>
         <Icon type='user-group' />
         <span className='icon-class'>
           <span className='icon-name' >user-group</span>
+        </span>
+      </li>
+      <li className=''>
+        <Icon type='appstore-o' />
+        <span className='icon-class'>
+          <span className='icon-name' >appstore-o</span>
         </span>
       </li>
       <li className=''>
@@ -238,21 +306,9 @@ export default () => (
         </span>
       </li>
       <li className=''>
-        <Icon type='house' />
+        <Icon type='clock-o' />
         <span className='icon-class'>
-          <span className='icon-name' >house</span>
-        </span>
-      </li>
-      <li className=''>
-        <Icon type='life-insurance' />
-        <span className='icon-class'>
-          <span className='icon-name' >life-insurance</span>
-        </span>
-      </li>
-      <li className=''>
-        <Icon type='clock' />
-        <span className='icon-class'>
-          <span className='icon-name' >clock</span>
+          <span className='icon-name' >clock-o</span>
         </span>
       </li>
       <li className=''>
@@ -265,6 +321,24 @@ export default () => (
         <Icon type='unlock' />
         <span className='icon-class'>
           <span className='icon-name' >unlock</span>
+        </span>
+      </li>
+      <li className=''>
+        <Icon type='achievement' />
+        <span className='icon-class'>
+          <span className='icon-name' >achievement</span>
+        </span>
+      </li>
+      <li className=''>
+        <Icon type='trophy' />
+        <span className='icon-class'>
+          <span className='icon-name' >trophy</span>
+        </span>
+      </li>
+      <li className=''>
+        <Icon type='sound' />
+        <span className='icon-class'>
+          <span className='icon-name' >sound</span>
         </span>
       </li>
     </ul>

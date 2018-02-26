@@ -46,9 +46,9 @@ export default class Progress extends Component {
       const iconType = (type === 'circle' || type === 'dashboard') ? '' : '-circle';
       if (progressStatus === 'exception') {
         if (type !== 'line') {
-          text = format ? textFormatter(percent) : <Icon type={`cross${iconType}`} />;
+          text = format ? textFormatter(percent) : <Icon type={`cross${iconType}`} />
         } else {
-          text = textFormatter(percent);
+          text = textFormatter(percent)
         }
       } else if (progressStatus === 'success') {
         if (type !== 'line') {
@@ -76,9 +76,9 @@ export default class Progress extends Component {
       }
       let importProgress;
       if (progressStatus === 'exception' || progressStatus === 'success') {
-        importProgress = null;
+        importProgress = null
       } else {
-        importProgress = <span className={`${prefixCls}-import`} style={importStyle}>正在导入中，请稍后...</span>;
+        importProgress = <span className={`${prefixCls}-import`} style={importStyle}>正在导入中，请稍后...</span>
       }
       progress = (<div>
         <div className={`${prefixCls}-outer`}>
@@ -101,7 +101,7 @@ export default class Progress extends Component {
       const gapDeg = gapDegree || (type === 'dashboard' && 75);
       progress = (<div className={`${prefixCls}-inner`} style={circleStyle}>
         <Circle percent={percent} strokeWidth={circleWidth} trailWidth={circleWidth} strokeColor={statusColorMap[progressStatus]} trailColor={trailColor} prefixCls={prefixCls} gapDegree={gapDeg} gapPosition={gapPos} />
-        <span className={`${prefixCls}-text`}>{text}</span>;
+        <span className={`${prefixCls}-text`}>{text}</span>
       </div>);
     }
     const classString = classNames(prefixCls, {

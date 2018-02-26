@@ -1,6 +1,6 @@
 import React from 'react';
-import Button from '../../components/button';
-import message from '../../components/message/index';
+import Button from 'components/button';
+import message from 'components/message/index';
 
 const success = () => {
   message.success('This is a message of success');
