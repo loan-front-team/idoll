@@ -1,7 +1,7 @@
 import React, { cloneElement } from 'react';
 import RcTooltip from 'rc-tooltip';
 import classNames from 'classnames';
-
+import getPlacements from './placements';
 export default class Tooltip extends React.Component {
   constructor(props) {
     super(props);
@@ -12,6 +12,10 @@ export default class Tooltip extends React.Component {
   static defaultProps = {
     prefixCls: 'idoll-tooltip',
     placement: 'top',
+    mouseEnterDelay: 0.1,
+    mouseLeaveDelay: 0.1,
+    arrowPointAtCenter: false,
+    autoAdjustOverflow: true,
   }
   onVisibleChange = (visible) => {
     const { onVisibleChange } = this.props;
@@ -65,6 +69,14 @@ export default class Tooltip extends React.Component {
     }
     return false;
   }
+  getPlacements() {
+    const { builtinPlacements, arrowPointAtCenter, autoAdjustOverflow } = this.props;
+    return builtinPlacements || getPlacements({
+      arrowPointAtCenter,
+      verticalArrowShift: 8,
+      autoAdjustOverflow,
+    });
+  }
   render() {
     // getTooltipContainer已经被重命名为getPopupContainer
     const { prefixCls, overlay, title, children, openClassName, getPopupContainer, getTooltipContainer } = this.props;
@@ -79,18 +91,17 @@ export default class Tooltip extends React.Component {
       [openClassName || `${prefixCls}-open`]: true,
     })
     return (
-      <div>
-        <RcTooltip
-          ref={this.saveTooltip}
-          overlay={overlay || title || ''}
-          visible={visible}
-          onVisibleChange={this.onVisibleChange}
-          getTooltipContainer={getPopupContainer || getTooltipContainer}
-          {...this.props}
+      <RcTooltip
+        ref={this.saveTooltip}
+        overlay={overlay || title || ''}
+        visible={visible}
+        onVisibleChange={this.onVisibleChange}
+        getTooltipContainer={getPopupContainer || getTooltipContainer}
+        builtinPlacements={this.getPlacements()}
+        {...this.props}
         >
-          {visible ? cloneElement(child, {className: childCls}) : child}
-        </RcTooltip>
-      </div>
+        {visible ? cloneElement(child, {className: childCls}) : child}
+      </RcTooltip>
     );
   }
 }
