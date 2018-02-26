@@ -127,6 +127,12 @@ function Home() {
           <div className='info'>auto-complete</div>
         </NavLink>
       </div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/popover'>
+          <div className='name'>气泡卡片</div>
+          <div className='info'>popover</div>
+        </NavLink>
+      </div>
     </div>
   );
 }
