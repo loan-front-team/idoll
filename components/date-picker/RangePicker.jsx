@@ -12,7 +12,6 @@ export default class RangePicker extends React.Component {
 
   constructor(props) {
     super(props);
-    console.log(props);
     const { value, defaultValue, parseDateFromValue } = this.props;
     const start = (value && value[0]) || defaultValue[0];
     const end = (value && value[1]) || defaultValue[1];

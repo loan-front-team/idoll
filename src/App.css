@@ -77,3 +77,17 @@ ul.iconlist li .icon-class .icon-name {
     line-height: 1;
     vertical-align: middle;
 }
+
+/* tooltip样式 */
+.demo-tooltip .placement {
+  margin-left: 80px;
+}
+.demo-tooltip .placement .idoll-btn {
+  width: 70px;
+  margin-right: 1em;
+  margin-bottom: 8px;
+  padding: 0;
+}
+.demo-tooltip .arrow .idoll-btn{
+  margin-left: 1em;
+}

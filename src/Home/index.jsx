@@ -104,6 +104,12 @@ function Home() {
         </NavLink>
       </div>
       <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/tooltip'>
+          <div className='name'>文字提示</div>
+          <div className='info'>tooltip</div>
+        </NavLink>
+      </div>
+      <div className='widget-item'>
         <NavLink className='widget-wrap' to='/timepicker'>
           <div className='name'>时间选择框</div>
           <div className='info'>timepicker</div>
@@ -113,6 +119,12 @@ function Home() {
         <NavLink className='widget-wrap' to='/datepicker'>
           <div className='name'>日期选择框</div>
           <div className='info'>datepicker</div>
+        </NavLink>
+      </div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/autocomplete'>
+          <div className='name'>自动完成</div>
+          <div className='info'>auto-complete</div>
         </NavLink>
       </div>
     </div>
