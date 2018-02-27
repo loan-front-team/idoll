@@ -19,8 +19,8 @@ import Modal from 'templates/modal'
 import Breadcrumb from 'templates/breadcrumb'
 import Index from './HomeIndex'
 import Tag from 'templates/tag';
-import TimePicker from './templates/timepicker';
-import DatePicker from './templates/date-picker';
+import TimePicker from 'templates/timepicker';
+import DatePicker from 'templates/date-picker';
 
 import './App.css';
 
