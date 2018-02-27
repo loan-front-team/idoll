@@ -19,9 +19,9 @@ import Modal from 'templates/modal'
 import Breadcrumb from 'templates/breadcrumb'
 import Index from './HomeIndex'
 import Tag from 'templates/tag';
+import TimePicker from 'templates/timepicker';
+import DatePicker from 'templates/date-picker';
 import Tooltip from 'templates/tooltip';
-import TimePicker from './templates/timepicker';
-import DatePicker from './templates/date-picker';
 import AutoComplete from 'templates/auto-complete';
 
 import './App.css';
