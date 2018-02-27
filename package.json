@@ -33,6 +33,7 @@
     "rc-scroll-anim": "^2.2.1",
     "rc-select": "^7.5.0",
     "rc-switch": "^1.6.0",
+    "rc-tabs": "^9.2.1",
     "rc-time-picker": "^3.2.1",
     "rc-trigger": "^2.3.3",
     "react": "^15.6.2",

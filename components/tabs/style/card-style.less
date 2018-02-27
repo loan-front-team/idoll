@@ -1,0 +1,15 @@
+@import "../../../style/theme/default/index";
+@import "../../../style/mixins/index";
+
+@tab-prefix-cls: ~"@{idoll-prefix}";
+
+
+.@{tab-prefix-cls} {
+  &&-card > &-bar &-nav-container {
+    height: @tabs-card-height;
+  }
+
+  &&-card > &-bar &-ink-bar {
+    visibility: hidden;
+  }
+}
