@@ -25,14 +25,17 @@ export default class Spin extends React.Component {
     tip: PropTypes.string,
     delay: PropTypes.number,
     debounceTimeout: PropTypes.number,
-    delayTimeout: PropTypes.number
+    delayTimeout: PropTypes.number,
+    notCssAnimationSupported: PropTypes.bool
   };
 
   constructor(props) {
     super(props);
-    const spinning = props.spinning
+    const spinning = props.spinning;
+    const notCssAnimationSupported = props.notCssAnimationSupported;
     this.state = {
       spinning,
+      notCssAnimationSupported,
     }
   }
 
