@@ -127,6 +127,12 @@ function Home() {
           <div className='info'>auto-complete</div>
         </NavLink>
       </div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/spin'>
+          <div className='name'>加载中</div>
+          <div className='info'>spin</div>
+        </NavLink>
+      </div>
     </div>
   );
 }
