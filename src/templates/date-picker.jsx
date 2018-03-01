@@ -12,17 +12,21 @@ export default class DatePickerView extends React.Component {
     return (
       <div id='main-container'>
         <h1 className='h1'>
-         基本日历
+         月份选择日期框
         </h1>
         <MonthPicker onChange={this.onChange} />
         <h1 className='h1'>
-         基本日历
+         日期范围选择框
         </h1>
         <RangePicker style={{ width: 230 }} />
         <h1 className='h1'>
-         基本日历
+         日期选择禁用框
         </h1>
         <DatePicker defaultValue='2015-06-06' disabled />
+        <h1 className='h1'>
+         带有时间的日期选择
+        </h1>
+        <DatePicker showTime format='yyyy-MM-dd HH:mm:ss' placeholder='请选择时间' />
       </div>
     )
   }
