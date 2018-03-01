@@ -17,20 +17,21 @@ import Radio from 'templates/radio'
 import Icon from 'templates/icon'
 import Modal from 'templates/modal'
 import Breadcrumb from 'templates/breadcrumb'
-import Index from './HomeIndex'
+// import Index from './HomeIndex'
 import Tag from 'templates/tag';
 import TimePicker from 'templates/timepicker';
 import DatePicker from 'templates/date-picker';
 import Tooltip from 'templates/tooltip';
 import AutoComplete from 'templates/auto-complete';
 import Popover from 'templates/popover';
+import Divider from 'templates/divider';
 
 import './App.css';
 
 const App = () => (
   <Router>
     <div>
-      <Route exact path='/' component={Index} />
+      <Route exact path='/' component={Divider} />
       <Route exact path='/home' component={Home} />
       <Route exact path='/collapse' component={Collapse} />
       <Route exact path='/progress' component={Progress} />
@@ -53,6 +54,7 @@ const App = () => (
       <Route exact path='/datepicker' component={DatePicker} />
       <Route exact path='/autocomplete' component={AutoComplete} />
       <Route exact path='/popover' component={Popover} />
+      <Route exact path='/divider' component={Divider} />
     </div>
   </Router>
 )
