@@ -131,7 +131,7 @@ function Home() {
         <NavLink className='widget-wrap' to='/spin'>
           <div className='name'>加载中</div>
           <div className='info'>spin</div>
-        </NabLink>
+        </NavLink>
       </div>
       <div className='widget-item'>
         <NavLink className='widget-wrap' to='/popover'>
