@@ -4,7 +4,8 @@ import Divider from 'components/divider';
 const text = `默认为水平分割线，可在中间加入文字。`;
 
 export default () => (
-  <div>
+  <div id='main-container'>
+    <h1 className='h1'>水平分割线</h1>
     <div>
       <p>{text}</p>
       <Divider />
@@ -14,6 +15,7 @@ export default () => (
       <Divider dashed />
       <p>{text}</p>
     </div>
+    <h1 className='h1'>垂直分割线</h1>
     <div>
       垂直分割线
       <Divider type='vertical' />
