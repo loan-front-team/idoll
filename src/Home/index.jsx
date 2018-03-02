@@ -139,6 +139,12 @@ function Home() {
           <div className='info'>popover</div>
         </NavLink>
       </div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/divider'>
+          <div className='name'>分割线</div>
+          <div className='info'>Divider</div>
+        </NavLink>
+      </div>
     </div>
   );
 }
