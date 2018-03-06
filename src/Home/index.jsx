@@ -104,6 +104,12 @@ function Home() {
         </NavLink>
       </div>
       <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/tabs'>
+          <div className='name'>标签页</div>
+          <div className='info'>tabs</div>
+        </NavLink>
+      </div>
+      <div className='widget-item'>
         <NavLink className='widget-wrap' to='/tooltip'>
           <div className='name'>文字提示</div>
           <div className='info'>tooltip</div>
