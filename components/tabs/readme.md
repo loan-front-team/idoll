@@ -1,4 +1,4 @@
-# [Tabs]()
+# [Tabs](http://naotu.baidu.com/file/6e36f5d7c4c69d7ac45980757dc1452c?token=baf3f81d38ab45d3)
 
 ---
 category: Components

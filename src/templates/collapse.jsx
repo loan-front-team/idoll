@@ -17,47 +17,45 @@ function callback(key) {
   console.log(key);
 }
 
-const text = `
-  A dog is a type of domesticated animal.
-  Known for its loyalty and faithfulness,
-  it can be found as a welcome guest in many households across the world.
-`;
+const text1 = `可以同时展开多个面板，这个例子默认展开了第一个。`
+const text2 = `一套没有边框的简洁样式。`
+const text3 = `自定义各个面板的背景色、圆角和边距。`
 export default () => (
   <div id='main-container'>
     <h1 className='h1'>折叠面板</h1>
     <Collapse defaultActiveKey={['1']} onChange={callback}>
-      <Panel header='This is panel header 1' key='1' >
-        <p>{text}</p>
+      <Panel header='标题一' key='1' >
+        <p>{text1}</p>
       </Panel>
-      <Panel header='This is panel header 2' key='2'>
-        <p>{text}</p>
+      <Panel header='标题二' key='2'>
+        <p>{text1}</p>
       </Panel>
-      <Panel header='This is panel header 3' key='3' disabled>
-        <p>{text}</p>
+      <Panel header='标题三' key='3' disabled>
+        <p>{text1}</p>
       </Panel>
     </Collapse>
     <h1 className='h1'>简洁风格</h1>
-    <Collapse defaultActiveKey={['1']} bordered={false}>
-      <Panel header='This is panel header 1' key='1'>
-        {text}
+    <Collapse defaultActiveKey={['2']} bordered={false}>
+      <Panel header='标题一' key='1'>
+        {text2}
       </Panel>
-      <Panel header='This is panel header 2' key='2'>
-        {text}
+      <Panel header='标题二' key='2'>
+        {text2}
       </Panel>
-      <Panel header='This is panel header 3' key='3'>
-        {text}
+      <Panel header='标题三' key='3'>
+        {text2}
       </Panel>
     </Collapse>
     <h1 className='h1'>自定义</h1>
-    <Collapse bordered={false} defaultActiveKey={['1']}>
-      <Panel header='This is panel header 1' key='1' style={customPanelStyle}>
-        <p>{text}</p>
+    <Collapse bordered={false}>
+      <Panel header='标题一' key='1' style={customPanelStyle}>
+        <p>{text3}</p>
       </Panel>
-      <Panel header='This is panel header 2' key='2' style={customPanelStyle}>
-        <p>{text}</p>
+      <Panel header='标题二' key='2' style={customPanelStyle}>
+        <p>{text3}</p>
       </Panel>
-      <Panel header='This is panel header 3' key='3' style={customPanelStyle}>
-        <p>{text}</p>
+      <Panel header='标题三' key='3' style={customPanelStyle}>
+        <p>{text3}</p>
       </Panel>
     </Collapse>
   </div>

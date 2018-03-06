@@ -3,6 +3,7 @@ import React from 'react';
 import Tabs from 'components/tabs';
 import Icon from 'components/icon';
 import Radio from 'components/radio';
+import Button from 'components/button';
 const TabPane = Tabs.TabPane;
 const RadioGroup = Radio.RadioGroup;
 const RadioButton = Radio.RadioButton;
@@ -10,10 +11,43 @@ const RadioButton = Radio.RadioButton;
 export default class TabsView extends React.Component {
   constructor(props) {
     super(props);
+    this.newTabIndex = 0;
+    const panes = [
+      { title: 'Tab 1', content: 'Content of Tab Pane 1', key: '1' },
+      { title: 'Tab 2', content: 'Content of Tab Pane 2', key: '2' }
+    ];
     this.state = {
-      mode: 'top'
+      mode: 'top',
+      panes,
+      activeKey: panes[0].key
     }
   }
+  onChange = (activeKey) => {
+    this.setState({activeKey});
+  };
+  onEdit = (targetKey, action) => {
+    this[action](targetKey);
+  };
+  add = () => {
+    const panes = this.state.panes;
+    const activeKey = `newTab${this.newTabIndex++}`;
+    panes.push({ title: 'New Tab', content: 'new Tab Pane', key: activeKey });
+    this.setState({panes, activeKey});
+  };
+  remove = (targetKey) => {
+    let activeKey = this.state.activeKey;
+    let lastIndex;
+    this.state.panes.forEach((pane, i) => {
+      if (pane.key === targetKey) {
+        lastIndex = i - 1;
+      }
+    });
+    const panes = this.state.panes.filter(pane => pane.key !== targetKey);
+    if (lastIndex >= 0 && activeKey === targetKey) {
+      activeKey = panes[lastIndex].key;
+    }
+    this.setState({panes, activeKey});
+  };
   callBack = (key) => {
     console.info(key);
   };
@@ -95,6 +129,15 @@ export default class TabsView extends React.Component {
           <TabPane tab='Tab 13' key='13'>Tab 13</TabPane>
           <TabPane tab='Tab 14' key='14'>Tab 14</TabPane>
         </Tabs>
+        <h1 className='h1'>自定义新增也签触发器</h1>
+        <div>
+          <div style={{ marginBottom: 15 }}>
+            <Button onClick={this.add}>ADD</Button>
+          </div>
+          <Tabs hideAdd onChange={this.onChange} activeKey={this.state.activeKey} type='editable-card' onEdit={this.onChange}>
+            {this.state.panes.map(pane => <TabPane tab={pane.title} key={pane.key}>{pane.content}</TabPane>)}
+          </Tabs>
+        </div>
       </div>
     )
   }
