@@ -89,5 +89,19 @@ ul.iconlist li .icon-class .icon-name {
   padding: 0;
 }
 .demo-tooltip .arrow .idoll-btn{
-  margin-left: 1em;
+  margin-right: 1em;
+}
+
+/* popover样式 */
+.demo-popover .placement {
+  margin-left: 80px;
+}
+.demo-popover .placement .idoll-btn {
+  width: 70px;
+  margin-right: 1em;
+  margin-bottom: 8px;
+  padding: 0;
+}
+.demo-popover .arrow .idoll-btn{
+  margin-right: 1em;
 }

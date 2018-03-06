@@ -132,6 +132,24 @@ function Home() {
           <div className='name'>时间轴</div>
           <div className='info'>timeline</div>
         </NavLink>
+        </div>
+      <div className='widget-item'>  
+        <NavLink className='widget-wrap' to='/spin'>
+          <div className='name'>加载中</div>
+          <div className='info'>spin</div>
+        </NavLink>
+      </div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/popover'>
+          <div className='name'>气泡卡片</div>
+          <div className='info'>popover</div>
+        </NavLink>
+      </div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/divider'>
+          <div className='name'>分割线</div>
+          <div className='info'>Divider</div>
+        </NavLink>
       </div>
     </div>
   );
