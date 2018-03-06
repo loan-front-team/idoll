@@ -128,6 +128,12 @@ function Home() {
         </NavLink>
       </div>
       <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/timeline'>
+          <div className='name'>时间轴</div>
+          <div className='info'>timeline</div>
+        </NavLink>
+        </div>
+      <div className='widget-item'>  
         <NavLink className='widget-wrap' to='/spin'>
           <div className='name'>加载中</div>
           <div className='info'>spin</div>
