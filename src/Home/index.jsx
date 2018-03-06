@@ -138,8 +138,8 @@ function Home() {
           <div className='name'>时间轴</div>
           <div className='info'>timeline</div>
         </NavLink>
-        </div>
-      <div className='widget-item'>  
+      </div>
+      <div className='widget-item'>
         <NavLink className='widget-wrap' to='/spin'>
           <div className='name'>加载中</div>
           <div className='info'>spin</div>
@@ -157,7 +157,7 @@ function Home() {
           <div className='info'>title</div>
         </NavLink>
       </div>
-      <div className='widget-item'>  
+      <div className='widget-item'>
         <NavLink className='widget-wrap' to='/divider'>
           <div className='name'>分割线</div>
           <div className='info'>Divider</div>
