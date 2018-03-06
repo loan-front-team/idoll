@@ -105,3 +105,14 @@ ul.iconlist li .icon-class .icon-name {
 .demo-popover .arrow .idoll-btn{
   margin-right: 1em;
 }
+/* title样式 */
+.demo-title .darkbg {
+  background: #F1F2F7;
+  height: 52px;
+  text-align: left;
+  line-height: 52px;
+  vertical-align: middle;
+}
+.demo-title .darkbg div {
+  display: inline-block;
+}

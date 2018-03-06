@@ -27,6 +27,7 @@ import AutoComplete from 'templates/auto-complete';
 import Timeline from 'templates/timeline';
 import Spin from 'templates/spin';
 import Popover from 'templates/popover';
+import Title from 'templates/title';
 import Divider from 'templates/divider';
 
 import './App.css';
@@ -60,6 +61,7 @@ const App = () => (
       <Route exact path='/timeline' component={Timeline} />
       <Route exact path='/spin' component={Spin} />
       <Route exact path='/popover' component={Popover} />
+      <Route exact path='/title' component={Title} />
       <Route exact path='/divider' component={Divider} />
     </div>
   </Router>

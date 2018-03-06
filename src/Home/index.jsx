@@ -152,6 +152,12 @@ function Home() {
         </NavLink>
       </div>
       <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/title'>
+          <div className='name'>标题</div>
+          <div className='info'>title</div>
+        </NavLink>
+      </div>
+      <div className='widget-item'>  
         <NavLink className='widget-wrap' to='/divider'>
           <div className='name'>分割线</div>
           <div className='info'>Divider</div>
