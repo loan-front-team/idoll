@@ -25,6 +25,7 @@ import Tooltip from 'templates/tooltip';
 import AutoComplete from 'templates/auto-complete';
 import Spin from 'templates/spin';
 import Popover from 'templates/popover';
+import Title from 'templates/title';
 
 
 import './App.css';
@@ -56,6 +57,7 @@ const App = () => (
       <Route exact path='/autocomplete' component={AutoComplete} />
       <Route exact path='/spin' component={Spin} />
       <Route exact path='/popover' component={Popover} />
+      <Route exact path='/title' component={Title} />
     </div>
   </Router>
 )

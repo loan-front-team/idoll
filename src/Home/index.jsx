@@ -139,6 +139,12 @@ function Home() {
           <div className='info'>popover</div>
         </NavLink>
       </div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/title'>
+          <div className='name'>标题</div>
+          <div className='info'>title</div>
+        </NavLink>
+      </div>
     </div>
   );
 }
