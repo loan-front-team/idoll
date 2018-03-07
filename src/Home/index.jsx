@@ -145,6 +145,12 @@ function Home() {
           <div className='info'>Divider</div>
         </NavLink>
       </div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/steps'>
+          <div className='name'>步骤条</div>
+          <div className='info'>Steps</div>
+        </NavLink>
+      </div>
     </div>
   );
 }
