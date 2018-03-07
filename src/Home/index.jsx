@@ -163,6 +163,12 @@ function Home() {
           <div className='info'>Divider</div>
         </NavLink>
       </div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/badge'>
+          <div className='name'>徽标数</div>
+          <div className='info'>Badge</div>
+        </NavLink>
+      </div>
     </div>
   );
 }
