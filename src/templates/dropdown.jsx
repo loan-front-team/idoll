@@ -2,9 +2,10 @@ import React from 'react';
 import Dropdown from 'components/dropdown';
 import Menu, { MenuItem, SubMenu } from 'rc-menu';
 import Button from 'components/button'
-// import Icon from 'components/icon'
-import './dropdown.less'
+import Icon from 'components/icon'
+// import './dropdown.less'
 const DropdownButton = Dropdown.Button;
+const DropdownNormal = Dropdown.Normal;
 
 function handleButtonClick(e) {
   console.info('click left button', e);
@@ -45,6 +46,7 @@ export default class DropView extends React.Component {
     }
   }
   handleVisibleChange = (flag) => {
+    console.info(flag);
     this.setState({
       visible: flag
     });
@@ -61,7 +63,7 @@ export default class DropView extends React.Component {
       <div id='main-container'>
         <h1 className='h1'>鼠标点击，显示菜单</h1>
         <Dropdown overlay={menu} trigger={['click']} onClick={handleButtonClick}>
-          <Button className='button-default'>
+          <Button type='normal'>
             按钮
           </Button>
         </Dropdown>
@@ -70,21 +72,27 @@ export default class DropView extends React.Component {
         <br />
         <br />
         <h1 className='h1'>鼠标移入，显示菜单</h1>
-        <DropdownButton overlay={menu1}>
+        <DropdownButton overlay={menu1} trigger={['click']}>
           功能按钮
         </DropdownButton>
         <br />
         <br />
         <br />
         <br />
-        <h1 className='h1'>在下拉列表中点击内容关闭菜单</h1>
-        <Dropdown overlay={menu2} onVisibleChange={this.handleVisibleChange} visible={this.state.visible} >
-          <span className='dropdown-span'>
-            <a href='#' className='dropdown-a'>
-              Hover me
-            </a>
-          </span>
+        <h1 className='h1'>自定义在下拉列表样式</h1>
+        <Dropdown trigger={['click']} overlay={menu2} onVisibleChange={this.handleVisibleChange} visible={this.state.visible} >
+          <a href='#'>
+            Hover Me{this.state.visible === true ? <Icon type='caret-up' /> : <Icon type='caret-down' />}
+          </a>
         </Dropdown>
+        <br />
+        <br />
+        <br />
+        <br />
+        <h1 className='h1'>在下拉列表中点击内容关闭菜单</h1>
+        <DropdownNormal overlay={menu2} type='caret-down'>
+          Hover Me
+        </DropdownNormal>
         <br />
         <br />
         <br />
