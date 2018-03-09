@@ -104,6 +104,12 @@ function Home() {
         </NavLink>
       </div>
       <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/tabs'>
+          <div className='name'>标签页</div>
+          <div className='info'>tabs</div>
+        </NavLink>
+      </div>
+      <div className='widget-item'>
         <NavLink className='widget-wrap' to='/tooltip'>
           <div className='name'>文字提示</div>
           <div className='info'>tooltip</div>
@@ -128,6 +134,12 @@ function Home() {
         </NavLink>
       </div>
       <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/timeline'>
+          <div className='name'>时间轴</div>
+          <div className='info'>timeline</div>
+        </NavLink>
+      </div>
+      <div className='widget-item'>
         <NavLink className='widget-wrap' to='/spin'>
           <div className='name'>加载中</div>
           <div className='info'>spin</div>
@@ -140,9 +152,21 @@ function Home() {
         </NavLink>
       </div>
       <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/title'>
+          <div className='name'>标题</div>
+          <div className='info'>title</div>
+        </NavLink>
+      </div>
+      <div className='widget-item'>
         <NavLink className='widget-wrap' to='/divider'>
           <div className='name'>分割线</div>
           <div className='info'>Divider</div>
+        </NavLink>
+      </div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/badge'>
+          <div className='name'>徽标数</div>
+          <div className='info'>Badge</div>
         </NavLink>
       </div>
       <div className='widget-item'>
