@@ -12,14 +12,12 @@ export default class DropdownButton extends React.Component {
     visible: false
   };
   onVisibleChange = (flag) => {
-    // console.info(flag);
     this.setState({
       visible: flag
     });
   };
   render() {
     const { type, overlay, trigger, align, children, className, ...restProps } = this.props;
-    // console.info('1111', this.state.visible);
     const cls = classNames({
       [className]: !!className
     })
