@@ -169,6 +169,12 @@ function Home() {
           <div className='info'>Badge</div>
         </NavLink>
       </div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/upload'>
+          <div className='name'>文件上传</div>
+          <div className='info'>upload</div>
+        </NavLink>
+      </div>
     </div>
   );
 }
