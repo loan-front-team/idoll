@@ -1,5 +1,4 @@
 import React from 'react'
-// import Button from '../button'
 import Icon from '../icon'
 import Dropdown from './dropdown'
 import classNames from 'classnames'
@@ -9,7 +8,6 @@ export default class DropdownNormal extends React.Component {
     visible: false
   };
   onVisibleChange = (flag) => {
-    // console.info(flag);
     this.setState({
       visible: flag
     });
@@ -18,7 +16,6 @@ export default class DropdownNormal extends React.Component {
     const {
       children, className, overlay, trigger, align, ...restProps
     } = this.props;
-    // console.info('visible', this.state.visible);
     const cls = classNames({
       'idoll-dropdown-normal': true,
       [className]: !!className

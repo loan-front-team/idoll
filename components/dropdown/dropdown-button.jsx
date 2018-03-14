@@ -10,7 +10,6 @@ export default class DropdownButton extends React.Component {
     visible: false
   };
   onChange = (flag) => {
-    console.info(flag);
     this.setState({
       visible: flag
     });
@@ -21,20 +20,6 @@ export default class DropdownButton extends React.Component {
     prefixCls: 'idoll-dropdown-button'
   };
   render() {
-    // const { type, overlay, trigger, align, children, className } = this.props;
-    // // console.info('1111', restProps);
-    // const cls = classNames({
-    //   [className]: !!className
-    // })
-    // return (
-    //   <div className={cls}>
-    //     <Dropdown align={align} overlay={overlay} trigger={trigger} onVisibleChange={this.onVisibleChange}>
-    //       <Button type={type}>
-    //         {children}{this.state.visible ? <Icon type='caret-up' /> : <Icon type='caret-down' />}
-    //       </Button>
-    //     </Dropdown>
-    //   </div>
-    // )
     const {
       type, disabled, children,
       prefixCls, className, overlay, trigger, align,
@@ -52,16 +37,6 @@ export default class DropdownButton extends React.Component {
     if ('visible' in this.props) {
       dropdownProps.visible = visible;
     }
-    // if ('onVisibleChange' in this.props) {
-    //   dropdownProps.onVisibleChange = this.onChange(visible, onVisibleChange);
-    // }
-    console.info('visible', visible);
-    // let iconChange;
-    // if (this.props.visible === true) {
-    //   iconChange = <Icon type='caret-up' />
-    // } else {
-    //   iconChange = <Icon type='caret-down' />
-    // }
 
     return (
       <ButtonGroup
