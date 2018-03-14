@@ -77,3 +77,42 @@ ul.iconlist li .icon-class .icon-name {
     line-height: 1;
     vertical-align: middle;
 }
+
+/* tooltip样式 */
+.demo-tooltip .placement {
+  margin-left: 80px;
+}
+.demo-tooltip .placement .idoll-btn {
+  width: 70px;
+  margin-right: 1em;
+  margin-bottom: 8px;
+  padding: 0;
+}
+.demo-tooltip .arrow .idoll-btn{
+  margin-right: 1em;
+}
+
+/* popover样式 */
+.demo-popover .placement {
+  margin-left: 80px;
+}
+.demo-popover .placement .idoll-btn {
+  width: 70px;
+  margin-right: 1em;
+  margin-bottom: 8px;
+  padding: 0;
+}
+.demo-popover .arrow .idoll-btn{
+  margin-right: 1em;
+}
+/* title样式 */
+.demo-title .darkbg {
+  background: #F1F2F7;
+  height: 52px;
+  text-align: left;
+  line-height: 52px;
+  vertical-align: middle;
+}
+.demo-title .darkbg div {
+  display: inline-block;
+}

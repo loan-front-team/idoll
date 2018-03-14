@@ -19,7 +19,7 @@ const select = () => (
     </Select>
     <br />
     <h1 className='h1'>多选下拉框</h1>
-    <Select multiple style={{ width: 160, margin: 30 }} placeholder='Select a person' >
+    <Select mode='multiple' style={{ width: 160, margin: 30 }} placeholder='Select a person' >
       <Option value='jane'>jane</Option>
       <Option value='jack'>jack</Option>
       <Option value='mick' >mick</Option>
