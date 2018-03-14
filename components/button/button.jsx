@@ -2,15 +2,18 @@ import React from 'react'
 import classNames from 'classnames';
 import { PropTypes } from 'prop-types';
 import { findDOMNode } from 'react-dom'
-import './style/index.js'
 
+import Icon from 'components/icon'
+
+import './style/index.js'
 
 export default class Button extends React.Component {
 	static defaultProps = {
 	    prefixCls: 'idoll-btn',
 	    onClick() {},
 	    ghost: false,
-	    loading: false
+	    loading: false,
+	    text: false
   	}
 	static propTypes = {
 	    type: PropTypes.string,
@@ -43,15 +46,8 @@ export default class Button extends React.Component {
 
 		this.props.onClick(...args);
 	}
-	// Handle auto focus when click button in Chrome
-	handleMouseUp = (e) => {
-	findDOMNode(this).blur();
-	if (this.props.onMouseUp) {
-	  this.props.onMouseUp(e);
-	}
-	}
 	render() {
-		const { type, shape, size, className, htmlType, children, icon, loading, ghost, prefixCls, ...others } = this.props;
+		const { type, text, shape, size, className, htmlType, children, icon, loading, ghost, prefixCls, ...others } = this.props;
 		const sizeCls = ({large: 'lg', small: 'sm'})[size] || '';
 		const classes = classNames({
 			[prefixCls]: true,
@@ -61,14 +57,16 @@ export default class Button extends React.Component {
 			[`${prefixCls}-icon-only`]: !children && icon,
 			[`${prefixCls}-loading`]: loading,
 			[`${prefixCls}-background-ghost`]: ghost,
+			[`${prefixCls}-text`]: text,
 			[className]: className
 
 		})
-
-		const kids = React.Children.map(children, insertSpace)
+    const iconType = icon;
+    const kids = React.Children.map(children, insertSpace);
+    const iconNode = iconType ? <Icon type={icon} /> : null;
 		return (
-  <button {...others} type={htmlType || 'button'} className={classes} onMouseUp={this.handleMouseUp} onClick={this.handleClick}>
-    { kids }
+  <button {...others} type={htmlType || 'button'} className={classes} onClick={this.handleClick}>
+    {iconNode}{ kids }
   </button>
 			)
 	}
@@ -82,7 +80,8 @@ function insertSpace(child) {
 	if (isString(child)) {
 		if (isTwoCNChar(child)) { child = child.split('').join(' ') }
 		return <span>{child}</span>
-	}
+  }
+  return child;
 }
 // 判断字符串类型
 function isString(str) {

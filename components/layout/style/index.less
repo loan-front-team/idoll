@@ -1,6 +1,6 @@
 @import '../../../style/theme/default/index';
 
-.idoll-layout {
+.@{idoll-prefix}-layout {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -9,91 +9,91 @@
   background-color: @layout-backgound-color;
 }
 
-.idoll-layout-has-sider {
+.@{idoll-prefix}-layout-has-sider {
   flex-direction: row;
 }
 
-.idoll-layout-sider {
+.@{idoll-prefix}-layout-sider {
   position: relative;
-  width: @sider-basic-w-size;
+  width: @layout-sider-basic-width;
   height: 100%;
-  background-color: @sider-backgroud-color
+  background-color: @layout-sider-backgroud
 }
 
-.idoll-silder-toggle-hiden{
+.@{idoll-prefix}-silder-toggle-hiden{
   position: absolute;
   top: 20px;
   right: 6px;
 }
 
-.idoll-silder-toggle-open{
+.@{idoll-prefix}-silder-toggle-open{
   position: absolute;
   top: 20px;
   right: -30px;
 }
 
-.idoll-layout-sider-1 {
-  width: @sider-basic-w-size + 12;
+.@{idoll-prefix}-layout-sider-1 {
+  width: @layout-sider-basic-width + 12;
 }
 
-.idoll-layout-sider-2 {
-  width: @sider-basic-w-size + 12*2;
+.@{idoll-prefix}-layout-sider-2 {
+  width: @layout-sider-basic-width + 12*2;
 }
 
-.idoll-layout-sider-3 {
-  width: @sider-basic-w-size + 12*3;
+.@{idoll-prefix}-layout-sider-3 {
+  width: @layout-sider-basic-width + 12*3;
 }
 
-.idoll-layout-sider-4 {
-  width: @sider-basic-w-size + 12*4;
+.@{idoll-prefix}-layout-sider-4 {
+  width: @layout-sider-basic-width + 12*4;
 }
 
-.idoll-layout-sider-5 {
-  width: @sider-basic-w-size + 12*5;
+.@{idoll-prefix}-layout-sider-5 {
+  width: @layout-sider-basic-width + 12*5;
 }
 
-.idoll-layout-sider-6 {
-  width: @sider-basic-w-size + 12*6;
+.@{idoll-prefix}-layout-sider-6 {
+  width: @layout-sider-basic-width + 12*6;
 }
 
-.idoll-layout-sider-7 {
-  width: @sider-basic-w-size + 12*7;
+.@{idoll-prefix}-layout-sider-7 {
+  width: @layout-sider-basic-width + 12*7;
 }
 
-.idoll-layout-sider-8 {
-  width: @sider-basic-w-size + 12*8;
+.@{idoll-prefix}-layout-sider-8 {
+  width: @layout-sider-basic-width + 12*8;
 }
 
-.idoll-layout-sider-9 {
-  width: @sider-basic-w-size + 12*9;
+.@{idoll-prefix}-layout-sider-9 {
+  width: @layout-sider-basic-width + 12*9;
 }
 
-.idoll-layout-sider-10 {
-  width: @sider-basic-w-size + 12*10;
+.@{idoll-prefix}-layout-sider-10 {
+  width: @layout-sider-basic-width + 12*10;
 }
 
-.idoll-layout-header {
+.@{idoll-prefix}-layout-header {
   width: 100%;
-  height: @header-h-size;
-  background-color: @header-backgroud-color;
+  height: @layout-header-base-height;
+  background-color: @layout-header-backgroud;
 }
 
-.idoll-layout-header-1{
-  height: @header-h-size + 15*1;
+.@{idoll-prefix}-layout-header-1{
+  height: @layout-header-base-height + 15*1;
 }
 
-.idoll-layout-header-2{
-  height: @header-h-size + 15*2;
+.@{idoll-prefix}-layout-header-2{
+  height: @layout-header-base-height + 15*2;
 }
 
-.idoll-layout-content {
+.@{idoll-prefix}-layout-content {
    width: 100%;
    height: 100%;
-   background-color: @content-background-color;
+   background-color: @layout-content-background;
 }
 
-.idoll-layout-footer {
+.@{idoll-prefix}-layout-footer {
   width: 100%;
-  height: @footer-h-size;
-  background-color: @footer-backgroud-color;
+  height: @layout-footer-height;
+  background-color: @layout-footer-backgroud;
 }
