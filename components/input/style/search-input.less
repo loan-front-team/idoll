@@ -3,8 +3,7 @@
 @import '../../button/style/mixin';
 @import './mixin';
 
-@idoll-prefix: ~'idoll';
-@search-prefix: ~'idoll-input-search';
+@search-prefix: ~'@{idoll-prefix}-input-search';
 
 
 .@{search-prefix} {
@@ -20,8 +19,10 @@
   > .@{idoll-prefix}-input-suffix > .@{search-prefix}-button {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+    border: 0;
+    padding: @input-padding-vertical-base @input-padding-horizontal; 
     > .@{iconfont-css-prefix}-search {
-      font-size: @font-size-lg;
+      font-size: @font-size-base;
     }
   }
 

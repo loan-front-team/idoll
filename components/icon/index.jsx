@@ -4,6 +4,6 @@ import './style'
 
 export default props => {
 	let { type, className = '', ...other } = props;
-	className += `idollicon idollicon-${type}`;
+	className += ` idoll-icon idoll-icon-${type}`;
 	return <i className={className.trim()} {...other} />;
 };
