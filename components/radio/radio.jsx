@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import RcCheckbox from 'rc-checkbox'
 import classNames from 'classnames'
 import shallowEqual from 'shallowequal'
-import './style/index.js'
+import './style/index.jsx'
 export default class Radio extends React.Component {
   static defaultProps = {
     prefixCls: 'idoll-radio',

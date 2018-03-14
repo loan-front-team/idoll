@@ -1,6 +1,6 @@
 import React from 'react';
 import RcDropdown from 'rc-dropdown';
-import './style/index.js'
+import './style/index.jsx'
 
 export default class Dropdown extends React.Component {
   static defaultProps = {
