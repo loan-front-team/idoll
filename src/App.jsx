@@ -19,8 +19,19 @@ import Modal from 'templates/modal'
 import Breadcrumb from 'templates/breadcrumb'
 import Index from './HomeIndex'
 import Tag from 'templates/tag';
-import TimePicker from './templates/timepicker';
-import DatePicker from './templates/date-picker';
+import Tabs from 'templates/tabs';
+import Tooltip from 'templates/tooltip';
+import TimePicker from 'templates/timepicker';
+import DatePicker from 'templates/date-picker';
+import AutoComplete from 'templates/auto-complete';
+import Timeline from 'templates/timeline';
+import Spin from 'templates/spin';
+import Popover from 'templates/popover';
+import Title from 'templates/title';
+import Divider from 'templates/divider';
+import Steps from 'templates/steps';
+
+import Badge from 'templates/badge';
 
 import './App.css';
 
@@ -45,8 +56,18 @@ const App = () => (
       <Route exact path='/modal' component={Modal} />
       <Route exact path='/checkbox' component={Checkbox} />
       <Route exact path='/breadcrumb' component={Breadcrumb} />
+      <Route exact path='/tabs' component={Tabs} />
+      <Route exact path='/tooltip' component={Tooltip} />
       <Route exact path='/timepicker' component={TimePicker} />
       <Route exact path='/datepicker' component={DatePicker} />
+      <Route exact path='/autocomplete' component={AutoComplete} />
+      <Route exact path='/timeline' component={Timeline} />
+      <Route exact path='/spin' component={Spin} />
+      <Route exact path='/popover' component={Popover} />
+      <Route exact path='/title' component={Title} />
+      <Route exact path='/divider' component={Divider} />
+      <Route exact path='/steps' component={Steps} />
+      <Route exact path='/badge' component={Badge} />
     </div>
   </Router>
 )
