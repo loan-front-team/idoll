@@ -4,7 +4,7 @@ import createPicker from './createPicker';
 import wrapPicker from './wrapPicker';
 import RangePicker from './RangePicker';
 import Calendar from './Calendar';
-import './style/index.js';
+import './style/index.jsx';
 
 const DatePicker = wrapPicker(createPicker(RcCalendar));
 const MonthPicker = wrapPicker(createPicker(MonthCalendar), 'yyyy-MM');
