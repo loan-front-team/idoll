@@ -29,6 +29,8 @@ import Spin from 'templates/spin';
 import Popover from 'templates/popover';
 import Title from 'templates/title';
 import Divider from 'templates/divider';
+import Steps from 'templates/steps';
+
 import Badge from 'templates/badge';
 
 import './App.css';
@@ -64,6 +66,7 @@ const App = () => (
       <Route exact path='/popover' component={Popover} />
       <Route exact path='/title' component={Title} />
       <Route exact path='/divider' component={Divider} />
+      <Route exact path='/steps' component={Steps} />
       <Route exact path='/badge' component={Badge} />
     </div>
   </Router>
