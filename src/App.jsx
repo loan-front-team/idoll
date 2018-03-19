@@ -32,6 +32,7 @@ import Divider from 'templates/divider';
 import Steps from 'templates/steps';
 
 import Badge from 'templates/badge';
+import Card from 'templates/card';
 
 import './App.css';
 
@@ -68,6 +69,7 @@ const App = () => (
       <Route exact path='/divider' component={Divider} />
       <Route exact path='/steps' component={Steps} />
       <Route exact path='/badge' component={Badge} />
+      <Route exact path='/card' component={Card} />
     </div>
   </Router>
 )
