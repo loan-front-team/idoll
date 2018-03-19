@@ -30,12 +30,12 @@ export default class RadioView extends React.Component {
         <Radio value={1}>世界很大4</Radio>
         <h1 className='h1'>禁用单选框</h1>
         <div>
-          <Radio defaultChecked={false} disabled >Disabled</Radio>
+          <Radio defaultChecked={false} disabled >不能操作</Radio>
           <br />
-          <Radio disabled={this.state.disabled}>Disabled</Radio>
+          <Radio disabled={this.state.disabled}>不允许操作</Radio>
           <div style={{ marginTop: 20 }}>
             <Button type='primary' onClick={this.toggleDisabled}>
-              Toggle disabled
+              控制能否操作
             </Button>
           </div>
         </div>

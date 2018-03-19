@@ -3,7 +3,7 @@ import Dropdown from 'components/dropdown';
 import Menu, { MenuItem, SubMenu } from 'rc-menu';
 import Button from 'components/button'
 import Icon from 'components/icon'
-// import './dropdown.less'
+import './dropdown.less'
 const DropdownButton = Dropdown.Button;
 const DropdownNormal = Dropdown.Normal;
 
@@ -51,6 +51,9 @@ export default class DropView extends React.Component {
       visible: flag
     });
   }
+  handleChange = (flag) => {
+    console.info('aaaaaaaaaaaaaa', flag);
+  }
   render() {
     const menu2 = (
       <Menu onClick={this.handleMenuClick}>
@@ -81,8 +84,8 @@ export default class DropView extends React.Component {
         <br />
         <h1 className='h1'>自定义在下拉列表样式</h1>
         <Dropdown trigger={['click']} overlay={menu2} onVisibleChange={this.handleVisibleChange} visible={this.state.visible} >
-          <a href='#'>
-            Hover Me{this.state.visible === true ? <Icon type='caret-up' /> : <Icon type='caret-down' />}
+          <a href='#' className='idoll-icon-a'>
+            下拉菜单{this.state.visible === true ? <Icon type='caret-up' /> : <Icon type='caret-down' />}
           </a>
         </Dropdown>
         <br />
@@ -90,8 +93,8 @@ export default class DropView extends React.Component {
         <br />
         <br />
         <h1 className='h1'>在下拉列表中点击内容关闭菜单</h1>
-        <DropdownNormal overlay={menu2} type='caret-down'>
-          Hover Me
+        <DropdownNormal overlay={menu2} type='caret-down' trigger={['click']} >
+          下拉菜单
         </DropdownNormal>
         <br />
         <br />
@@ -99,23 +102,23 @@ export default class DropView extends React.Component {
         <br />
         <h1 className='h1'>下拉菜单展示位置</h1>
         <Dropdown overlay={menu} placement='bottomLeft'>
-          <Button>botLeft</Button>
+          <Button>下左</Button>
         </Dropdown>
         <Dropdown overlay={menu} placement='bottomCenter'>
-          <Button>botCenter</Button>
+          <Button>下中</Button>
         </Dropdown>
         <Dropdown overlay={menu} placement='bottomRight'>
-          <Button>botRight</Button>
+          <Button>下右</Button>
         </Dropdown>
         <br />
         <Dropdown overlay={menu} placement='topLeft'>
-          <Button>topLeft</Button>
+          <Button>上左</Button>
         </Dropdown>
         <Dropdown overlay={menu} placement='topCenter'>
-          <Button>topCenter</Button>
+          <Button>上中</Button>
         </Dropdown>
         <Dropdown overlay={menu} placement='topRight'>
-          <Button>topRight</Button>
+          <Button>上右</Button>
         </Dropdown>
       </div>
     )
