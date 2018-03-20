@@ -30,9 +30,9 @@ import Popover from 'templates/popover';
 import Title from 'templates/title';
 import Divider from 'templates/divider';
 import Steps from 'templates/steps';
+
 import Badge from 'templates/badge';
 import Card from 'templates/card';
-import Avatar from './templates/avatar';
 
 import './App.css';
 
@@ -70,7 +70,6 @@ const App = () => (
       <Route exact path='/steps' component={Steps} />
       <Route exact path='/badge' component={Badge} />
       <Route exact path='/card' component={Card} />
-      <Route exact path='/avatar' component={Avatar} />
     </div>
   </Router>
 )
