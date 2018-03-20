@@ -30,6 +30,7 @@ import Popover from 'templates/popover';
 import Title from 'templates/title';
 import Divider from 'templates/divider';
 import Steps from 'templates/steps';
+import Form from 'templates/form';
 
 import Badge from 'templates/badge';
 
@@ -68,6 +69,7 @@ const App = () => (
       <Route exact path='/divider' component={Divider} />
       <Route exact path='/steps' component={Steps} />
       <Route exact path='/badge' component={Badge} />
+      <Route exact path='/form' component={Form} />
     </div>
   </Router>
 )

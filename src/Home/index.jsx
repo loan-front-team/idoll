@@ -175,6 +175,12 @@ function Home() {
           <div className='info'>Steps</div>
         </NavLink>
       </div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/form'>
+          <div className='name'>Form表单</div>
+          <div className='info'>Form</div>
+        </NavLink>
+      </div>
     </div>
   );
 }
