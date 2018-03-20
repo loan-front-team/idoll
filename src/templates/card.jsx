@@ -2,6 +2,7 @@ import React from 'react';
 import Card from 'components/card';
 import {Row, Col} from 'components/grid';
 import Icon from 'components/icon';
+import Avatar from 'components/avatar';
 
 
 const Meta = Card.Meta;
@@ -182,7 +183,7 @@ export default class card extends React.Component {
           action={actions}
           >
           <Meta
-            avatar={<img style={{width: '32px', height: '32px'}} alt='example' src='https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png' />}
+            avatar={<Avatar src='https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png' />}
             title='hello react'
             description='欢迎来到react的世界' />
         </Card>
