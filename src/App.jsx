@@ -17,7 +17,7 @@ import Radio from 'templates/radio'
 import Icon from 'templates/icon'
 import Modal from 'templates/modal'
 import Breadcrumb from 'templates/breadcrumb'
-// import Index from './HomeIndex'
+import Index from './HomeIndex'
 import Tag from 'templates/tag';
 import Tabs from 'templates/tabs';
 import Tooltip from 'templates/tooltip';
@@ -39,7 +39,7 @@ import './App.css';
 const App = () => (
   <Router>
     <div>
-      <Route exact path='/' component={Divider} />
+      <Route exact path='/' component={Index} />
       <Route exact path='/home' component={Home} />
       <Route exact path='/collapse' component={Collapse} />
       <Route exact path='/progress' component={Progress} />
