@@ -11,46 +11,46 @@ export default class AlertView extends React.Component {
       <div id='main-container'>
         <h1 className='h1'>带有关闭按钮的警告提示</h1>
         <Alert
-          message='Warning Text Warning Text Warning TextW arning Text Warning Text Warning TextWarning Text'
+          message='警告文字警告文字警告文字警告文字警告文字警告文字警告文字警告文字警告文字警告文字警告文字警告文字警告文字'
           type='warning'
           closable
           onClose={onClose}
         />
         <Alert
-          message='Error Text'
-          description='Error Description Error Description Error Description Error Description Error Description Error Description'
+          message='错误文字'
+          description='错误描述错误描述错误描述错误描述错误描述错误描述错误描述错误描述错误描述错误描述错误描述错误描述错误描述'
           type='error'
           closable
           onClose={onClose}
         />
         <h1 className='h1'>带有图标的警告提示</h1>
         <Alert
-          message='Warning'
-          description='This is a warning notice about copywriting.'
+          message='警告'
+          description='这是警告文字.'
           type='warning'
           showIcon
         />
         <Alert
-          message='Informational Notes'
-          description='Additional description and informations about copywriting.'
+          message='信息文字'
+          description='关于文案的附加描述和信息.'
           type='info'
           showIcon
         />
         <Alert
-          message='Error'
-          description='This is an error message about copywriting.'
+          message='错误'
+          description='关于文案的错误信息.'
           type='error'
           showIcon
         />
         <h1 className='h1'>含有輔助性文字的警告提示</h1>
         <Alert
-          message='Info Text'
-          description='Info Description Info Description Info Description Info Description'
+          message='信息文字'
+          description='信息描述信息描述信息描述信息描述信息描述信息描述'
           type='info'
         />
         <Alert
-          message='Warning Text'
-          description='Warning Description Warning Description Warning Description Warning Description'
+          message='警告文字'
+          description='警告描述警告描述警告描述警告描述警告描述警告描述警告描述警告描述'
           type='warning'
         />
       </div>
