@@ -16,7 +16,7 @@ import Layout from 'templates/layout'
 import Radio from 'templates/radio'
 import Icon from 'templates/icon'
 import Pagination from 'templates/pagination'
-// import Index from './HomeIndex'
+import Index from './HomeIndex'
 import Modal from 'templates/modal'
 import Breadcrumb from 'templates/breadcrumb'
 import Tag from 'templates/tag';
@@ -40,7 +40,7 @@ import './App.css';
 const App = () => (
   <Router>
     <div>
-      <Route exact path='/' component={Pagination} />
+      <Route exact path='/' component={Index} />
       <Route exact path='/home' component={Home} />
       <Route exact path='/collapse' component={Collapse} />
       <Route exact path='/progress' component={Progress} />
@@ -72,6 +72,7 @@ const App = () => (
       <Route exact path='/badge' component={Badge} />
       <Route exact path='/card' component={Card} />
       <Route exact path='/avatar' component={Avatar} />
+      <Route exact path='/pagination' component={Pagination} />
     </div>
   </Router>
 )
