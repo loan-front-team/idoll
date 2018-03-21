@@ -1,6 +1,8 @@
 import React from 'react';
 
-import Button from '../../components/button';
+import Button from 'components/button';
+import Icon from 'components/icon';
+
 const ButtonGroup = Button.Group;
 
 export default () => (
@@ -29,6 +31,16 @@ export default () => (
     <ButtonGroup>
       <Button>取消</Button>
       <Button type='primary'>确定</Button>
-    </ButtonGroup><br />
+    </ButtonGroup>
+    <br />
+    <br />
+    <ButtonGroup>
+      <Button>
+        <Icon type='left-circle-o' />向后
+      </Button>
+      <Button>
+        向前<Icon type='right-circle-o' />
+      </Button>
+    </ButtonGroup>
   </div>
 	)

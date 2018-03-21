@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import Icon from '../icon'
 import { Circle } from 'rc-progress'
 import classNames from 'classnames'
-import './style/index.js'
+import './style/index.jsx'
 
 const statusColorMap = {
   normal: '#108ee9',

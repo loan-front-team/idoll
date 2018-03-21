@@ -110,6 +110,18 @@ function Home() {
         </NavLink>
       </div>
       <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/tabs'>
+          <div className='name'>标签页</div>
+          <div className='info'>tabs</div>
+        </NavLink>
+      </div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/tooltip'>
+          <div className='name'>文字提示</div>
+          <div className='info'>tooltip</div>
+        </NavLink>
+      </div>
+      <div className='widget-item'>
         <NavLink className='widget-wrap' to='/timepicker'>
           <div className='name'>时间选择框</div>
           <div className='info'>timepicker</div>
@@ -125,6 +137,60 @@ function Home() {
         <NavLink className='widget-wrap' to='/autocomplete'>
           <div className='name'>自动完成</div>
           <div className='info'>auto-complete</div>
+        </NavLink>
+      </div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/timeline'>
+          <div className='name'>时间轴</div>
+          <div className='info'>timeline</div>
+        </NavLink>
+      </div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/spin'>
+          <div className='name'>加载中</div>
+          <div className='info'>spin</div>
+        </NavLink>
+      </div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/popover'>
+          <div className='name'>气泡卡片</div>
+          <div className='info'>popover</div>
+        </NavLink>
+      </div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/title'>
+          <div className='name'>标题</div>
+          <div className='info'>title</div>
+        </NavLink>
+      </div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/divider'>
+          <div className='name'>分割线</div>
+          <div className='info'>Divider</div>
+        </NavLink>
+      </div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/badge'>
+          <div className='name'>徽标数</div>
+          <div className='info'>Badge</div>
+        </NavLink>
+      </div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/card'>
+          <div className='name'>card卡片</div>
+          <div className='info'>card</div>
+        </NavLink>
+      </div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/steps'>
+          <div className='name'>步骤条</div>
+          <div className='info'>Steps</div>
+        </NavLink>
+      </div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/avatar'>
+          <div className='name'>头像</div>
+          <div className='info'>Avatar</div>
         </NavLink>
       </div>
     </div>
