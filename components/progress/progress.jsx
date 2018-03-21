@@ -110,7 +110,7 @@ export default class Progress extends Component {
       [`${prefixCls}-show-info`]: showInfo,
       [`${prefixCls}-${size}`]: size
     }, className);
-   
+
     return (
       <div {...restProps} className={classString}>
         {progress}

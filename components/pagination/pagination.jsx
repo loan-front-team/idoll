@@ -6,7 +6,7 @@ import classNames from 'classnames';
 
 import Select from '../select';
 import MiniSelect from './MiniSelect';
-import zhCN from './rc-pagination/local/zh_CN';
+import zhCN from './locale/zh_CN';
 
 import './style/index.jsx';
 
