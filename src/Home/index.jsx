@@ -86,6 +86,12 @@ function Home() {
         </NavLink>
       </div>
       <div className='widget-item' >
+        <NavLink className='widget-wrap' to='/pagination'>
+          <div className='name'>分页</div>
+          <div className='info'>Pagination</div>
+        </NavLink>
+      </div>
+      <div className='widget-item' >
         <NavLink className='widget-wrap' to='/tag'>
           <div className='name'>Tag标签</div>
           <div className='info'>tag</div>

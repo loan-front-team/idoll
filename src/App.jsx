@@ -15,9 +15,10 @@ import message from 'templates/message'
 import Layout from 'templates/layout'
 import Radio from 'templates/radio'
 import Icon from 'templates/icon'
+import Pagination from 'templates/pagination'
+import Index from './HomeIndex'
 import Modal from 'templates/modal'
 import Breadcrumb from 'templates/breadcrumb'
-import Index from './HomeIndex'
 import Tag from 'templates/tag';
 import Tabs from 'templates/tabs';
 import Tooltip from 'templates/tooltip';
@@ -71,6 +72,7 @@ const App = () => (
       <Route exact path='/badge' component={Badge} />
       <Route exact path='/card' component={Card} />
       <Route exact path='/avatar' component={Avatar} />
+      <Route exact path='/pagination' component={Pagination} />
     </div>
   </Router>
 )
