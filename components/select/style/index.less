@@ -216,13 +216,19 @@
   }
 
   &-sm {
+    height: @select-height-sm;
+    overflow: hidden;
+
     .@{select-prefix-cls}-selection {
+      height: @select-height-sm;
       border-radius: @border-radius-sm;
+      font-size: @select-font-size -2px;
     }
     .@{select-prefix-cls}-selection--single {
       height: @select-height-sm;
       .@{select-prefix-cls}-selection__rendered {
-        line-height: @select-height-sm -2px;
+        height: @select-height-sm;
+        line-height: @select-height-sm;
       }
     }
     .@{select-prefix-cls}-selection--multiple {
@@ -440,6 +446,8 @@
       }
 
       &-item {
+        height: @select-height-base;
+        line-height: @font-size-base;
         position: relative;
         display: block;
         padding: @select-option-padding-horizontal @select-option-padding-vertical;
@@ -449,6 +457,7 @@
         cursor: pointer;
         white-space: nowrap;
         overflow: hidden;
+        font-size: @font-size-base;
         transition: background 0.3s ease;
 
         &:hover,
