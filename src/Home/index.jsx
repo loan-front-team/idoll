@@ -176,6 +176,12 @@ function Home() {
         </NavLink>
       </div>
       <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/affix'>
+          <div className='name'>固钉</div>
+          <div className='info'>Affix</div>
+        </NavLink>
+      </div>
+      <div className='widget-item'>
         <NavLink className='widget-wrap' to='/card'>
           <div className='name'>card卡片</div>
           <div className='info'>card</div>
@@ -194,6 +200,7 @@ function Home() {
         </NavLink>
       </div>
       <div>
+      <div className='widget-item'>
         <NavLink className='widget-wrap' to='/avatar'>
           <div className='name'>头像</div>
           <div className='info'>Avatar</div>
