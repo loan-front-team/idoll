@@ -15,9 +15,10 @@ import message from 'templates/message'
 import Layout from 'templates/layout'
 import Radio from 'templates/radio'
 import Icon from 'templates/icon'
+import Pagination from 'templates/pagination'
+import Index from './HomeIndex'
 import Modal from 'templates/modal'
 import Breadcrumb from 'templates/breadcrumb'
-import Index from './HomeIndex'
 import Tag from 'templates/tag';
 import Tabs from 'templates/tabs';
 import Tooltip from 'templates/tooltip';
@@ -29,8 +30,13 @@ import Spin from 'templates/spin';
 import Popover from 'templates/popover';
 import Title from 'templates/title';
 import Divider from 'templates/divider';
+import Steps from 'templates/steps';
+import Form from 'templates/form';
 import Badge from 'templates/badge';
 import Affix from 'templates/affix';
+import Card from 'templates/card';
+import Avatar from './templates/avatar';
+
 
 import './App.css';
 
@@ -65,8 +71,13 @@ const App = () => (
       <Route exact path='/popover' component={Popover} />
       <Route exact path='/title' component={Title} />
       <Route exact path='/divider' component={Divider} />
+      <Route exact path='/steps' component={Steps} />
       <Route exact path='/badge' component={Badge} />
       <Route exact path='/affix' component={Affix} />
+      <Route exact path='/form' component={Form} />
+      <Route exact path='/card' component={Card} />
+      <Route exact path='/avatar' component={Avatar} />
+      <Route exact path='/pagination' component={Pagination} />
     </div>
   </Router>
 )
