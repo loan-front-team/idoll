@@ -188,6 +188,12 @@ function Home() {
         </NavLink>
       </div>
       <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/form'>
+          <div className='name'>Form表单</div>
+          <div className='info'>Form</div>
+        </NavLink>
+      </div>
+      <div>
         <NavLink className='widget-wrap' to='/avatar'>
           <div className='name'>头像</div>
           <div className='info'>Avatar</div>
