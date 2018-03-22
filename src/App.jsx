@@ -30,6 +30,7 @@ import Popover from 'templates/popover';
 import Title from 'templates/title';
 import Divider from 'templates/divider';
 import Badge from 'templates/badge';
+import Affix from 'templates/affix';
 
 import './App.css';
 
@@ -65,6 +66,7 @@ const App = () => (
       <Route exact path='/title' component={Title} />
       <Route exact path='/divider' component={Divider} />
       <Route exact path='/badge' component={Badge} />
+      <Route exact path='/affix' component={Affix} />
     </div>
   </Router>
 )

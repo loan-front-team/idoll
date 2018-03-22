@@ -169,6 +169,12 @@ function Home() {
           <div className='info'>Badge</div>
         </NavLink>
       </div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/affix'>
+          <div className='name'>固钉</div>
+          <div className='info'>Affix</div>
+        </NavLink>
+      </div>
     </div>
   );
 }
