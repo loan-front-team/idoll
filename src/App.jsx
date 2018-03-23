@@ -74,15 +74,12 @@ const App = () => (
       <Route exact path='/divider' component={Divider} />
       <Route exact path='/steps' component={Steps} />
       <Route exact path='/badge' component={Badge} />
-<<<<<<< HEAD
       <Route exact path='/upload' component={Upload} />
-=======
       <Route exact path='/affix' component={Affix} />
       <Route exact path='/form' component={Form} />
       <Route exact path='/card' component={Card} />
       <Route exact path='/avatar' component={Avatar} />
       <Route exact path='/pagination' component={Pagination} />
->>>>>>> develop
     </div>
   </Router>
 )
