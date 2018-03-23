@@ -86,6 +86,12 @@ function Home() {
         </NavLink>
       </div>
       <div className='widget-item' >
+        <NavLink className='widget-wrap' to='/pagination'>
+          <div className='name'>分页</div>
+          <div className='info'>Pagination</div>
+        </NavLink>
+      </div>
+      <div className='widget-item' >
         <NavLink className='widget-wrap' to='/tag'>
           <div className='name'>Tag标签</div>
           <div className='info'>tag</div>
@@ -173,6 +179,36 @@ function Home() {
         <NavLink className='widget-wrap' to='/upload'>
           <div className='name'>文件上传</div>
           <div className='info'>upload</div>
+        </NavLink>
+      </div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/affix'>
+          <div className='name'>固钉</div>
+          <div className='info'>Affix</div>
+        </NavLink>
+      </div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/card'>
+          <div className='name'>card卡片</div>
+          <div className='info'>card</div>
+        </NavLink>
+      </div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/steps'>
+          <div className='name'>步骤条</div>
+          <div className='info'>Steps</div>
+        </NavLink>
+      </div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/form'>
+          <div className='name'>Form表单</div>
+          <div className='info'>Form</div>
+        </NavLink>
+      </div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/avatar'>
+          <div className='name'>头像</div>
+          <div className='info'>Avatar</div>
         </NavLink>
       </div>
     </div>
