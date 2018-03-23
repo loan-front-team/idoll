@@ -34,7 +34,6 @@ class Avatar extends React.Component {
     };
 
     componentDidUpdate(prevProps, prevState) {
-        console.log('componentDidUpdate')
         if (prevProps.children !== this.props.children ||
             (prevState.scale !== this.state.scale && this.state.scale === 1)) {
           this.setScale();
