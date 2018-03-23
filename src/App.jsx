@@ -34,6 +34,7 @@ import Steps from 'templates/steps';
 import Badge from 'templates/badge';
 import Card from 'templates/card';
 import Avatar from './templates/avatar';
+import List from 'templates/list';
 
 import './App.css';
 
@@ -73,6 +74,7 @@ const App = () => (
       <Route exact path='/card' component={Card} />
       <Route exact path='/avatar' component={Avatar} />
       <Route exact path='/pagination' component={Pagination} />
+      <Route exact path='/list' component={List} />
     </div>
   </Router>
 )

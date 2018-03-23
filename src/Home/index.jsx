@@ -193,6 +193,12 @@ function Home() {
           <div className='info'>Avatar</div>
         </NavLink>
       </div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/list'>
+          <div className='name'>列表</div>
+          <div className='info'>List</div>
+        </NavLink>
+      </div>
     </div>
   );
 }
