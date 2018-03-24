@@ -33,6 +33,7 @@ import Divider from 'templates/divider';
 import Steps from 'templates/steps';
 import Form from 'templates/form';
 import Badge from 'templates/badge';
+import Upload from 'templates/upload';
 import Affix from 'templates/affix';
 import Card from 'templates/card';
 import Avatar from './templates/avatar';
@@ -74,6 +75,7 @@ const App = () => (
       <Route exact path='/divider' component={Divider} />
       <Route exact path='/steps' component={Steps} />
       <Route exact path='/badge' component={Badge} />
+      <Route exact path='/upload' component={Upload} />
       <Route exact path='/affix' component={Affix} />
       <Route exact path='/form' component={Form} />
       <Route exact path='/card' component={Card} />
