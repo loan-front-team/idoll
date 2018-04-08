@@ -60,26 +60,26 @@ export default class card extends React.Component {
       <div id='main-container'>
         <h1 className='h1'>典型的卡片 </h1>
         <span>包含标题、内容、操作区域。</span>
-        <Card title='card title' extra={<a href='#'>more</a>} bordered bodyStyle={{ width: 300 }}>
-          <p>Card content</p>
-          <p>Card content</p>
-          <p>Card content</p>
+        <Card title='卡片 提示' extra={<a href='#'>更多</a>} bordered bodyStyle={{ width: 300 }}>
+          <p>卡片内容</p>
+          <p>卡片内容</p>
+          <p>卡片内容</p>
         </Card>
         <h1 className='h1'>无边框的卡片 </h1>
         <span>在灰色背景上使用无边框的卡片。</span>
         <div style={{width: 500, height: 200, background: '#ccc', paddingTop: 15}}>
-          <Card title='card title' bordered={false} bodyStyle={{ width: 300, marginLeft: 20 }}>
-            <p>Card content</p>
-            <p>Card content</p>
-            <p>Card content</p>
+          <Card title='卡片 提示' bordered={false} bodyStyle={{ width: 300, marginLeft: 20 }}>
+            <p>卡片内容</p>
+            <p>卡片内容</p>
+            <p>卡片内容</p>
           </Card>
         </div>
         <h1 className='h1'>简洁的卡片</h1>
         <span>只包含内容区域</span>
         <Card bodyStyle={{ width: 300 }}>
-          <p>Card content</p>
-          <p>Card content</p>
-          <p>Card content</p>
+          <p>卡片内容</p>
+          <p>卡片内容</p>
+          <p>卡片内容</p>
         </Card>
         <h1 className='h1'>更灵活的内容展示</h1>
         <span>可以利用 Card.Meta 支持更灵活的内容</span>
@@ -88,7 +88,7 @@ export default class card extends React.Component {
           bodyStyle={{ width: 240 }}
           cover={<img alt='example' src='https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png' />}
       >
-          <Meta title='hello react' description='欢迎来到react的世界' />
+          <Meta title='提示语' description='欢迎来到react的世界' />
         </Card>
 
         <h1 className='h1'>栅格卡片</h1>
@@ -96,39 +96,39 @@ export default class card extends React.Component {
         <div style={{background: '#ccc', padding: 30}}>
           <Row gutter={12} type='flex' align='middle' justify='center'>
             <Col span='4' >
-              <Card title='card title'>
-                <p>conment</p>
+              <Card title='卡片 提示'>
+                <p>内容</p>
               </Card>
             </Col>
             <Col span='4' >
-              <Card title='card title'>
-                <p>conment</p>
+              <Card title='卡片 提示'>
+                <p>内容</p>
               </Card>
             </Col>
             <Col span='4' >
-              <Card title='card title'>
-                <p>conment</p>
+              <Card title='卡片 提示'>
+                <p>内容</p>
               </Card>
             </Col>
           </Row>
         </div>
         <h1 className='h1'>预加载的卡片</h1>
         <span>数据读入前会有文本块样式。</span>
-        <Card title='hello react' loading bordered bodyStyle={{width: 300}} />
+        <Card title='提示语' loading bordered bodyStyle={{width: 300}} />
         <h1 className='h1'>网格性内嵌卡片</h1>
         <span>一种常见的卡片内容区隔模式。</span>
         <Card title='网格性内嵌卡片'>
-          <Card.Grid bodyStyle={{ width: '25%', textAlign: 'center' }}>Content</Card.Grid>
-          <Card.Grid bodyStyle={{ width: '25%', textAlign: 'center' }}>Content</Card.Grid>
-          <Card.Grid bodyStyle={{ width: '25%', textAlign: 'center' }}>Content</Card.Grid>
-          <Card.Grid bodyStyle={{ width: '25%', textAlign: 'center' }}>Content</Card.Grid>
-          <Card.Grid bodyStyle={{ width: '25%', textAlign: 'center' }}>Content</Card.Grid>
-          <Card.Grid bodyStyle={{ width: '25%', textAlign: 'center' }}>Content</Card.Grid>
-          <Card.Grid bodyStyle={{ width: '25%', textAlign: 'center' }}>Content</Card.Grid>
+          <Card.Grid bodyStyle={{ width: '25%', textAlign: 'center' }}>内容</Card.Grid>
+          <Card.Grid bodyStyle={{ width: '25%', textAlign: 'center' }}>内容</Card.Grid>
+          <Card.Grid bodyStyle={{ width: '25%', textAlign: 'center' }}>内容</Card.Grid>
+          <Card.Grid bodyStyle={{ width: '25%', textAlign: 'center' }}>内容</Card.Grid>
+          <Card.Grid bodyStyle={{ width: '25%', textAlign: 'center' }}>内容</Card.Grid>
+          <Card.Grid bodyStyle={{ width: '25%', textAlign: 'center' }}>内容</Card.Grid>
+          <Card.Grid bodyStyle={{ width: '25%', textAlign: 'center' }}>内容</Card.Grid>
         </Card>
         <h1 className='h1'>内部卡片</h1>
         <span>可以放在普通卡片内部，展示多层级结构的信息。</span>
-        <Card title='hello react'>
+        <Card title='提示语'>
           <p
             style={{
         fontSize: 14,
@@ -137,29 +137,29 @@ export default class card extends React.Component {
         fontWeight: 500,
       }}
      >
-      Group title
+      提示语
           </p>
           <Card
             type='inner'
-            title='Inner Card title'
-            extra={<a href='#'>More</a>}
+            title='提示语一'
+            extra={<a href='#'>更多</a>}
     >
-      Inner Card content
+      内容
           </Card>
           <Card
             type='inner'
-            title='Inner Card title'
-            extra={<a href='#'>More</a>}
+            title='提示语二'
+            extra={<a href='#'>更多</a>}
             bodyStyle={{marginTop: 15}}
     >
-      Inner Card content
+      内容
           </Card>
         </Card>
         <h1 className='h1'>带页签的卡片</h1>
         <span>可承载更多内容。</span>
         <Card
-          title='Card title'
-          extra={<a href='#'>More</a>}
+          title='提示语'
+          extra={<a href='#'>更多</a>}
           tabList={tabList}
           activeTabKey={this.state.key}
           onTabChange={(key) => { this.onTabChange(key, 'key'); }}
@@ -184,7 +184,7 @@ export default class card extends React.Component {
           >
           <Meta
             avatar={<Avatar src='https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png' />}
-            title='hello react'
+            title='提示'
             description='欢迎来到react的世界' />
         </Card>
       </div>

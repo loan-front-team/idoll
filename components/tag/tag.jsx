@@ -56,7 +56,7 @@ class Tag extends Component {
         let iconStyle = {
             marginLeft: 8
         }
-        const closeIcon = closable ? <Icon style={iconStyle} type='down-circle' onClick={this.close} /> : null;
+        const closeIcon = closable ? <Icon style={iconStyle} type='close' onClick={this.close} /> : null;
         const cls = classNames(prefixCls, {
             [`${prefixCls}-${color}`]: color,
             [`${prefixCls}-checkable`]: hover,
