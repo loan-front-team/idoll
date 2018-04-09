@@ -12,27 +12,26 @@ const Meta = List.Meta;
 
 // 简单列表
 const simpleData = [
-    'Racing car sprays burning fuel into crowd.',
-    'Japanese princess to wed commoner.',
-    'Australian walks 100km after outback crash.',
-    'Man charged over missing wedding girl.',
-    'Los Angeles battles huge wildfires.'
+    '内容一',
+    '内容二',
+    '内容三',
+    '内容四',
+    '内容五'
 ]
 
 // 基础列表
-
 const basicData = [
   {
-    title: 'Ant Design Title 1',
+    title: '会员 1',
   },
   {
-    title: 'Ant Design Title 2',
+    title: '会员 2',
   },
   {
-    title: 'Ant Design Title 3',
+    title: '会员 3',
   },
   {
-    title: 'Ant Design Title 4',
+    title: '会员 4',
   },
 ];
 
@@ -42,33 +41,33 @@ const fakeDataUrl = 'https://randomuser.me/api/?results=5&inc=name,gender,email,
 // 栅格列表数据
 const colData = [
   {
-    title: 'Title 1',
+    title: '标题 1',
   },
   {
-    title: 'Title 2',
+    title: '标题 2',
   },
   {
-    title: 'Title 3',
+    title: '标题 3',
   },
   {
-    title: 'Title 4',
+    title: '标题 4',
   },
 ];
 
 const listData = [];
 for (let i = 0; i < 5; i++) {
   listData.push({
-    href: 'http://ant.design',
-    title: `ant design part ${i}`,
+    href: 'https://github.com/loan-front-team/idoll',
+    title: `提示 ${i}`,
     avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
-    description: 'Ant Design, a design language for background applications, is refined by Ant UED Team.',
-    content: 'We supply a series of design principles, practical patterns and high quality design resources (Sketch and Axure), to help people create their product prototypes beautifully and efficiently.',
+    description: '描述',
+    content: '评论内容',
   });
 }
 
 // 分页操作
 const pagination = {
-  pageSize: 1,
+  pageSize: 10,
   current: 1,
   total: listData.length,
   onChange: () => {
@@ -142,28 +141,28 @@ export default class list extends React.Component {
             <span>列表拥有大、中、小三种尺寸。通过设置 size 为 large small 分别把按钮设为大、小尺寸。若不设置 size，则尺寸为中。
 可通过设置 header 和 footer，来自定义列表头部和尾部。</span>
             <div>
-              <h3 style={{ marginBottom: 16 }}>Default Size</h3>
+              <h3 style={{ marginBottom: 16 }}>默认尺寸</h3>
               <List
-                header={<div>Header</div>}
-                footer={<div>Footer</div>}
+                header={<div>首部</div>}
+                footer={<div>尾部</div>}
                 bordered
                 dataSource={simpleData}
                 renderItem={item => (<List.Item>{item}</List.Item>)}
               />
-              <h3 style={{ margin: '16px 0' }}>Small Size</h3>
+              <h3 style={{ margin: '16px 0' }}>小尺寸</h3>
               <List
                 size='small'
-                header={<div>Header</div>}
-                footer={<div>Footer</div>}
+                header={<div>首部</div>}
+                footer={<div>尾部</div>}
                 bordered
                 dataSource={simpleData}
                 renderItem={item => (<List.Item>{item}</List.Item>)}
               />
-              <h3 style={{ margin: '16px 0' }}>Large Size</h3>
+              <h3 style={{ margin: '16px 0' }}>大尺寸</h3>
               <List
                 size='large'
-                header={<div>Header</div>}
-                footer={<div>Footer</div>}
+                header={<div>首部</div>}
+                footer={<div>尾部</div>}
                 bordered
                 dataSource={simpleData}
                 renderItem={item => (<List.Item>{item}</List.Item>)}
@@ -176,8 +175,8 @@ export default class list extends React.Component {
                   <List.Item>
                     {<Meta
                       avatar={<Avatar src='https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png' />}
-                      title={<a href='https://ant.design'>{item.title}</a>}
-                      description='Ant Design, a design language for background applications, is refined by Ant UED Team'
+                      title={<a href='https://github.com/loan-front-team/idoll'>{item.title}</a>}
+                      description='评论内容'
                     />}
                   </List.Item>
                 )}
@@ -191,13 +190,13 @@ export default class list extends React.Component {
                 loadMore={loadMore}
                 dataSource={data}
                 renderItem={item => (
-                  <List.Item actions={[<a>edit</a>, <a>more</a>]}>
+                  <List.Item actions={[<a>编辑</a>, <a>更多</a>]}>
                     <Meta
                       avatar={<Avatar src='https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png' />}
-                      title={<a href='https://ant.design'>{item.name.last}</a>}
-                      description='Ant Design, a design language for background applications, is refined by Ant UED Team'
+                      title={<a href='#'>{item.name.last}</a>}
+                      description='评论内容'
                     />
-                    <div>content</div>
+                    <div>内容</div>
                   </List.Item>
                 )}
               />
@@ -208,7 +207,7 @@ export default class list extends React.Component {
                 dataSource={colData}
                 renderItem={item => (
                   <List.Item>
-                    <Card title={item.title}>Card content</Card>
+                    <Card title={item.title}>列表内容</Card>
                   </List.Item>
                 )}
               />
@@ -219,7 +218,7 @@ export default class list extends React.Component {
                 dataSource={colData}
                 renderItem={item => (
                   <List.Item>
-                    <Card title={item.title}>Card content</Card>
+                    <Card title={item.title}>列表内容</Card>
                   </List.Item>
                 )}
               />
