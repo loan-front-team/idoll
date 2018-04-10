@@ -80,7 +80,8 @@ function insertSpace(child) {
 	if (isString(child)) {
 		if (isTwoCNChar(child)) { child = child.split('').join(' ') }
 		return <span>{child}</span>
-	}
+  }
+  return child;
 }
 // 判断字符串类型
 function isString(str) {
