@@ -223,6 +223,12 @@ function Home() {
           <div className='info'>Table</div>
         </NavLink>
       </div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/anchor'>
+          <div className='name'>锚点</div>
+          <div className='info'>Anchor</div>
+        </NavLink>
+      </div>
     </div>
   );
 }
