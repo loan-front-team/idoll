@@ -38,8 +38,7 @@ import Affix from 'templates/affix';
 import Card from 'templates/card';
 import Avatar from './templates/avatar';
 import List from 'templates/list';
-import Cascader from 'templates/cascader';
-
+import Table from 'templates/table';
 import Anchor from 'templates/anchor';
 
 import './App.css';
@@ -84,6 +83,7 @@ const App = () => (
       <Route exact path='/avatar' component={Avatar} />
       <Route exact path='/pagination' component={Pagination} />
       <Route exact path='/list' component={List} />
+      <Route exact path='/table' component={Table} />
       <Route exact path='/cascader' component={Cascader} />
       <Route exact path='/anchor' component={Anchor} />
     </div>
