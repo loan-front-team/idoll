@@ -217,6 +217,12 @@ function Home() {
           <div className='info'>List</div>
         </NavLink>
       </div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/cascader'>
+          <div className='name'>级联选择</div>
+          <div className='info'>Cascader</div>
+        </NavLink>
+      </div>
     </div>
   );
 }
