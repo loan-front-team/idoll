@@ -84,6 +84,7 @@ const App = () => (
       <Route exact path='/pagination' component={Pagination} />
       <Route exact path='/list' component={List} />
       <Route exact path='/table' component={Table} />
+      <Route exact path='/cascader' component={Cascader} />
       <Route exact path='/anchor' component={Anchor} />
     </div>
   </Router>
