@@ -218,6 +218,12 @@ function Home() {
         </NavLink>
       </div>
       <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/cascader'>
+          <div className='name'>级联选择</div>
+          <div className='info'>Cascader</div>
+        </NavLink>
+      </div>
+      <div className='widget-item'>
         <NavLink className='widget-wrap' to='/anchor'>
           <div className='name'>锚点</div>
           <div className='info'>Anchor</div>
