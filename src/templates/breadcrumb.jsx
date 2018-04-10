@@ -10,10 +10,10 @@ export default class BreadcrumBreadcrumView extends React.Component {
     const Apps = () => (
       <ul className='app-list'>
         <li>
-          <Link to='/apps/1'>Application1</Link>：<Link to='/apps/1/detail'>Detail</Link>
+          <Link to='/apps/1'>点击</Link>：<Link to='/apps/1/detail'>点击</Link>
         </li>
         <li>
-          <Link to='/apps/2'>Application2</Link>：<Link to='/apps/2/detail'>Detail</Link>
+          <Link to='/apps/2'>点击</Link>：<Link to='/apps/2/detail'>点击</Link>
         </li>
       </ul>
     );
@@ -41,20 +41,20 @@ export default class BreadcrumBreadcrumView extends React.Component {
       });
       const breadcrumbItems = [(
         <Breadcrumb.Item key='home'>
-          <Link to='/'>Home</Link>
+          <Link to='/'>点击</Link>
         </Breadcrumb.Item>
       )].concat(extraBreadcrumbItems);
       return (
         <div className='demo'>
           <div className='demo-nav'>
-            <Link to='/'>Home</Link>
-            <Link to='/apps'>Application List</Link>
+            <Link to='/'>点击</Link>
+            <Link to='/apps'>点击</Link>
           </div>
           <Switch>
             <Route path='/apps' component={Apps} />
-            <Route render={() => <span>Home Page</span>} />
+            <Route render={() => <span>内容</span>} />
           </Switch>
-          <Alert style={{ margin: '16px 0' }} message='Click the navigation above to switch:' />
+          <Alert style={{ margin: '16px 0' }} message='内容:' />
           <Breadcrumb>
             {breadcrumbItems}
           </Breadcrumb>
@@ -65,10 +65,10 @@ export default class BreadcrumBreadcrumView extends React.Component {
       <div id='main-container'>
         <h1 className='h1'>基本的面包屑</h1>
         <Breadcrumb>
-          <Breadcrumb.Item>Home</Breadcrumb.Item>
-          <Breadcrumb.Item><a href='javascript:void(0);'>Application Center</a></Breadcrumb.Item>
-          <Breadcrumb.Item><a href='javascript:void(0);'>Application List</a></Breadcrumb.Item>
-          <Breadcrumb.Item>An Application</Breadcrumb.Item>
+          <Breadcrumb.Item>点击</Breadcrumb.Item>
+          <Breadcrumb.Item><a href='javascript:void(0);'>点击</a></Breadcrumb.Item>
+          <Breadcrumb.Item><a href='javascript:void(0);'>点击</a></Breadcrumb.Item>
+          <Breadcrumb.Item>点击</Breadcrumb.Item>
         </Breadcrumb>
         <h1 className='h1'>带图标的面包屑</h1>
         <Breadcrumb>
@@ -77,10 +77,10 @@ export default class BreadcrumBreadcrumView extends React.Component {
           </Breadcrumb.Item>
           <Breadcrumb.Item href='javascript:void(0);'>
             <Icon type='user' />
-            <span>Application List</span>
+            <span>点击</span>
           </Breadcrumb.Item>
           <Breadcrumb.Item>
-              Application
+          点击
           </Breadcrumb.Item>
         </Breadcrumb>
         <h1 className='h1'>react-router@4面包屑</h1>

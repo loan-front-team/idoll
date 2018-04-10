@@ -62,13 +62,13 @@ export default class Alert extends React.Component {
     let iconType = '';
     switch (type) {
       case 'success':
-        iconType = 'up';// check-circle
+        iconType = 'check-circle';// check-circle
         break;
       case 'info':
-        iconType = 'down';// info-circle
+        iconType = 'warning-circle';// info-circle
         break;
       case 'error':
-        iconType = 'up';// cross-circle
+        iconType = 'close-circle';// cross-circle
         break;
       default:
         iconType = 'default';
@@ -76,7 +76,7 @@ export default class Alert extends React.Component {
 
     // use outline icon in alert with description
     if (description) {
-      iconType = 'down';
+      iconType = 'close-circle';
     }
 
     let alertCls = classNames(prefixCls, {
@@ -106,7 +106,7 @@ export default class Alert extends React.Component {
         onEnd={this.animationEnd}
       >
         <div data-show={this.state.closing} className={alertCls} style={style}>
-          {showIcon ? <Icon type={iconType} /> : null}
+          {showIcon ? <Icon type={iconType} className={`${prefixCls}-icon`} /> : null}
           <span className={`${prefixCls}-message`}>{message}</span>
           <span className={`${prefixCls}-description`}>{description}</span>
           {closeIcon}

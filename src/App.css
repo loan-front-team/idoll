@@ -116,3 +116,13 @@ ul.iconlist li .icon-class .icon-name {
 .demo-title .darkbg div {
   display: inline-block;
 }
+
+.demo-affix {
+  height: 150px;
+  overflow: scroll;
+}
+.demo-affix .scrollable-container {
+  height: 100px;
+  background: url(../assets/images/affix-bg.jpg);
+}
+

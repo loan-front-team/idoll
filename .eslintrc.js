@@ -56,6 +56,8 @@ module.exports = {
     "handle-callback-err": 0,
     "keyword-spacing": ["error", { "before": true }],
     'react/prop-types': 0,
-    'comma-dangle':0
+    'comma-dangle':0,
+
+    'no-callback-literal':0
   }
 }
