@@ -170,6 +170,12 @@ function Home() {
         </NavLink>
       </div>
       <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/menu'>
+          <div className='name'>导航菜单</div>
+          <div className='info'>menu</div>
+        </NavLink>
+      </div>
+      <div className='widget-item'>
         <NavLink className='widget-wrap' to='/badge'>
           <div className='name'>徽标数</div>
           <div className='info'>Badge</div>

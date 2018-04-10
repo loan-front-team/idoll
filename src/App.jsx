@@ -30,6 +30,7 @@ import Spin from 'templates/spin';
 import Popover from 'templates/popover';
 import Title from 'templates/title';
 import Divider from 'templates/divider';
+import MenuDemo from 'templates/menu';
 import Steps from 'templates/steps';
 import Form from 'templates/form';
 import Badge from 'templates/badge';
@@ -41,12 +42,13 @@ import List from 'templates/list';
 import Table from 'templates/table';
 import Anchor from 'templates/anchor';
 
+
 import './App.css';
 
 const App = () => (
   <Router>
     <div>
-      <Route exact path='/' component={Index} />
+      <Route exact path='/' component={MenuDemo} />
       <Route exact path='/home' component={Home} />
       <Route exact path='/collapse' component={Collapse} />
       <Route exact path='/progress' component={Progress} />
@@ -74,6 +76,7 @@ const App = () => (
       <Route exact path='/popover' component={Popover} />
       <Route exact path='/title' component={Title} />
       <Route exact path='/divider' component={Divider} />
+      <Route exact path='/menu' component={MenuDemo} />
       <Route exact path='/steps' component={Steps} />
       <Route exact path='/badge' component={Badge} />
       <Route exact path='/upload' component={Upload} />

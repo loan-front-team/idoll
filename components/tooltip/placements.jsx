@@ -128,7 +128,7 @@ export default function getPlacements(config) {
       overflow: getOverflowOptions(autoAdjustOverflow)
     }
   });
-  console.log(placementMap);
+  // console.log(placementMap);
 
   return placementMap;
 }
