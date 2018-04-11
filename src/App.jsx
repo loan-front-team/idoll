@@ -41,6 +41,7 @@ import Avatar from './templates/avatar';
 import List from 'templates/list';
 import Table from 'templates/table';
 import Anchor from 'templates/anchor';
+import Cascader from 'templates/cascader';
 
 
 import './App.css';
@@ -48,7 +49,7 @@ import './App.css';
 const App = () => (
   <Router>
     <div>
-      <Route exact path='/' component={MenuDemo} />
+      <Route exact path='/' component={Index} />
       <Route exact path='/home' component={Home} />
       <Route exact path='/collapse' component={Collapse} />
       <Route exact path='/progress' component={Progress} />
