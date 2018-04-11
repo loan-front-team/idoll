@@ -69,7 +69,7 @@ const columns = [{
 | expandedRowKeys | 展开的行，控制属性 | Array | - |
 | onChange      | 分页、排序、筛选变化时触发 | Function(pagination, filters, sorter) |  |
 | loading       | 页面是否加载中 | Boolean | false |
-| locale        | 默认文案设置，目前包括排序、过滤、空数据文案 | Object | filterConfirm: '确定' <br> filterReset: '重置' <br> emptyText: '暂无数据' <br> [默认值](https://github.com/ant-design/ant-design/issues/575#issuecomment-159169511) |
+| locale        | 默认文案设置，目前包括排序、过滤、空数据文案 | Object | filterConfirm: '确定' <br> filterReset: '重置' <br> emptyText: '暂无数据' <br> [默认值] |
 | indentSize    | 展示树形数据时，每层缩进的宽度，以 px 为单位 | Number   | 15 |
 | onRowClick    | 处理行点击事件 | Function(record, index)   | - |
 | useFixedHeader  | 是否固定表头 | Boolean | false      |
