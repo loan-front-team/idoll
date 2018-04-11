@@ -63,12 +63,12 @@ export default class MenuDemo extends React.Component {
         >
           <SubMenu key='sub1' title={<span>导航一</span>}>
             <MenuItemGroup title='条目一'>
-              <Menu.Item>选项 1</Menu.Item>
-              <Menu.Item>选项 2</Menu.Item>
+              <Menu.Item key='setting:1'>选项 1</Menu.Item>
+              <Menu.Item key='setting:2'>选项 2</Menu.Item>
             </MenuItemGroup>
             <MenuItemGroup title='条目二'>
-              <Menu.Item>选项 3</Menu.Item>
-              <Menu.Item>选项 4</Menu.Item>
+              <Menu.Item key='setting:3'>选项 3</Menu.Item>
+              <Menu.Item key='setting:4'>选项 4</Menu.Item>
             </MenuItemGroup>
           </SubMenu>
           <SubMenu title={<span>导航二</span>}>
