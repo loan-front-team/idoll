@@ -162,9 +162,3 @@ CustomizedForm = Form.create({})(CustomizedForm);
 | whitespace | 必选时，空格是否会被视为错误 | boolean | `false` |
 
 更多高级用法可研究 [async-validator](https://github.com/yiminghe/async-validator)。
-
-<style>
-.code-box-demo .ant-form:not(.ant-form-inline):not(.ant-form-vertical) {
-  max-width: 600px;
-}
-</style>

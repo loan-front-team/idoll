@@ -200,9 +200,6 @@ export default class FormItem extends React.Component {
     }
     return false;
   }
-
-  // Resolve duplicated ids bug between different forms
-  // https://github.com/ant-design/ant-design/issues/7351
   onLabelClick = () => {
     const id = this.props.id || this.getId();
     if (!id) {
