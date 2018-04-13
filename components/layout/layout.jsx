@@ -1,14 +1,14 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
-import classNames from 'classNames';
+import classNames from 'classnames';
 
 import './style'
 
 function Layout(props) {
-  	const { children } = props;
+    const { children } = props;
     const classes = classNames({
        'idoll-layout': 'doll-layout',
-       'idoll-layout-has-sider': (children.length && children.filter(function(item) { return item.type.name === 'Sider' })).length
+       'idoll-layout-has-sider': (children.length && children.filter(function(item) { console.log(); return Object.keys(item.type.propTypes).indexOf('toggle') !== -1 })).length
     });
   	return <div className={classes}>{children}</div>;
 }
