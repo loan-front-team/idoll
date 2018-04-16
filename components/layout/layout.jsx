@@ -10,7 +10,7 @@ function Layout(props) {
        'idoll-layout': 'doll-layout',
        'idoll-layout-has-sider': (children.length && children.filter(function(item) { console.log(); return Object.keys(item.type.propTypes).indexOf('toggle') !== -1 })).length
     });
-  	return <div className={classes}>{children}</div>;
+  	return <div {...props} className={classes}>{children}</div>;
 }
 
 Layout.propTypes = {
