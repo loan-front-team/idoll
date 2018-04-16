@@ -5,7 +5,7 @@ import './style'
 
 function Footer(props) {
   	const { children } = props;
-    return <div className='idoll-layout-footer'>{children}</div>;
+  return <div {...props} className='idoll-layout-footer'>{children}</div>;
 }
 
 Footer.propTypes = {

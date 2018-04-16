@@ -10,7 +10,7 @@ function Header(props) {
       'idoll-layout-header': 'idoll-layout-header',
       [`idoll-layout-header-${span}`]: span
     });
-  	return <div className={classes}>{children}</div>;
+  	return <div {...props} className={classes} >{children}</div>;
 }
 
 Header.propTypes = {
