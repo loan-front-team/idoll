@@ -3,6 +3,10 @@ import { Layout, Sider, Footer, Header, Content } from 'components/Layout'
 
 import './layout.css'
 
+function onCollapse() {
+  console.log('toggle sider')
+}
+
 const MainLayout = () => (
   <div id='main-container'>
     <h1 className='h1'>排版1</h1>
@@ -10,9 +14,9 @@ const MainLayout = () => (
       <Layout>
         <Sider />
         <Layout>
-          <Header />
+          <Header style={{ background: '#eee' }} />
           <Content />
-          <Footer />
+          <Footer style={{ background: '#eee' }} />
         </Layout>
       </Layout>
     </div>
@@ -20,20 +24,20 @@ const MainLayout = () => (
     <h1 className='h1'>排版2</h1>
     <div className='layout_temp'>
       <Layout>
-        <Header />
+        <Header style={{ background: '#eee' }} />
         <Content />
-        <Footer />
+        <Footer style={{ background: '#eee' }} />
       </Layout>
     </div>
     <br />
     <h1 className='h1'>排版3 左菜单栏可缩进</h1>
-    <div className='layout_temp'>
+    <div className='layout_temp' style={{width: '900px', height: '800px'}} >
       <Layout>
-        <Sider toogle={1} />
+        <Sider toggle foldSpan={{fold: '44', unfold: '116'}} onCollapse={onCollapse} />
         <Layout>
-          <Header />
+          <Header style={{ background: '#eee' }} />
           <Content />
-          <Footer />
+          <Footer style={{ background: '#eee' }} />
         </Layout>
       </Layout>
     </div>

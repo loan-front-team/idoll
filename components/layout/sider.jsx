@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import classNames from 'classnames';
+import classNames from 'classnames'
+import omit from 'object.omit'
+
+import Icon from '../icon/index'
 
 import './style'
 
@@ -13,34 +16,50 @@ class Sider extends Component {
     this.toggleMenu = this.toggleMenu.bind(this);
   }
 
-  toggleMenu() {
+  toggleMenu(spanNum) {
     this.setState({
       fold: !this.state.fold
     })
   }
 
   render() {
-  	const { span, toggle, children } = this.props;
-    const { fold } = this.state;
+  	const { span, toggle, children, onCollapse, foldSpan } = this.props
+    const { fold } = this.state
+
+    let currentSpan = span
+
+    if (toggle && foldSpan && fold) {
+      currentSpan = foldSpan.fold
+    } else if (toggle && foldSpan && !fold) {
+      currentSpan = foldSpan.unfold
+    }
+
     const classes = classNames({
       'idoll-layout-sider': 'doll-layout-sider',
-      [`idoll-layout-sider-${span}`]: (span && toggle !== 1) || (span && toggle === 1 && !fold)
+      [`idoll-layout-sider-${currentSpan}`]: (currentSpan && !toggle) || (currentSpan && toggle && !fold)
     })
-    const menToggleClass = classNames({
-      'idoll-silder-toggle-hiden': fold,
-      'idoll-silder-toggle-open': !fold
-    })
+    const iconType = fold ? 'menu-unfold' : 'menu-fold'
 
     var menuToggle = (toggle) => {
       const menuDom = []
-      if (toggle === 1) {
-        menuDom.push(<div key={0} onClick={this.toggleMenu} className={menToggleClass} >&&</div>)
+      if (toggle) {
+        menuDom.push(<Icon type={iconType} key={0} onClick={this.toggleMenu} className='idoll-silder-toggle' />)
+      }
+
+      if (onCollapse) {
+        onCollapse()
       }
       return menuDom
     }
 
+    const otherProps = omit(this.props, [
+      'toggle',
+      'foldSpan',
+      'onCollapse'
+    ]);
+
   	return (
-    <div className={classes}>
+    <div {...otherProps} className={classes}>
       {menuToggle(toggle)}
       {children}
     </div>
@@ -49,9 +68,11 @@ class Sider extends Component {
 }
 
 Sider.propTypes = {
-  span: PropTypes.number,
+  span: PropTypes.string,
   toggle: PropTypes.bool,
-  children: PropTypes.node
+  foldSpan: PropTypes.object,
+  children: PropTypes.node,
+  onCollapse: PropTypes.func,
 }
 
 export default Sider
