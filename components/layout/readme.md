@@ -48,10 +48,10 @@ Sider
 
 | 成员       | 说明                   | 类型               | 默认值       |
 |-----------|-------------------------------------|--------------------|-------------|
-| span      | 基本宽度32px + 12 * span 最大值 10, 3个定制值，44，116， 140  | number  | 0 |
+| span      | 基本宽度32px + 12 * span 最大值 10, 3个定制值, 44, 116, 140  | number  | 0 |
 | toogle    | 可选, 是否添加缩进图标    | boolean             |   |
 | children    | 可选, 内容元素    | node             |   |
-| foldSpan    | 可选, fold，unflod状态下侧边栏的span值    | object             |   |{unfold: '116', fold: '44'}
+| foldSpan    | 可选, fold,unflod状态下侧边栏的span值    | object             |   |{unfold: '116', fold: '44'}
 | onCollapse    | 可选, 切换sider是回调函数    | function             |   |
 
 Header
