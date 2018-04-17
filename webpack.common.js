@@ -40,8 +40,29 @@ module.exports = {
         exclude: path.resolve(__dirname, 'node_modules')
       },
       {
-        test: /\.(less|css)$/,
-        use: ['style-loader', 'css-loader', 'less-loader'],
+        test: /\.(css)$/,
+        use: [{
+          loader: 'style-loader'
+        }, {
+          loader: 'css-loader',
+          options: {
+            modules: true
+          }
+        }]
+        // exclude: path.resolve(__dirname, 'node_modules')
+      },
+      {
+        test: /\.(less)$/,
+        use: [{
+          loader: 'style-loader'
+        }, {
+          loader: 'css-loader'
+        }, {
+          loader: 'less-loader',
+          options: {
+            modules: true
+          }
+        }]
         // exclude: path.resolve(__dirname, 'node_modules')
       },
       {
