@@ -36,7 +36,7 @@ class Sider extends Component {
 
     const classes = classNames({
       'idoll-layout-sider': 'doll-layout-sider',
-      [`idoll-layout-sider-${currentSpan}`]: (currentSpan && !toggle) || (currentSpan && toggle && !fold)
+      [`idoll-layout-sider-${currentSpan}`]: currentSpan
     })
     const iconType = fold ? 'menu-unfold' : 'menu-fold'
 
