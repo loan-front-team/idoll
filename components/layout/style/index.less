@@ -1,4 +1,5 @@
 @import '../../../style/theme/default/index';
+@import './mixin';
 
 .@{idoll-prefix}-layout {
   box-sizing: border-box;
@@ -44,45 +45,7 @@
   right: -30px;
 }
 
-.@{idoll-prefix}-layout-sider-1 {
-  width: @layout-sider-basic-width + 12;
-}
-
-.@{idoll-prefix}-layout-sider-2 {
-  width: @layout-sider-basic-width + 12*2;
-}
-
-.@{idoll-prefix}-layout-sider-3 {
-  width: @layout-sider-basic-width + 12*3;
-}
-
-.@{idoll-prefix}-layout-sider-4 {
-  width: @layout-sider-basic-width + 12*4;
-}
-
-.@{idoll-prefix}-layout-sider-5 {
-  width: @layout-sider-basic-width + 12*5;
-}
-
-.@{idoll-prefix}-layout-sider-6 {
-  width: @layout-sider-basic-width + 12*6;
-}
-
-.@{idoll-prefix}-layout-sider-7 {
-  width: @layout-sider-basic-width + 12*7;
-}
-
-.@{idoll-prefix}-layout-sider-8 {
-  width: @layout-sider-basic-width + 12*8;
-}
-
-.@{idoll-prefix}-layout-sider-9 {
-  width: @layout-sider-basic-width + 12*9;
-}
-
-.@{idoll-prefix}-layout-sider-10 {
-  width: @layout-sider-basic-width + 12*10;
-}
+.make-sider-span();
 
 .@{idoll-prefix}-layout-header {
   width: 100%;
