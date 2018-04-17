@@ -33,7 +33,7 @@ const MainLayout = () => (
     <h1 className='h1'>排版3 左菜单栏可缩进</h1>
     <div className='layout_temp' style={{width: '900px', height: '800px'}} >
       <Layout>
-        <Sider toggle foldSpan={{fold: '44', unfold: '19'}} onCollapse={onCollapse} />
+        <Sider toggle foldSpan={{fold: '1', unfold: '19'}} onCollapse={onCollapse} />
         <Layout>
           <Header style={{ background: '#eee' }} />
           <Content />
