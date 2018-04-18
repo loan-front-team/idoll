@@ -20,7 +20,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 ReactDOM.render(
 	(
-  <Provider store={store} style={{height: '100%'}}>
+  <Provider store={store} >
     <App />
   </Provider>
 	),
