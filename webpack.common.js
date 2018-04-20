@@ -35,6 +35,7 @@ module.exports = {
       'container': path.resolve(__dirname, 'src/container'),
       'reduxes': path.resolve(__dirname, 'src/reduxes'),
       'utils': path.resolve(__dirname, 'src/utils'),
+      '~': path.resolve(__dirname, 'style'),
     }
   },
   // devserver 配置
@@ -66,17 +67,31 @@ module.exports = {
       },
       {
         test: /\.(less)$/,
+        exclude: [/components/, /style/],
         use: [{
           loader: 'style-loader'
         }, {
-          loader: 'css-loader'
+          loader: 'css-loader',
+          options: {
+            modules: true,
+          }
         }, {
           loader: 'less-loader',
-          options: {
-            modules: true
-          }
         }]
-        // exclude: path.resolve(__dirname, 'node_modules')
+      },
+      {
+        test: /\.(less)$/,
+        exclude: [/src/],
+        use: [{
+          loader: 'style-loader'
+        }, {
+          loader: 'css-loader',
+          // options: {
+          //   importLoaders: 1,
+          // }
+        }, {
+          loader: 'less-loader',
+        }]
       },
       {
         test: /\.(png|svg|jpg|gif|webp|ico)$/,
