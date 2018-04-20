@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, Sider, Footer, Header, Content } from 'components/Layout';
+import Layout, { Sider, Footer, Header, Content } from 'components/Layout';
 
 import Menu from 'components/menu';
 import Icon from 'components/icon';

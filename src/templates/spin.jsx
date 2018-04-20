@@ -1,5 +1,5 @@
 import React from 'react';
-import { Spin } from 'components/spin/index';
+import Spin from 'components/spin/index';
 
 export default class SpinView extends React.Component {
   render() {
