@@ -1,13 +1,19 @@
 const merge = require('webpack-merge');
 const HtmlwebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack');
+const path = require('path');
 
-// webpack错误信息提示插件
-// https://github.com/geowarin/friendly-errors-webpack-plugin
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
 
 const common = require('./webpack.common.js');
+
+// 目录列表
+let catalog = [{
+		from: path.resolve(__dirname, 'mock'),
+		to: path.resolve(__dirname, 'mock')
+	}]
 
 // 将 Hot-reload 热加载的客户端代码添加到 webpack.base.conf 的 对应 entry 中，一起打包
 // Object.keys(common.entry).forEach(function (name) {
@@ -45,7 +51,11 @@ module.exports = merge(common, {
 	         'NODE_ENV': JSON.stringify('development')
 	       }
 	    }),
+	    // webpack 复制文件和文件夹的插件
+	    // https://github.com/kevlened/copy-webpack-plugin
+		new CopyWebpackPlugin(catalog),
 	    // webpack错误信息提示插件
+		// https://github.com/geowarin/friendly-errors-webpack-plugin
         new FriendlyErrorsPlugin()
 	]
 });

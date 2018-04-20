@@ -1,0 +1,58 @@
+@import "../../../style/theme/default/index.less";
+.main {
+  width: 368px;
+  margin: 0 auto;
+
+  :global {
+    .idoll-tabs .idoll-tabs-bar {
+      border-bottom: 0;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    .idoll-form-item {
+      margin-bottom: 24px;
+    }
+  }
+
+  .prefixIcon {
+    font-size: @font-size-base;
+    color: @disabled-color;
+  }
+
+  .submit {
+    width: 100%;
+    margin-top: 24px;
+  }
+}
+.loginpage {
+  width: 100%;
+  min-height: 200%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  padding: 110px 0 144px 0;
+  position: relative;
+  .header {
+    height: 80px;
+    line-height: 44px;
+    text-align: center;
+    img {
+      height: 44px;
+      vertical-align: top;
+      margin-right: 16px;
+    }
+    span {
+      font-size: 28px;
+      color: rgba(0, 0, 0, 0.65);
+      font-family: 'Myriad Pro', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+      font-weight: 600;
+      position: relative;
+      top: 2px;
+    }
+  }
+  .loginButton {
+    width: 100%;
+    margin-top: 24px;
+  }
+}

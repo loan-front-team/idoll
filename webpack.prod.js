@@ -7,11 +7,21 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
+const postcssFlexibility = require('postcss-flexibility');
 
 
 const common = require('./webpack.common.js');
 
- let webpackConfig = merge(common, {
+// 判断当前是否处于开发环境
+const _DEV_ = (process.env.NODE_ENV || 'development') === 'development';
+// 判断当前是否处于测试环境
+const _STG_ = (process.env.NODE_ENV || 'staging') === 'staging';
+// 判断当前是否处于生产环境
+const _PRD_ = (process.env.NODE_ENV || 'production') === 'production';
+
+
+
+let webpackConfig = merge(common, {
 	devtool: '#source-map',
 	module: {
 		rules: [
@@ -25,8 +35,22 @@ const common = require('./webpack.common.js');
 						loader: 'postcss-loader',
 						options: {
 							plugins: () => [
-								autoprefixer({add: true, remove: true, browsers: ['>0%']}),
-								cssnano()
+								autoprefixer({add: true,
+								remove: true,
+								browsers: [
+									'ie >= 9',
+									'ie_mob >= 10',
+									'ff >= 30',
+									'chrome >= 34',
+									'safari >= 7',
+									'opera >= 23',
+									'ios >= 7',
+									'android >= 4.4',
+									'bb >= 10'
+									]
+								}),
+								cssnano(),
+								postcssFlexibility
 								]
 						}
 					},
@@ -98,9 +122,12 @@ const common = require('./webpack.common.js');
 	// 此处，插入适当的环境
 	// https://webpack.js.org/plugins/define-plugin/
 	new webpack.DefinePlugin({
+		// 将NODE中使用的变量传入到Web环境中，以方便使用
 		'process.env': {
 		 'NODE_ENV': JSON.stringify('production')
 		}
+		// 判断当前是否处于开发状态
+
 	})
 	]
 })

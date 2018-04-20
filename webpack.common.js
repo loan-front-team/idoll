@@ -5,6 +5,15 @@ const ROOT_PATH = path.resolve(__dirname);
 const APP_PATH = path.resolve(ROOT_PATH, 'src');
 const BUILD_PATH = path.resolve(ROOT_PATH, 'dist');
 
+// 判断当前是否处于开发环境
+const _DEV_ = (process.env.NODE_ENV || 'development') === 'development';
+// 判断当前是否处于测试环境
+const _STG_ = (process.env.NODE_ENV || 'staging') === 'staging';
+// 判断当前是否处于生产环境
+const _PRD_ = (process.env.NODE_ENV || 'production') === 'production';
+
+
+
 module.exports = {
   // 项目的文件夹 可以直接用文件夹名称 默认会找index.js 也可以确定是哪个文件名字
   entry: APP_PATH,
@@ -21,7 +30,12 @@ module.exports = {
     alias: {
       'assets': path.resolve(__dirname, 'assets'),
       'templates': path.resolve(__dirname, 'src/templates'),
-      'components': path.resolve(__dirname, 'components')
+      'components': path.resolve(__dirname, 'components'),
+      'component': path.resolve(__dirname, 'src/component'),
+      'container': path.resolve(__dirname, 'src/container'),
+      'reduxes': path.resolve(__dirname, 'src/reduxes'),
+      'utils': path.resolve(__dirname, 'src/utils'),
+      '~': path.resolve(__dirname, 'style'),
     }
   },
   // devserver 配置
@@ -40,9 +54,44 @@ module.exports = {
         exclude: path.resolve(__dirname, 'node_modules')
       },
       {
-        test: /\.(less|css)$/,
-        use: ['style-loader', 'css-loader', 'less-loader'],
+        test: /\.(css)$/,
+        use: [{
+          loader: 'style-loader'
+        }, {
+          loader: 'css-loader',
+          options: {
+            modules: true
+          }
+        }]
         // exclude: path.resolve(__dirname, 'node_modules')
+      },
+      {
+        test: /\.(less)$/,
+        exclude: [/components/, /style/],
+        use: [{
+          loader: 'style-loader'
+        }, {
+          loader: 'css-loader',
+          options: {
+            modules: true,
+          }
+        }, {
+          loader: 'less-loader',
+        }]
+      },
+      {
+        test: /\.(less)$/,
+        exclude: [/src/],
+        use: [{
+          loader: 'style-loader'
+        }, {
+          loader: 'css-loader',
+          // options: {
+          //   importLoaders: 1,
+          // }
+        }, {
+          loader: 'less-loader',
+        }]
       },
       {
         test: /\.(png|svg|jpg|gif|webp|ico)$/,

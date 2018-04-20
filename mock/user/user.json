@@ -1,0 +1,10 @@
+{
+	"responseCode": "0000",
+	"responseMsg": "success",
+	"responseBody": {
+		"data":[{
+		"username": "admin",
+		"pwd": "123456"
+		}]
+	}
+}
