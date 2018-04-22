@@ -4,4 +4,5 @@ import Header from './header'
 import Content from './content'
 import Footer from './footer'
 
-export { Layout, Sider, Header, Content, Footer };
+export default Layout;
+export { Sider, Header, Content, Footer };
