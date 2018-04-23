@@ -1,5 +1,5 @@
 import React from 'react';
-import { TimePicker } from 'components/time-picker/index';
+import TimePicker from 'components/time-picker/index';
 
 export default class TimePickerView extends React.Component {
   state = {

@@ -6,7 +6,7 @@ import Icon from '../icon';
 
 import './style';
 
-class Tag extends Component {
+export default class Tag extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -91,4 +91,3 @@ class Tag extends Component {
     }
 }
 
-export default Tag;

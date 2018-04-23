@@ -9,7 +9,7 @@ function noop() {
     // 组件change && click 挂载到noop上
 }
 
-class Switch extends Component {
+export default class Switch extends Component {
   constructor(props) {
     super(props);
 
@@ -140,4 +140,4 @@ class Switch extends Component {
     );
   }
 }
-export default Switch;
+
