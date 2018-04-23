@@ -5,7 +5,7 @@ import Radio from '../radio';
 import FilterDropdown from './filterDropdown';
 import Pagination from '../pagination';
 import Icon from '../icon';
-// import Spin from '../spin';
+import Spin from '../spin';
 import classNames from 'classnames';
 import { flatArray } from './util';
 
@@ -787,11 +787,11 @@ export default class Table extends React.Component {
     );
     // if there is no pagination or no data,
     // the height of spin should decrease by half of pagination
-    // const paginationPatchClass = (this.hasPagination() && data && data.length !== 0)
-    //         ? 'idoll-table-with-pagination'
-    //         : 'idoll-table-without-pagination';
-    // const spinClassName = this.props.loading ? `${paginationPatchClass} idoll-table-spin-holder` : '';
-    // table = <Spin className={spinClassName} spinning={this.props.loading}>{table}</Spin>;
+    const paginationPatchClass = (this.hasPagination() && data && data.length !== 0)
+            ? 'idoll-table-with-pagination'
+            : 'idoll-table-without-pagination';
+    const spinClassName = this.props.loading ? `${paginationPatchClass} idoll-table-spin-holder` : '';
+    table = <Spin className={spinClassName} spinning={this.props.loading}>{table}</Spin>;
     return (
       <div className={`${className} clearfix`} style={style}>
         {table}
