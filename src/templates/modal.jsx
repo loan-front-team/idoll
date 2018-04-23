@@ -1,5 +1,5 @@
 import React from 'react';
-import { Modal } from 'components/modal/index';
+import Modal from 'components/modal/index';
 import Button from 'components/button/button';
 const confirm = Modal.confirm;
 
@@ -97,7 +97,7 @@ export default class ModalView extends React.Component {
     });
   }
 
-  // 确认对话框
+  确认对话框
   showConfirm = () => {
     confirm({
       iconType: 'close-circle',
@@ -184,7 +184,6 @@ export default class ModalView extends React.Component {
         <Button onClick={this.success}>成功提示</Button>
         <Button onClick={this.error}>失败提示</Button>
 
-        {/* 确认对话框 */}
         <div className='h1'>
         确认对话框
         </div>
