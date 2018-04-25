@@ -10,27 +10,27 @@ import './style'
 class Sider extends Component {
   constructor(props) {
     super(props)
+    const { collapsed } = this.props
     this.state = {
-      fold: false
+      collapsed: collapsed
     };
     this.toggleMenu = this.toggleMenu.bind(this);
   }
 
   toggleMenu(spanNum) {
     this.setState({
-      fold: !this.state.fold
+      collapsed: !this.state.collapsed
     })
   }
 
   render() {
-  	const { span, toggle, children, onCollapse, foldSpan } = this.props
-    const { fold } = this.state
-
+    const { span, toggle, children, onCollapse, foldSpan } = this.props
+    let collapsed = this.state.collapsed
     let currentSpan = span
 
-    if (toggle && foldSpan && fold) {
+    if (toggle && foldSpan && collapsed) {
       currentSpan = foldSpan.fold
-    } else if (toggle && foldSpan && !fold) {
+    } else if (toggle && foldSpan && !collapsed) {
       currentSpan = foldSpan.unfold
     }
 
@@ -38,7 +38,7 @@ class Sider extends Component {
       'idoll-layout-sider': 'doll-layout-sider',
       [`idoll-layout-sider-${currentSpan}`]: currentSpan
     })
-    const iconType = fold ? 'menu-unfold' : 'menu-fold'
+    const iconType = collapsed ? 'menu-unfold' : 'menu-fold'
 
     var menuToggle = (toggle) => {
       const menuDom = []
@@ -55,6 +55,7 @@ class Sider extends Component {
     const otherProps = omit(this.props, [
       'toggle',
       'foldSpan',
+      'collapsed',
       'onCollapse'
     ]);
 
@@ -72,6 +73,7 @@ Sider.propTypes = {
   toggle: PropTypes.bool,
   foldSpan: PropTypes.object,
   children: PropTypes.node,
+  collapsed: PropTypes.bool,
   onCollapse: PropTypes.func,
 }
 

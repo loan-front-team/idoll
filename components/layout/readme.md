@@ -52,6 +52,7 @@ Sider
 | toogle    | 可选, 是否添加缩进图标    | boolean             |   |
 | children    | 可选, 内容元素    | node             |   |
 | foldSpan    | 可选, fold,unflod状态下侧边栏的span值    | object             | {unfold: '7', fold: '1'}  |
+| collapse    | 可选, sider初始化折叠状态    | boolean             |   |
 | onCollapse    | 可选, 切换sider是回调函数    | function             |   |
 
 Header
