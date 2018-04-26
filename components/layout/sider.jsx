@@ -24,7 +24,7 @@ class Sider extends Component {
   }
 
   render() {
-    const { span, toggle, children, onCollapse, foldSpan } = this.props
+    const { span, toggle, children, onCollapse, foldSpan, toggleStyle } = this.props
     let collapsed = this.state.collapsed
     let currentSpan = span
 
@@ -43,7 +43,7 @@ class Sider extends Component {
     var menuToggle = (toggle) => {
       const menuDom = []
       if (toggle) {
-        menuDom.push(<Icon type={iconType} key={0} onClick={this.toggleMenu} className='idoll-silder-toggle' />)
+        menuDom.push(<Icon type={iconType} key={0} onClick={this.toggleMenu} className='idoll-silder-toggle' style={toggleStyle} />)
       }
 
       if (onCollapse) {
@@ -54,6 +54,7 @@ class Sider extends Component {
 
     const otherProps = omit(this.props, [
       'toggle',
+      'toggleStyle',
       'foldSpan',
       'collapsed',
       'onCollapse'
@@ -71,6 +72,7 @@ class Sider extends Component {
 Sider.propTypes = {
   span: PropTypes.string,
   toggle: PropTypes.bool,
+  toggleStyle: PropTypes.object,
   foldSpan: PropTypes.object,
   children: PropTypes.node,
   collapsed: PropTypes.bool,
