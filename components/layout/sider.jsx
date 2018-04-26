@@ -54,6 +54,7 @@ class Sider extends Component {
 
     const otherProps = omit(this.props, [
       'toggle',
+      'toggleStyle',
       'foldSpan',
       'collapsed',
       'onCollapse'
