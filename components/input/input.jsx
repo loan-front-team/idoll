@@ -15,7 +15,7 @@ function fixControlledValue(value) {
 
 export default class Input extends Component {
   static defaultProps = {
-    initValue: '',
+    // intialValue: '',
     disabled: false,
     prefixCls: 'idoll-input',
     type: 'text',
@@ -41,7 +41,7 @@ export default class Input extends Component {
     readOnly: PropTypes.bool,
     disabled: PropTypes.bool,
     value: PropTypes.any,
-    initValue: PropTypes.any,
+    // intialValue: PropTypes.any,
     className: PropTypes.string,
     addonBefore: PropTypes.node,
     addonAfter: PropTypes.node,
@@ -189,8 +189,8 @@ export default class Input extends Component {
     if ('value' in this.props) {
       otherProps.value = fixControlledValue(value);
       // Input elements must be either controlled or uncontrolled,
-      // specify either the value prop, or the initValue props, but no both
-      delete otherProps.initValue;
+      // specify either the value prop, or the intialValue props, but no both
+      // delete otherProps.intialValue;
     }
     return this.renderLaybeldIcon(
       <input
