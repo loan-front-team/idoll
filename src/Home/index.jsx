@@ -241,6 +241,12 @@ function Home() {
           <div className='info'>Anchor</div>
         </NavLink>
       </div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/tree'>
+          <div className='name'>树</div>
+          <div className='info'>Tree</div>
+        </NavLink>
+      </div>
     </div>
   );
 }
