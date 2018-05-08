@@ -1,47 +1,67 @@
-import React from 'react'
-import Layout, { Sider, Footer, Header, Content } from 'components/Layout'
+import React, { Component } from 'react'
+import Layout, { Sider, Footer, Header, Content } from 'components/layout'
+import Button from 'components/button'
 
 import './layout.css'
 
-function onCollapse() {
-  console.log('toggle sider')
-}
+class MainLayout extends Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      collpased: false
+    }
+  }
 
-const MainLayout = () => (
-  <div id='main-container'>
-    <h1 className='h1'>排版1</h1>
-    <div className='layout_temp'>
-      <Layout>
-        <Sider />
-        <Layout>
-          <Header style={{ background: '#eee' }} />
-          <Content />
-          <Footer style={{ background: '#eee' }} />
-        </Layout>
-      </Layout>
-    </div>
-    <br />
-    <h1 className='h1'>排版2</h1>
-    <div className='layout_temp'>
-      <Layout>
-        <Header style={{ background: '#eee' }} />
-        <Content />
-        <Footer style={{ background: '#eee' }} />
-      </Layout>
-    </div>
-    <br />
-    <h1 className='h1'>排版3 左菜单栏可缩进</h1>
-    <div className='layout_temp' style={{width: '900px', height: '800px'}} >
-      <Layout>
-        <Sider toggle toggleStyle={{ top: '30px', fontSize: '18px' }} foldSpan={{ fold: '1', unfold: '19' }} collapsed onCollapse={onCollapse} style={{ background: '#eee' }} />
-        <Layout>
-          <Header span={2} style={{ background: '#eee' }} />
-          <Content />
-          <Footer style={{ background: '#eee' }} />
-        </Layout>
-      </Layout>
-    </div>
-  </div>
-)
+  onCollapse = () => {
+    console.log('toggle sider')
+  }
+
+  toggle = () => {
+    this.setState({
+      collpased: !this.state.collpased
+    })
+  }
+
+  render () {
+    const { collpased } = this.state
+    return (
+      <div id='main-container'>
+        <h1 className='h1'>排版1</h1>
+        <div className='layout_temp' style={{ width: '900px', height: '100vh' }}>
+          <Layout>
+            <Sider style={{ background: '#eee' }} />
+            <Layout>
+              <Header style={{ background: '#eee' }} />
+              <Content />
+              <Footer style={{ background: '#eee' }} />
+            </Layout>
+          </Layout>
+        </div>
+        <br />
+        <h1 className='h1'>排版2</h1>
+        <div className='layout_temp' style={{ width: '900px', height: '100vh' }}>
+          <Layout>
+            <Header style={{ background: '#eee' }} />
+            <Content />
+            <Footer style={{ background: '#eee' }} />
+          </Layout>
+        </div>
+        <br />
+        <h1 className='h1'>排版3 左菜单栏可缩进</h1>
+        <h1 className='h1'><Button type='normal' onClick={this.toggle}>toggle Sider</Button></h1>
+        <div className='layout_temp' style={{ width: '900px', height: '100vh' }} >
+          <Layout>
+            <Sider span={{ fold: '1', unfold: '12' }} collapsed={collpased} onCollapse={this.onCollapse} style={{ background: '#eee' }} />
+            <Layout>
+              <Header span={2} style={{ background: '#eee' }} />
+              <Content />
+              <Footer style={{ background: '#eee' }} />
+            </Layout>
+          </Layout>
+        </div>
+      </div>
+    )
+  }
+}
 
 export default MainLayout;
