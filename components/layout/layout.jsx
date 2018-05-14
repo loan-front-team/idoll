@@ -14,7 +14,7 @@ function Layout(props) {
       })
     }
     const classes = classNames({
-       'idoll-layout': 'doll-layout',
+       'idoll-layout': 'idoll-layout',
       'idoll-layout-has-sider': sider.length,
     }, className);
   	return <div {...props} className={classes}>{children}</div>;
