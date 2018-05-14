@@ -5,8 +5,8 @@ import classNames from 'classnames';
 import './style';
 
 function Layout(props) {
-    const { children } = props;
-    // console.log('LayoutchildrenLength', children.length);
+    const { children, className } = props;
+    // // console.log('LayoutchildrenLength', children.length);
     let sider = []
     if (children && children.length) {
       sider = children.filter((item) => {
@@ -14,9 +14,9 @@ function Layout(props) {
       })
     }
     const classes = classNames({
-       'idoll-layout': 'doll-layout',
-      'idoll-layout-has-sider': sider.length
-    });
+       'idoll-layout': 'idoll-layout',
+      'idoll-layout-has-sider': sider.length,
+    }, className);
   	return <div {...props} className={classes}>{children}</div>;
 }
 
