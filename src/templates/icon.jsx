@@ -341,6 +341,132 @@ export default () => (
           <span className='icon-name' >sound</span>
         </span>
       </li>
+      <li className=''>
+        <Icon type='pro-chart' />
+        <span className='icon-class'>
+          <span className='icon-name' >pro-chart</span>
+        </span>
+      </li>
+      <li className=''>
+        <Icon type='pro-clock-circle' />
+        <span className='icon-class'>
+          <span className='icon-name' >pro-clock-circle</span>
+        </span>
+      </li>
+      <li className=''>
+        <Icon type='pro-download' />
+        <span className='icon-class'>
+          <span className='icon-name' >pro-download</span>
+        </span>
+      </li>
+      <li className=''>
+        <Icon type='pro-drag' />
+        <span className='icon-class'>
+          <span className='icon-name' >pro-drag</span>
+        </span>
+      </li>
+      <li className=''>
+        <Icon type='pro-info' />
+        <span className='icon-class'>
+          <span className='icon-name' >pro-info</span>
+        </span>
+      </li>
+      <li className=''>
+        <Icon type='pro-left' />
+        <span className='icon-class'>
+          <span className='icon-name' >pro-left</span>
+        </span>
+      </li>
+      <li className=''>
+        <Icon type='pro-phone-circle' />
+        <span className='icon-class'>
+          <span className='icon-name' >pro-phone-circle</span>
+        </span>
+      </li>
+      <li className=''>
+        <Icon type='pro-right' />
+        <span className='icon-class'>
+          <span className='icon-name' >pro-right</span>
+        </span>
+      </li>
+      <li className=''>
+        <Icon type='pro-rollback' />
+        <span className='icon-class'>
+          <span className='icon-name' >pro-rollback</span>
+        </span>
+      </li>
+      <li className=''>
+        <Icon type='pro-safety' />
+        <span className='icon-class'>
+          <span className='icon-name' >pro-safety</span>
+        </span>
+      </li>
+      <li className=''>
+        <Icon type='pro-setting' />
+        <span className='icon-class'>
+          <span className='icon-name' >pro-setting</span>
+        </span>
+      </li>
+      <li className=''>
+        <Icon type='pro-sharealt' />
+        <span className='icon-class'>
+          <span className='icon-name' >pro-sharealt</span>
+        </span>
+      </li>
+      <li className=''>
+        <Icon type='pro-sync' />
+        <span className='icon-class'>
+          <span className='icon-name' >pro-sync</span>
+        </span>
+      </li>
+      <li className=''>
+        <Icon type='pro-table' />
+        <span className='icon-class'>
+          <span className='icon-name' >pro-table</span>
+        </span>
+      </li>
+      <li className=''>
+        <Icon type='arrowdown' />
+        <span className='icon-class'>
+          <span className='icon-name' >arrowdown</span>
+        </span>
+      </li>
+      <li className=''>
+        <Icon type='arrowup' />
+        <span className='icon-class'>
+          <span className='icon-name' >arrowup</span>
+        </span>
+      </li>
+      <li className=''>
+        <Icon type='book' />
+        <span className='icon-class'>
+          <span className='icon-name' >book</span>
+        </span>
+      </li>
+      <li className=''>
+        <Icon type='contacts' />
+        <span className='icon-class'>
+          <span className='icon-name' >contacts</span>
+        </span>
+      </li>
+      <li className=''>
+        <Icon type='detail' />
+        <span className='icon-class'>
+          <span className='icon-name' >detail</span>
+        </span>
+      </li>
+      <li className=''>
+        <Icon type='flag' />
+        <span className='icon-class'>
+          <span className='icon-name' >flag</span>
+        </span>
+      </li>
+      <li className=''>
+        <Icon type='help' />
+        <span className='icon-class'>
+          <span className='icon-name' >help</span>
+        </span>
+      </li>
     </ul>
   </div>
 )
