@@ -5,7 +5,6 @@ const MonthPicker = DatePicker.MonthPicker;
 
 function disabledDate(current) {
   // Can not select days before today and today
-  // return current && current < moment().endOf('day');
   return current && current.getTime() < Date.now();
 }
 
