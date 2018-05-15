@@ -1,15 +1,22 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import './style'
+import './style';
 
 function Layout(props) {
-    const { children } = props;
+    const { children, className } = props;
+    // // console.log('LayoutchildrenLength', children.length);
+    let sider = []
+    if (children && children.length) {
+      sider = children.filter((item) => {
+        return Object.keys(item.type.propTypes).indexOf('collapsed') !== -1
+      })
+    }
     const classes = classNames({
-       'idoll-layout': 'doll-layout',
-       'idoll-layout-has-sider': (children.length && children.filter(function(item) { console.log(); return Object.keys(item.type.propTypes).indexOf('toggle') !== -1 })).length
-    });
+       'idoll-layout': 'idoll-layout',
+      'idoll-layout-has-sider': sider.length,
+    }, className);
   	return <div {...props} className={classes}>{children}</div>;
 }
 

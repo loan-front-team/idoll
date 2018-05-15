@@ -425,6 +425,48 @@ export default () => (
           <span className='icon-name' >pro-table</span>
         </span>
       </li>
+      <li className=''>
+        <Icon type='arrowdown' />
+        <span className='icon-class'>
+          <span className='icon-name' >arrowdown</span>
+        </span>
+      </li>
+      <li className=''>
+        <Icon type='arrowup' />
+        <span className='icon-class'>
+          <span className='icon-name' >arrowup</span>
+        </span>
+      </li>
+      <li className=''>
+        <Icon type='book' />
+        <span className='icon-class'>
+          <span className='icon-name' >book</span>
+        </span>
+      </li>
+      <li className=''>
+        <Icon type='contacts' />
+        <span className='icon-class'>
+          <span className='icon-name' >contacts</span>
+        </span>
+      </li>
+      <li className=''>
+        <Icon type='detail' />
+        <span className='icon-class'>
+          <span className='icon-name' >detail</span>
+        </span>
+      </li>
+      <li className=''>
+        <Icon type='flag' />
+        <span className='icon-class'>
+          <span className='icon-name' >flag</span>
+        </span>
+      </li>
+      <li className=''>
+        <Icon type='help' />
+        <span className='icon-class'>
+          <span className='icon-name' >help</span>
+        </span>
+      </li>
     </ul>
   </div>
 )
