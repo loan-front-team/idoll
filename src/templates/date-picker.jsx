@@ -3,6 +3,11 @@ import DatePicker from 'components/date-picker/index';
 const RangePicker = DatePicker.RangePicker;
 const MonthPicker = DatePicker.MonthPicker;
 
+function disabledDate(current) {
+  // Can not select days before today and today
+  return current && current.getTime() < Date.now();
+}
+
 export default class DatePickerView extends React.Component {
   onChange = (value, dateString) => {
     console.log(value, dateString);
@@ -27,6 +32,16 @@ export default class DatePickerView extends React.Component {
          带有时间的日期选择
         </h1>
         <DatePicker showTime format='yyyy-MM-dd HH:mm:ss' placeholder='请选择时间' />
+        <h1 className='h1'>
+          不可选择日期
+        </h1>
+        <RangePicker
+          disabledDate={disabledDate}
+          showTime={{
+        hideDisabledOptions: true,
+      }}
+          format='YYYY-MM-DD HH:mm:ss'
+    />
       </div>
     )
   }
