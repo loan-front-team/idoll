@@ -247,6 +247,12 @@ function Home() {
           <div className='info'>Tree</div>
         </NavLink>
       </div>
+      <div className='widget-item'>
+        <NavLink className='widget-wrap' to='/popconfirm'>
+          <div className='name'>气泡确认框</div>
+          <div className='info'>Popconfirm</div>
+        </NavLink>
+      </div>
     </div>
   );
 }
