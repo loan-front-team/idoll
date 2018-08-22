@@ -119,7 +119,8 @@ export default class UploadList extends React.Component {
                 </span>
               )
             }
-            {
+          </div>
+          {
               this.props.listType === 'picture-card' && file.status !== 'uploading'
               ? (
                 <span>
@@ -135,7 +136,6 @@ export default class UploadList extends React.Component {
                 </span>
               ) : <Icon type='close' onClick={() => this.handleClose(file)} />
             }
-          </div>
           {progress}
         </div>
       );

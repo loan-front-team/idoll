@@ -235,6 +235,22 @@
       background: transparent;
     }
 
+    .@{upload-item} span{
+      display: block;
+      color: #fff;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      z-index: 10;
+      white-space: nowrap;
+      opacity: 0;
+    }
+
+    .@{upload-item}:hover span {
+       opacity: 1;
+    }
+
     .@{upload-item}-uploading {
       border-style: dashed;
     }

@@ -44,7 +44,7 @@
     "rc-tooltip": "^3.7.0",
     "rc-tree": "^1.11.1",
     "rc-trigger": "^2.3.3",
-    "rc-upload": "^2.0.3",
+    "rc-upload": "2.0.3",
     "react": "^15.6.2",
     "react-copy-to-clipboard": "^5.0.1",
     "react-dom": "^15.6.2",
